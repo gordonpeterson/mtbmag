@@ -1,0 +1,54 @@
+<table style="width:360px;" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td style="width:22px">&nbsp;</td>
+  <td style="background-color:#FEFEFE; padding-top:12px; padding-bottom:12px"><center>
+ <script type='text/javascript'>
+GA_googleFillSlot("MTB-home");
+</script>
+</center></td>
+</tr>
+</table>
+</br>
+
+<table style="width:360px;" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td style="width:22px">&nbsp;</td>
+  <td style="background-color:#FEFEFE; padding-top:12px; padding-bottom:12px"><center>
+<!-- MTB-home-300x250-sponsor -->
+<script type='text/javascript'>
+GA_googleFillSlot("MTB-home-300x250-sponsor");
+</script>
+</center></td>
+</tr>
+</table>
+</br>
+
+<table style="width:360px;" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td style="width:22px">&nbsp;</td>
+  <td style="background-color:#FEFEFE; padding-top:12px; padding-bottom:12px"><center>
+<!-- MTB-home-Multiplayer -->
+<script type='text/javascript'>
+GA_googleFillSlot("MTB-home-Multiplayer");
+</script>
+</center></td>
+</tr>
+</table>
+</br>
+
+
+
+
+
+
+
+<div  id="sidebar"  class="col-<?php if ( get_option('woo_left_sidebar') == "true" ) echo 'left'; else echo 'right'; ?>">
+
+	<!-- Widgetized Sidebar -->	
+	<?php woo_sidebar('sidebar-1'); ?>
+             
+</div><!-- /#sidebar -->
+
+
+
+
