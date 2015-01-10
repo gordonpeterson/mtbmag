@@ -1,0 +1,52 @@
+/*
+
+Theme Name: mtb-mag.com v2.0
+Description: the sweet new site re-design for mtb-mag.com
+Author: gordon peterson
+Version: 2.0.2
+Template: wt_pandora
+
+*/
+
+
+@import url('../wt_pandora/style.css');
+
+html{
+    border: 3px dashed purple;
+
+}
+
+body.page{
+    background-image: none;
+}
+
+
+
+.gordon{
+	background: pink;
+}
+
+.test{
+	border: 5px dashed orange;
+}
+
+
+
+#content.featured-page{
+	width: 100%;
+	position: relative;
+}
+
+
+
+.post-excerpt{
+	border: 1px solid green;
+	width: 32%;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+.post-excerpt.last{
+	border: 1px dashed green;
+}
