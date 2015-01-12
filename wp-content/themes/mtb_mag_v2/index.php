@@ -18,10 +18,6 @@ get_header(); ?>
 
 <div id="main-content" class="main-content">
 
-<hr>
-<h1>------this is the index page-----------------</h1>
-<hr>
-
 <?php
 	if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
 		// Include the featured content template.
