@@ -1,0 +1,2332 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pandora\n"
+"POT-Creation-Date: 2013-11-21 23:28+0100\n"
+"PO-Revision-Date: 2013-11-23 18:08+0100\n"
+"Last-Translator: Marco Toniolo <marco@bike-board.net>\n"
+"Language-Team: WellThemes <info@wellthemes.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../wt_pandora/404.php:17
+msgid "Yes, this is the end..."
+msgstr "È la fine…."
+
+#: ../wt_pandora/404.php:17
+msgid "Or is it?"
+msgstr "O no?"
+
+#: ../wt_pandora/404.php:19
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr ""
+"Non riusciamo a trovare quello che cerchi. Forse uno dei link qui sotto ti "
+"può aiutare"
+
+#: ../wt_pandora/404.php:37
+msgid "Page not found"
+msgstr "Pagina non trovata"
+
+#: ../wt_pandora/archive.php:24
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../wt_pandora/archive.php:26
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../wt_pandora/archive.php:28
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../wt_pandora/archive.php:30
+msgid "Blog Archives"
+msgstr "Archivio"
+
+#: ../wt_pandora/archive.php:55 ../wt_pandora/author.php:73
+#: ../wt_pandora/category.php:49 ../wt_pandora/index.php:41
+#: ../wt_pandora/page-blog.php:65 ../wt_pandora/search.php:44
+#: ../wt_pandora/tag.php:48
+msgid "Nothing Found"
+msgstr "Nessun risultato"
+
+#: ../wt_pandora/archive.php:59 ../wt_pandora/author.php:76
+#: ../wt_pandora/category.php:53 ../wt_pandora/index.php:45
+#: ../wt_pandora/page-blog.php:69 ../wt_pandora/tag.php:52
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+
+#: ../wt_pandora/author.php:27
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Archivi autore: %s"
+
+#: ../wt_pandora/author.php:48
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: ../wt_pandora/category.php:18
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Archivi rubriche: %s"
+
+#: ../wt_pandora/comments.php:18
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: ../wt_pandora/comments.php:46
+msgid "Leave Comment"
+msgstr "Commenta"
+
+#: ../wt_pandora/comments.php:64
+msgid "Comment navigation"
+msgstr "Navigazione dei commenti"
+
+#: ../wt_pandora/comments.php:65
+msgid "&larr; Older Comments"
+msgstr "&larr; Commenti vecchi"
+
+#: ../wt_pandora/comments.php:66
+msgid "Newer Comments &rarr;"
+msgstr "Commenti recenti &rarr;"
+
+#: ../wt_pandora/content-excerpt.php:35 ../wt_pandora/content-page.php:32
+#: ../wt_pandora/content-single.php:87 ../wt_pandora/image.php:33
+#: ../wt_pandora/framework/widgets/widget_carousel.php:105
+#: ../wt_pandora/framework/widgets/widget_most_read.php:108
+#: ../wt_pandora/framework/widgets/widget_popular_posts.php:109
+#: ../wt_pandora/framework/widgets/widget_recent_posts.php:108
+#: ../wt_pandora/framework/widgets/widget_top_reviews.php:110
+#: ../wt_pandora/framework/widgets/widget_top_reviews_text.php:105
+#: ../wt_pandora/includes/feat-post.php:84
+#: ../wt_pandora/includes/feat-post.php:164
+#: ../wt_pandora/includes/feat-tabs.php:129
+#: ../wt_pandora/includes/feat-tabs.php:170
+#: ../wt_pandora/includes/feat-tabs.php:232
+#: ../wt_pandora/includes/feat-tabs.php:324
+#: ../wt_pandora/includes/feat-tabs.php:365
+#: ../wt_pandora/includes/feat-tabs.php:427
+#: ../wt_pandora/includes/feat-tabs.php:511
+#: ../wt_pandora/includes/feat-tabs.php:552
+#: ../wt_pandora/includes/feat-tabs.php:614
+#: ../wt_pandora/includes/single-cats.php:73
+#: ../wt_pandora/includes/single-cats.php:170
+#: ../wt_pandora/includes/single-cats.php:274
+#: ../wt_pandora/includes/single-cats.php:371
+msgid "by "
+msgstr "di "
+
+#: ../wt_pandora/content-excerpt.php:55
+#: ../wt_pandora/includes/feat-post.php:105
+#: ../wt_pandora/includes/feat-tabs.php:147
+#: ../wt_pandora/includes/feat-tabs.php:342
+#: ../wt_pandora/includes/feat-tabs.php:529
+msgid "Read More"
+msgstr "Continua..."
+
+#: ../wt_pandora/content-page.php:62 ../wt_pandora/content-single.php:125
+#: ../wt_pandora/image.php:114 ../wt_pandora/page-archives.php:88
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: ../wt_pandora/content-page.php:99 ../wt_pandora/content-single.php:163
+msgid "About"
+msgstr "Chi è"
+
+#: ../wt_pandora/content-page.php:111 ../wt_pandora/content-single.php:175
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Guarda tutti i post di %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../wt_pandora/content-page.php:150 ../wt_pandora/content-single.php:232
+msgid "Share this:"
+msgstr "Condividi:"
+
+#: ../wt_pandora/content-page.php:157 ../wt_pandora/content-single.php:239
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:94
+msgid "Facebook"
+msgstr ""
+
+#: ../wt_pandora/content-page.php:161 ../wt_pandora/content-single.php:243
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:87
+msgid "Twitter"
+msgstr ""
+
+#: ../wt_pandora/content-page.php:165 ../wt_pandora/content-single.php:247
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:100
+msgid "Google+"
+msgstr ""
+
+#: ../wt_pandora/content-page.php:169 ../wt_pandora/content-single.php:251
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:118
+msgid "Linkedin"
+msgstr ""
+
+#: ../wt_pandora/content-page.php:173 ../wt_pandora/content-single.php:255
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:106
+msgid "Pinterest"
+msgstr ""
+
+#: ../wt_pandora/content-single.php:32
+msgid "Article"
+msgstr "Articolo"
+
+#: ../wt_pandora/content-single.php:33 ../wt_pandora/content-single.php:272
+msgid "Related Posts"
+msgstr "Articoli correlati"
+
+#: ../wt_pandora/content-single.php:37
+msgid "No comments"
+msgstr "Nessun commento"
+
+#: ../wt_pandora/content-single.php:37
+msgid "1 comment"
+msgstr "1 commento"
+
+#: ../wt_pandora/content-single.php:37
+#, php-format
+msgid "% comments"
+msgstr "% commenti"
+
+#: ../wt_pandora/header.php:49
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../wt_pandora/image.php:34
+msgid "Original Image size: "
+msgstr "Dimensione originale dell'immagine: "
+
+#: ../wt_pandora/image.php:37
+#, php-format
+msgid "<a href=\"%3$s\" rel=\"lightbox\">%1$s &times; %2$s</a>"
+msgstr ""
+
+#: ../wt_pandora/image.php:120
+msgid "&larr; Previous"
+msgstr "&larr; Precedente"
+
+#: ../wt_pandora/image.php:121
+msgid "Next &rarr;"
+msgstr "Successivo &rarr;"
+
+#: ../wt_pandora/image.php:125
+#, php-format
+msgid "Return to %s"
+msgstr "Ritorna a %s"
+
+#: ../wt_pandora/page-archives.php:41
+msgid "Last 10 Posts:"
+msgstr "Ultimi 10 articoli:"
+
+#: ../wt_pandora/page-archives.php:56
+msgid "Most Popular Tags:"
+msgstr "I tag più popolari:"
+
+#: ../wt_pandora/page-archives.php:66
+msgid "Archives by Category:"
+msgstr "Archivi ordinati per rubriche:"
+
+#: ../wt_pandora/page-archives.php:76
+msgid "Archives By Month:"
+msgstr "Archives per mesi:"
+
+#: ../wt_pandora/page-archives.php:98
+msgid "Search Archives:"
+msgstr "Cerca negli archivi:"
+
+#: ../wt_pandora/page-contact.php:68
+msgid "Please enter code correctly."
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:117
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:185
+msgid "Please enter your name."
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:121
+msgid "Please enter message title."
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:125
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:189
+msgid "Please enter your email."
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:129
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:193
+msgid "Please enter your message."
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:133
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:197
+msgid "Please enter the security code."
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:141
+msgid "Please enter valid email"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:194
+msgid "Send us a message!"
+msgstr "Mandaci un messaggio!"
+
+#: ../wt_pandora/page-contact.php:198
+msgid "<strong>Thank you.</strong> Your email was sent successfully."
+msgstr "<strong>Grazie.</strong> La tua email è stata spedita correttamente."
+
+#: ../wt_pandora/page-contact.php:202
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:171
+msgid "Please correct the following errors and try again."
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:208
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:244
+msgid "Name"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:216 ../wt_pandora/page-contact.php:317
+#: ../wt_pandora/framework/settings/theme-options.php:1162
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:75
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:253
+#: ../wt_pandora/framework/widgets/widget_subscribe.php:85
+msgid "Email"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:224
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:65
+#: ../wt_pandora/framework/widgets/widget_subscribe.php:34
+msgid "Title"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:232
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:261
+msgid "Message"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:243
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:282
+msgid "Incorrect please try again"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:244
+msgid "Enter the words:"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:245
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:284
+msgid "Enter the numbers you hear:"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:254
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:275
+msgid "Refresh"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:255
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:276
+msgid "Audio "
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:256
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:277
+msgid "Image"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:257
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:278
+msgid "Help"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:275
+#: ../wt_pandora/framework/widgets/widget_subscribe.php:89
+msgid "Send"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:286
+msgid "Contact us"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:293
+msgid "Our Address"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:305
+msgid "Phone"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:326
+msgid "Get social with us"
+msgstr ""
+
+#: ../wt_pandora/page-contact.php:377
+msgid "Who we are"
+msgstr "Chi siamo"
+
+#: ../wt_pandora/search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Risultati ricerca: %s"
+
+#: ../wt_pandora/search.php:49
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../wt_pandora/sidebar.php:54
+msgid ""
+"You have not selected any widget for this sidebar. Go to your widgets "
+"section and select widgets."
+msgstr ""
+
+#: ../wt_pandora/tag.php:18
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:72
+msgid "Top Menu"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:73
+msgid "Primary Menu"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:141
+msgid "Sidebar"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:143
+msgid "Main sidebar area"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:152
+msgid "Footer Widget 1"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:154
+msgid "Widget 1 area in the footer"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:162
+msgid "Footer Widget 2"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:164
+msgid "Widget 2 area in the footer"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:172
+msgid "Footer Widget 3"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:174
+msgid "Widget 3 area in the footer"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:182
+msgid "Footer Widget 4"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:184
+msgid "Widget 4 area in the footer"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:226
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:236
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s alle %2$s"
+
+#: ../wt_pandora/framework/functions.php:240
+msgid "Reply"
+msgstr "Rispondi"
+
+#: ../wt_pandora/framework/functions.php:243
+#: ../wt_pandora/framework/functions.php:266
+msgid "[ Edit ]"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:251
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:266
+msgid "Pingback:"
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:519
+msgid "Review by "
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:521
+msgid " on "
+msgstr ""
+
+#: ../wt_pandora/framework/functions.php:525
+msgid "Rating:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_category.php:32
+msgid "Wellthemes Category Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_category.php:36
+msgid "Category Color"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_category.php:41
+msgid "Select color for the category"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_category.php:45
+msgid "Category Icon"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_category.php:48
+msgid "Enter color name. Check theme documentation for complete list of icons."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:58
+msgid "Enable Review"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:64
+msgid "Review title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:70
+msgid "Item 1 title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:81
+msgid "Item 1 score:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:102
+msgid "Item 2 title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:114
+msgid "Item 2 score:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:135
+msgid "Item 3 title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:147
+msgid "Item 3 score:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:168
+msgid "Item 4 title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:180
+msgid "Item 4 score:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:201
+msgid "Item 5 title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:213
+msgid "Item 5 score:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:234
+msgid "Overall title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:246
+msgid "Overall score:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:264
+msgid "Overall rating text:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:269
+msgid "Select on scale of 1 - 50. Example: 45 will be converted to 4.5"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:272
+msgid "Review Summary:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:295
+msgid "Hide post navigation"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:302
+msgid "Hide featured image"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:308
+msgid "Hide Post meta"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:313
+#: ../wt_pandora/framework/settings/theme-options.php:414
+#: ../wt_pandora/framework/settings/theme-options.php:434
+msgid "Hide Author Information"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:318
+msgid "Hide Post Share Links"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:333
+msgid "Background color:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:336
+msgid "Select background color for the post. Leave blank for default."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:341
+msgid "Background Image:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:344
+msgid "Upload image or leave blank for default."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:349
+#: ../wt_pandora/framework/settings/theme-options.php:650
+msgid "Background repeat:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:351
+msgid "Repeat"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:352
+msgid "Repeat x"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:353
+msgid "Repeat y"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:354
+msgid "No Repeat"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:355
+msgid "Cover"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:357
+#: ../wt_pandora/framework/settings/theme-options.php:658
+msgid "Select the background image repeat style."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:384
+msgid "Select Right Sidebar:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:386
+#: ../wt_pandora/framework/settings/theme-options.php:530
+#: ../wt_pandora/framework/settings/theme-options.php:546
+#: ../wt_pandora/framework/settings/theme-options.php:562
+#: ../wt_pandora/framework/settings/theme-options.php:578
+#: ../wt_pandora/framework/settings/theme-options.php:594
+msgid "Default"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:396
+msgid "You can create custom sidebars in WellThemes's theme options page."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:408
+msgid "Post Top Banner:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:410
+#: ../wt_pandora/framework/meta/meta_post.php:416
+msgid "Paste the banner code for post top banner. Leave blank to disable."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:414
+msgid "Post Bottom Banner:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:433
+msgid "Slider Section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:437
+msgid "Enable Featured Slider"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:441
+msgid "Slider Category"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:447
+#: ../wt_pandora/framework/meta/meta_post.php:479
+#: ../wt_pandora/framework/meta/meta_post.php:534
+#: ../wt_pandora/framework/meta/meta_post.php:630
+#: ../wt_pandora/framework/meta/meta_post.php:672
+#: ../wt_pandora/framework/meta/meta_post.php:704
+#: ../wt_pandora/framework/meta/meta_post.php:730
+#: ../wt_pandora/framework/meta/meta_post.php:756
+#: ../wt_pandora/framework/meta/meta_post.php:811
+#: ../wt_pandora/framework/meta/meta_post.php:847
+msgid "--none--"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:457
+msgid "Select category for slider. Select none to display latest posts."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:467
+msgid "Slider Speed:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:469
+#: ../wt_pandora/framework/meta/meta_post.php:801
+msgid "Enter the carousel speed in milliseconds eg. 4000."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:473
+msgid "Posts Category"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:489
+msgid ""
+"Select category for the posts on right side of slider. Select none to "
+"display latest posts."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:495
+msgid "Tabs Section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:499
+msgid "Enable Tabs Section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:509
+msgid "Tab 1 Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:511
+#: ../wt_pandora/framework/meta/meta_post.php:556
+#: ../wt_pandora/framework/meta/meta_post.php:580
+msgid "Select the main title for the tab section."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:522
+msgid "Tab 1 subtitle:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:524
+#: ../wt_pandora/framework/meta/meta_post.php:568
+#: ../wt_pandora/framework/meta/meta_post.php:592
+msgid "Select the subtitle for the tab section."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:528
+msgid "Hot Category"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:544
+msgid ""
+"Select category for the Tab 1 section. Select none to display latest posts."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:554
+msgid "Tab 2 Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:566
+msgid "Tab 2 subtitle:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:578
+msgid "Tab 3 Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:590
+msgid "Tab 3 subtitle:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:596
+msgid "Archive Link:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:598
+msgid "Enter full URL for the archives link in the tabs section."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:604
+msgid "Featured Post Section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:608
+msgid "Enable Post Section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:618
+msgid "Section Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:620
+msgid "Select title for the featured post section."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:624
+#: ../wt_pandora/framework/meta/meta_post.php:805
+#: ../wt_pandora/framework/meta/meta_post.php:841
+msgid "Category"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:640
+msgid "Select category for the section. Select none to display latest posts."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:646
+msgid "Single Categories Section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:650
+msgid "Enable categories section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:660
+msgid "Category 1 Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:662
+msgid "Select title for category 1 section."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:666
+msgid "Category 1"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:682
+msgid "Select category 1. Select none to display latest posts."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:692
+msgid "Category 2 Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:694
+msgid "Select title for category 2 section."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:698
+msgid "Category 2"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:714
+msgid "Select category 2. Select none to display latest posts."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:718
+msgid "Category 3 Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:720
+msgid "Select title for category 3 section."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:724
+msgid "Category 3"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:740
+msgid "Select category 3. Select none to hide the category."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:744
+msgid "Category 4 Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:746
+msgid "Select title for category 4 section."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:750
+msgid "Category 4"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:766
+msgid "Select category 4. Select none to hide the category."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:772
+msgid "Carousel Section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:776
+msgid "Enable carousel section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:786
+#: ../wt_pandora/framework/meta/meta_post.php:835
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:172
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:150
+#: ../wt_pandora/framework/widgets/widget_adsingle.php:91
+#: ../wt_pandora/framework/widgets/widget_carousel.php:156
+#: ../wt_pandora/framework/widgets/widget_facebook.php:121
+#: ../wt_pandora/framework/widgets/widget_flickr.php:102
+#: ../wt_pandora/framework/widgets/widget_most_read.php:131
+#: ../wt_pandora/framework/widgets/widget_popular_categories.php:114
+#: ../wt_pandora/framework/widgets/widget_popular_posts.php:131
+#: ../wt_pandora/framework/widgets/widget_popular_posts_text.php:117
+#: ../wt_pandora/framework/widgets/widget_recent_comments.php:112
+#: ../wt_pandora/framework/widgets/widget_recent_posts.php:131
+#: ../wt_pandora/framework/widgets/widget_top_reviews.php:132
+#: ../wt_pandora/framework/widgets/widget_top_reviews_text.php:129
+#: ../wt_pandora/framework/widgets/widget_video.php:76
+msgid "Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:788
+msgid "Select title for carousel section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:799
+msgid "Carousel Speed:"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:821
+msgid "Select category for carousel. Select none to display latest posts."
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:827
+msgid "Post List Section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:831
+msgid "Enable post list"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:837
+msgid "Select title for post list section"
+msgstr ""
+
+#: ../wt_pandora/framework/meta/meta_post.php:857
+msgid "Select category for post list. Select none to display latest posts."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/option-functions.php:511
+msgid "Wellthemes custom sidebar"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:66
+#: ../wt_pandora/framework/settings/theme-options.php:92
+msgid "Theme Options"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:96
+msgid "Pandora Theme"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:100
+msgid "http://forums.wellthemes.com/"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:100
+msgid "Theme Support"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:115
+msgid "General"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:116
+#: ../wt_pandora/framework/settings/theme-options.php:189
+msgid "Header Menu"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:117
+msgid "Posts and Archives"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:118
+#: ../wt_pandora/framework/settings/theme-options.php:484
+msgid "Sidebars"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:119
+#: ../wt_pandora/framework/settings/theme-options.php:611
+msgid "Styles"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:120
+#: ../wt_pandora/framework/settings/theme-options.php:689
+msgid "Typography"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:121
+msgid "SEO"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:122
+msgid "Header and Footer"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:123
+msgid "Contact Page"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:124
+msgid "Reset"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:131
+msgid "Theme settings updated successfully"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:141
+msgid "General Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:146
+msgid "Uploading Images"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:147
+msgid ""
+"You can specify the complete URLs for the logo and other images or you can "
+"upload the image. Please read the documentation for the image uploading "
+"instructions."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:150
+#: ../wt_pandora/framework/settings/theme-options.php:1080
+msgid "Header Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:153
+msgid "Upload logo"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:157
+msgid ""
+"Upload a logo image or specify path. Max width: 390px. Max height: 55px."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:162
+msgid "Upload Favicon"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:165
+msgid "Upload your 16x16 px favicon or specify path."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:169
+msgid "Apple Touch Icon"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:172
+msgid "Upload your 114px by 114px icon."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:176
+msgid "Custom RSS URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:178
+msgid ""
+"Enter full URL of RSS Feeds link starting with <strong>http:// </strong>. "
+"Leave blank to use default RSS Feeds."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:186
+msgid "Header Menu Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:190
+msgid ""
+"You can configure the header menu on this page. You can use background "
+"image, icon with background color or only background oclor for each item."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:194
+msgid "Disable Menu"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:196
+msgid "Check if you want to disable post header menu."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:200
+msgid "Menu item 1"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:203
+#: ../wt_pandora/framework/settings/theme-options.php:239
+#: ../wt_pandora/framework/settings/theme-options.php:275
+#: ../wt_pandora/framework/settings/theme-options.php:311
+#: ../wt_pandora/framework/settings/theme-options.php:347
+msgid "Item Title"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:205
+#: ../wt_pandora/framework/settings/theme-options.php:241
+#: ../wt_pandora/framework/settings/theme-options.php:277
+#: ../wt_pandora/framework/settings/theme-options.php:313
+#: ../wt_pandora/framework/settings/theme-options.php:349
+msgid "Enter the item title"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:209
+#: ../wt_pandora/framework/settings/theme-options.php:245
+#: ../wt_pandora/framework/settings/theme-options.php:281
+#: ../wt_pandora/framework/settings/theme-options.php:317
+#: ../wt_pandora/framework/settings/theme-options.php:353
+msgid "Item Link"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:211
+#: ../wt_pandora/framework/settings/theme-options.php:247
+#: ../wt_pandora/framework/settings/theme-options.php:283
+#: ../wt_pandora/framework/settings/theme-options.php:319
+#: ../wt_pandora/framework/settings/theme-options.php:355
+msgid ""
+"Enter full URL starting with <strong>http:// </strong>. Leave blank to "
+"disable the item."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:215
+#: ../wt_pandora/framework/settings/theme-options.php:251
+#: ../wt_pandora/framework/settings/theme-options.php:287
+#: ../wt_pandora/framework/settings/theme-options.php:323
+#: ../wt_pandora/framework/settings/theme-options.php:359
+msgid "Item Background color"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:218
+#: ../wt_pandora/framework/settings/theme-options.php:254
+#: ../wt_pandora/framework/settings/theme-options.php:290
+#: ../wt_pandora/framework/settings/theme-options.php:326
+#: ../wt_pandora/framework/settings/theme-options.php:362
+msgid "Select background color for the item."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:222
+#: ../wt_pandora/framework/settings/theme-options.php:258
+#: ../wt_pandora/framework/settings/theme-options.php:294
+#: ../wt_pandora/framework/settings/theme-options.php:330
+#: ../wt_pandora/framework/settings/theme-options.php:366
+msgid "Item Icon"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:224
+#: ../wt_pandora/framework/settings/theme-options.php:260
+#: ../wt_pandora/framework/settings/theme-options.php:296
+#: ../wt_pandora/framework/settings/theme-options.php:332
+#: ../wt_pandora/framework/settings/theme-options.php:368
+msgid ""
+"Enter the icon name only. Check theme documentation for list of icon names."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:228
+#: ../wt_pandora/framework/settings/theme-options.php:264
+#: ../wt_pandora/framework/settings/theme-options.php:300
+#: ../wt_pandora/framework/settings/theme-options.php:336
+#: ../wt_pandora/framework/settings/theme-options.php:372
+msgid "Item Image"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:232
+#: ../wt_pandora/framework/settings/theme-options.php:268
+#: ../wt_pandora/framework/settings/theme-options.php:304
+#: ../wt_pandora/framework/settings/theme-options.php:340
+#: ../wt_pandora/framework/settings/theme-options.php:376
+msgid "Upload 110x110px image. Leave blank to use background color or image."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:236
+msgid "Menu item 2"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:272
+msgid "Menu item 3"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:308
+msgid "Menu item 4"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:344
+msgid "Menu item 5"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:384
+msgid "Posts and Archive Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:389
+msgid "Settings for single posts, pages, images and archives"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:390
+msgid "You can adjust single posts, pages images and archive settings."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:393
+msgid "Post Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:396
+msgid "Hide Post Nav"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:398
+#: ../wt_pandora/framework/settings/theme-options.php:404
+msgid "Check if you want to disable post navigation links."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:402
+msgid "Hide Post Image"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:408
+msgid "Hide Post Meta"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:410
+msgid "Check if you want to disable post meta data on pages."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:416
+msgid "Check if you want to disable author information below single posts."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:420
+#: ../wt_pandora/framework/settings/theme-options.php:440
+msgid "Hide Social Media"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:422
+msgid "Check if you want to disable social media below single posts."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:425
+msgid "Page Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:428
+msgid "Hide Page Meta"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:430
+msgid "Check if you want to disable page meta data on pages."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:436
+msgid "Check if you want to hide author information on pages."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:442
+msgid "Check if you want to disable social media on pages."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:445
+msgid "Images Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:448
+msgid "Hide Post Meta on Images"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:450
+msgid "Check if you want to disable post meta data on image pages."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:454
+msgid "Hide Comments on Images"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:456
+msgid "Check if you want to disable comments on the image pages."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:460
+msgid "Hide Social Media on Images"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:462
+msgid "Check if you want to disable social media on Images."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:465
+msgid "Post Ads Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:468
+msgid "Header Ad"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:470
+msgid "Enter the code for post top ad."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:474
+msgid "Footer Ad"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:476
+msgid "Enter the code for post bottom ad."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:487
+msgid "Unlimited Sidebars"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:488
+#: ../wt_pandora/framework/settings/theme-options.php:522
+msgid ""
+"You can create as many sidebars you wish. Once you have created the sidebar, "
+"you can select the widgets for it from the widgets section on your WordPress "
+"dashboard."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:492
+msgid "Create Sidebar"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:495
+msgid "Sidebar Name"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:520
+msgid "Custom Sidebars"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:525
+msgid "Select Sidebars"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:528
+msgid "Homepage Sidebar"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:540
+msgid "Select sidebar for the homepage."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:544
+msgid "Single Post Sidebar"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:556
+msgid "Select sidebar for the single post."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:560
+msgid "Single Page Sidebar"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:572
+msgid "Select sidebar for the single page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:576
+msgid "Category Sidebar"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:588
+msgid "Select sidebar for the category archives page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:592
+msgid "Archive Sidebar"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:604
+msgid "Select sidebar for the archives page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:616
+msgid "Custom Styles"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:617
+msgid ""
+"You can select the background and the theme color schemes. The background "
+"you select here will be used on all theme. You can specify a post or page "
+"background from the post settings."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:620
+msgid "Use Background Color"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:622
+msgid "Background Color"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:625
+msgid "Select background color."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:628
+msgid "Use Background Pattern"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:640
+msgid "Upload Custom Backgroud"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:662
+msgid "Theme Color Schemes"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:664
+msgid "Theme main color"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:667
+msgid "Select primary color for the theme."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:671
+msgid "Second color"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:674
+msgid "Select secondary color for the theme."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:678
+msgid "Custom CSS Styles"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:680
+msgid "CSS Code"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:682
+msgid "You can enter custom CSS code. It will overwrite the default style."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:694
+msgid "Adjust your font styles"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:695
+msgid ""
+"You can use your custom fonts styles. If you want to use the default theme "
+"fonts, leave the fields empty. <br />\n"
+"\t\t\t\t\t\t\t\t\t\t\tFrom left to right: Font size, Font style, Line "
+"height, Margin Bottom"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:699
+msgid "Headings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:702
+msgid "Heading 1"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:736
+msgid "Heading 2"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:769
+msgid "Heading 3"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:802
+msgid "Heading 4"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:836
+msgid "Heading 5"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:870
+msgid "Heading 6"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:903
+msgid "Text Font Styles"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:906
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:178
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:70
+msgid "Text"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:930
+msgid ""
+"Select font style for text. From left to right: Font Size, Font Style, Line "
+"Height"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:934
+msgid "Font"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:937
+msgid "Headings Font"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:945
+msgid "Select font for Headings."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:949
+msgid "Text Font"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:957
+msgid "Select font for Text."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:960
+msgid "Color Schemes"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:963
+msgid "Text Color"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:966
+msgid "Select the text color."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:970
+msgid "Links Color"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:973
+msgid "Select the links color."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:977
+msgid "Links Hover Color"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:980
+msgid "Select links hover color."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:988
+msgid "SEO Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:993
+#: ../wt_pandora/framework/settings/theme-options.php:1053
+msgid "Site Verification"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:994
+msgid ""
+"You can improve your search rankings by verifying your website with Bing and "
+"Google.\n"
+"\t\t\t\t\t\t\t\t\t\t\tPlease read the theme documentation for step by step "
+"instructions on how to find Google and Bing site verification IDs."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:998
+msgid "Default Meta Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1001
+msgid "Homepage title"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1003
+msgid "Enter the Homepage title."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1007
+msgid "Homepage Description"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1009
+msgid "Add homepage description."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1013
+msgid "Meta Keywords"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1015
+msgid "Add default meta keywords. Separate keywords with commas."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1019
+msgid "Post Meta"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1021
+msgid "Check to enable the meta description on single posts."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1024
+msgid "Exclude pages from crawl"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1027
+msgid "Category Pages"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1029
+msgid ""
+"Check to exclude category pages from being crawled. Useful to avoid "
+"duplicate content."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1033
+msgid "Tag Pages"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1035
+msgid ""
+"Check to exclude tag pages from being crawled. Useful to avoid duplicate "
+"content."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1039
+#: ../wt_pandora/includes/feat-tabs.php:66
+msgid "Archives"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1041
+msgid ""
+"Check to exclude category archives from being crawled. Useful to avoid "
+"duplicate content."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1044
+msgid "Open Graph Meta Elements"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1047
+msgid "Enable Open Graph Meta"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1049
+msgid ""
+"Check to enable Open Graph Meta Elements to the header of theme. Useful for "
+"sharing content on social sharing sites."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1056
+msgid "Google Site Verification"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1058
+msgid "Enter your ID only."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1062
+msgid "Bing Site Verification"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1064
+msgid ""
+"Enter the ID only. It will be verified by <strong>Yahoo</strong> as well."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1072
+msgid "Header and Footer Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1076
+msgid "Using Site Analytics Codes"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1077
+msgid "You can use site analytics codes in the header of footer."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1083
+msgid "Header Code."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1085
+msgid ""
+"You can add any code eg. Google Analytics. It will appear in <strong>head</"
+"strong> section."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1088
+msgid "Footer Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1090
+msgid "Footer Text."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1092
+msgid "Enter the footer left side text."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1096
+msgid "Footer Code"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1098
+msgid ""
+"You can add any code eg. Google Analytics. It will appear in <strong>footer</"
+"strong> section."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1106
+msgid "Contact Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1109
+msgid "reCAPTCHA"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1110
+msgid ""
+"reCAPTCHA helps prevent automated abuse of your site (such as email spam) by "
+"using a CAPTCHA to ensure that only humans send the message through the "
+"contact form."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1113
+msgid "Contact Map"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1116
+msgid "Show map"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1118
+msgid "Check to show the map on contact page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1121
+msgid "Contact Form Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1124
+msgid "Contact Address"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1126
+msgid "Enter the address for the map on contact page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1130
+msgid "Email Address"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1132
+msgid ""
+"Enter the email address where you wish to receive the contact form messages."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1136
+msgid "Email Subject"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1138
+msgid "Enter the subject of the email."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1141
+msgid "reCAPTCHA Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1143
+msgid "Public Key"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1145
+msgid ""
+"Enter the reCaptcha public key for the contact form reCaptcha. See "
+"documentation for more information"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1149
+msgid "Private Key"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1151
+msgid ""
+"Enter the reCaptcha private key for the contact form reCaptcha. See "
+"documentation for more information"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1154
+msgid "Contact Information"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1156
+msgid "Phone number"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1158
+msgid "Enter the phone number do display on contact page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1164
+msgid "Enter your email. Please note this will be visible on the contact page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1167
+msgid "Social Links"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1170
+msgid "Show Social Links"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1172
+msgid "Check to enable social media links on contact page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1176
+msgid "Google+ URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1178
+msgid "Enter full URL of your Google+ Profile."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1182
+msgid "Facebook URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1184
+msgid "Enter full URL of your Facebook Profile."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1188
+msgid "Twitter URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1190
+msgid "Enter full URL of your Twitter Profile."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1194
+msgid "Linkedin URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1196
+msgid "Enter full URL of your Linkedin profile."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1200
+msgid "Dribbble URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1202
+msgid "Enter full URL of your Dribbble profile."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1206
+msgid "Pinterest URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1208
+msgid "Enter full URL of your Pinterest profile."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1212
+msgid "Instagram URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1214
+msgid "Enter full URL of your Instagram profile."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1218
+msgid "Youtube URL"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1220
+msgid "Enter full URL of your Youtube profile."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1223
+msgid "About us section"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1226
+msgid "Contact Page Logo"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1229
+msgid "Upload logo for contact page. Leave blank to use default logo"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1233
+msgid "Who we are."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1235
+msgid "Enter the text for the contact page."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1243
+msgid "Reset Theme Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1246
+msgid "Please Note"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1247
+msgid ""
+"You will lose all your theme settings and custom sidebar. The theme will "
+"restore default settings."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1251
+msgid "If you want to reset the theme settings."
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1252
+msgid "Reset Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/settings/theme-options.php:1264
+msgid "Save Settings"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:33
+msgid "Displays the logo, information and the social links."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:36
+msgid "Well Themes: About us"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:112
+msgid "Dribbble"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:124
+msgid "Instagram"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:130
+msgid "Youtube"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:136
+msgid "RSS"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:175
+msgid "Full logo image path"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:183
+msgid "Twitter URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:188
+msgid "Facebook URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:193
+msgid "Google Plus URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:198
+msgid "Pinterest URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:203
+msgid "Dribbble URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:208
+msgid "Linkedin URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:213
+msgid "Instagram URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:218
+msgid "Youtube URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_aboutus.php:223
+msgid "RSS URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:34
+msgid "This widget allows to place upto 4 ads block in sidebar."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:37
+msgid "Well Themes: 150x150px Ads Block"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:156
+msgid "Ad 1 image url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:162
+msgid "Ad 1 link url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:168
+msgid "Ad 2 image url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:174
+msgid "Ad 2 link url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:180
+msgid "Ad 3 image url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:186
+msgid "Ad 3 link url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:192
+msgid "Ad 4 image url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsblock.php:198
+msgid "Ad 4 link url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsingle.php:96
+msgid "Link Url:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_adsingle.php:101
+msgid "Image URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_carousel.php:161
+msgid "Filter by Category:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_carousel.php:172
+msgid "Number of posts:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:33
+msgid "Displays contact form in the sidebar or footer."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:36
+msgid "Well Themes: Contact Form"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:165
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:218
+msgid "Thank you. Your message was sent successfully."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:207
+msgid "You entered an invalid"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_contact_form.php:283
+msgid "Enter the words above:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_facebook.php:127
+msgid "Facebook Page URL:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_facebook.php:132
+msgid "Width:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_facebook.php:137
+msgid "Color Scheme:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_facebook.php:146
+msgid "Show faces"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_facebook.php:151
+msgid "Show stream"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_facebook.php:156
+msgid "Show facebook header"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_flickr.php:104
+msgid "Flickr User ID:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_flickr.php:106
+msgid "Number of images:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_google.php:34
+msgid "Displays Google+ profile badge."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_google.php:37
+msgid "Well Themes: Google+ Badge"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_most_read.php:33
+msgid "Displays the most read posts from previous week"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_most_read.php:36
+msgid "Well Themes: Most Read Posts"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_most_read.php:134
+#: ../wt_pandora/framework/widgets/widget_popular_posts.php:134
+#: ../wt_pandora/framework/widgets/widget_popular_posts_text.php:120
+#: ../wt_pandora/framework/widgets/widget_recent_comments.php:115
+#: ../wt_pandora/framework/widgets/widget_recent_posts.php:134
+#: ../wt_pandora/framework/widgets/widget_top_reviews.php:135
+#: ../wt_pandora/framework/widgets/widget_top_reviews_text.php:132
+msgid "How many entries to display?"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_most_read.php:137
+#: ../wt_pandora/framework/widgets/widget_popular_categories.php:120
+#: ../wt_pandora/framework/widgets/widget_popular_posts.php:137
+#: ../wt_pandora/framework/widgets/widget_popular_posts_text.php:123
+#: ../wt_pandora/framework/widgets/widget_recent_posts.php:137
+#: ../wt_pandora/framework/widgets/widget_top_reviews.php:138
+#: ../wt_pandora/framework/widgets/widget_top_reviews_text.php:135
+msgid ""
+"Display specific categories? Enter category ids separated with a comma (e.g. "
+"- 1, 3, 8)"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_pinterest.php:35
+msgid "Displays the recent pins from pinterest."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_pinterest.php:38
+msgid "Well Themes: Pinterest"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_pinterest.php:153
+msgid "Widget Title:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_pinterest.php:157
+msgid "Pinterest Username:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_pinterest.php:161
+msgid "Specific Board (optional):"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_pinterest.php:165
+msgid "Number of Pins To Show:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_pinterest.php:177
+msgid "Show \"Follow Me\" Button?:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_popular_categories.php:33
+msgid "Displays the most popular categories."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_popular_categories.php:36
+msgid "Well Themes: Popular Categories"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_popular_categories.php:117
+msgid "How many categories to display?"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_popular_posts.php:33
+msgid "Displays the most popular posts in the sidebar."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_popular_posts.php:36
+msgid "Well Themes: Popular Posts"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_popular_posts_text.php:33
+msgid "Displays the most popular posts with comments."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_popular_posts_text.php:36
+msgid "Well Themes: Popular Posts Text"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_recent_comments.php:33
+msgid "Displays the recent comments with thumbnails."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_recent_comments.php:36
+msgid "Well Themes: Recent Comments"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_recent_posts.php:33
+msgid "Displays the most recent posts in the sidebar."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_recent_posts.php:36
+msgid "Well Themes: Recent Posts"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribe.php:40
+msgid "Text:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribe.php:46
+msgid "Feedburner ID:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:42
+msgid "Displays Facebook and Twitter subscribers number."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:45
+msgid "Well Themes: Subscribers Counter"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:151
+msgid "Twitter Followers:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:162
+msgid "Facebook Followers:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:173
+msgid "Subscribe RSS Feeds"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:220
+msgid "Facebook Page ID:"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:225
+msgid "Full RSS URL"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:231
+msgid "Twitter Name"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:236
+msgid "Consumer key"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:241
+msgid "Consumer secret"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:246
+msgid "Access token"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_subscribers_count.php:251
+msgid "Access token secret"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_top_reviews.php:33
+msgid "Displays the top reviews in the sidebar."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_top_reviews.php:36
+msgid "Well Themes: Top Reviews"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_top_reviews_text.php:33
+msgid "Displays the most top reviews with numbers."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_top_reviews_text.php:36
+msgid "Well Themes: Top Reviews Text"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_video.php:33
+msgid "Embed a video in the sidebar."
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_video.php:36
+msgid "Well Themes: Featured Video"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_video.php:58
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: ../wt_pandora/framework/widgets/widget_video.php:81
+msgid "Video Embed Code:"
+msgstr ""
+
+#: ../wt_pandora/includes/feat-post.php:62
+msgid "Featured"
+msgstr ""
+
+#: ../wt_pandora/includes/feat-post.php:110
+msgid "In:"
+msgstr ""
+
+#: ../wt_pandora/includes/feat-post.php:114
+msgid "Leave comment"
+msgstr ""
+
+#: ../wt_pandora/includes/feat-post.php:114
+msgid "1"
+msgstr ""
+
+#: ../wt_pandora/includes/feat-post.php:114
+msgid "%"
+msgstr ""
+
+#: ../wt_pandora/includes/feat-post.php:118
+msgid "Tags:"
+msgstr ""
+
+#: ../wt_pandora/includes/feat-tabs.php:55
+msgid "Hot Posts"
+msgstr "Articoli caldi"
+
+#: ../wt_pandora/includes/feat-tabs.php:58
+msgid "Top Weekly"
+msgstr "I più letti della settimana"
+
+#: ../wt_pandora/includes/feat-tabs.php:61
+msgid "Most Commented"
+msgstr "I più commentati"
+
+#: ../wt_pandora/includes/related-posts.php:38
+msgid "Related"
+msgstr ""
+
+#: ../wt_pandora/includes/related-posts.php:39
+msgid "Posts"
+msgstr ""
