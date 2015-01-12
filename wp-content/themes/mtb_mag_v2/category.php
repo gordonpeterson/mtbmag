@@ -11,7 +11,6 @@
 
 get_header(); ?>
 
-<h1 class="gordon">------------this is the category.php file------------</h1>
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
@@ -34,15 +33,13 @@ get_header(); ?>
 					while ( have_posts() ) : the_post();
 
 
-					echo "<h2 class='gordon'>post</h2>";
-					var_dump( the_post() );
-
 					/*
 					 * Include the post format-specific template for the content. If you want to
 					 * use this in a child theme, then include a file called called content-___.php
 					 * (where ___ is the post format) and that will be used instead.
 					 */
 					// get_template_part( 'content', get_post_format() );
+					get_template_part( 'content', 'small' ); //....this gets the content-small.php template part
 
 					endwhile;
 					// Previous/next page navigation.

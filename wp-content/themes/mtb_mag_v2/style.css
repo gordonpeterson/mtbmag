@@ -9,20 +9,33 @@ Template: twentyfourteen
 */
 
 
-@import url('../twentyfourteen/style.css');
+@import url('old.css');
 
 
 
+@media all {
+	article.small{
+		/*border: 2px solid green;*/
+	}
 
+	article.small header.entry-header{
+		background: #000;
+		background-color: rgba(0,0,0,.5);
+		color: #FFF;
+	}
+	article.small header.entry-header a{
+		color: #FFF;
+	}
+}
 
 @media all and (min-width: 1008px) {
 
 	html{
-	    /*border: 3px dashed orange;*/
+		/*border: 10px dashed orange;*/
 	}
 
 	body.page{
-	    background-image: none;
+	    /*background-image: none;*/
 	}
 
 	.site {
@@ -40,31 +53,154 @@ Template: twentyfourteen
 	.site-header,
 	.header-main{
 		max-width: 2400px;
-		border: 1px solid red;
 	}
 
+	.site-header{
+		position: fixed;
+	}
 
+	.site-main{
+		padding-top: 70px;
+	}
+
+	.site-content,
 	#content{
-		max-width: 1200px;
+		max-width: 975px;
 		margin: 0 auto;
-		/*border: 2px dashed brown;*/
+		/*border: 2px dashed orange;*/
+	}
+
+	.site-content .entry-header{
+		background: #000;
+		background: rgba(0,0,0,.5);
+		color: white;
+	}
+	.site-content .entry-header a{
+		color: white;
+	}
+	.site-content .entry-meta{
+		background-color: transparent;
 	}
 
 
 	.site-navigation,
 	.primary-navigation{
-/*		float: left;
-		margin: 0 1px 0 15px
-*/	}
+		float: left;
+		margin: 0 1px 0 15px;
+		/*border: 1px solid orange;*/
+	}
+
+	article.small{
+		display: inline-block;
+		width: 300px;
+		height: 250px;
+		overflow: hidden;
+		position: relative;
+		margin: 10px 1%;
+		background: lightgrey;
+
+	}
+
+	article.small .post-info{
+		position: absolute;
+		/*border: 1px dashed orange;*/
+		/*top: 50%;*/
+		top: 250px;
+	}
+	
 
 }
 
+
+@media screen and (max-width: 1007px) and (min-width: 461px) {
+	html{
+		/*border: 10px dashed blue;*/
+	}
+
+	article.small{
+		display: block;
+		border: 1px double blue;
+		width: 100%;
+		position: relative;
+		margin: 10px auto;
+		padding: 20px;
+	}
+
+	article.small img{
+		/*border: 2px solid blue;*/
+		width: 45%;
+		float: left;
+		display: inline-block;
+	}
+
+	article.small .post-info{
+		/*position: absolute;*/
+		/*top: 50%;*/
+		display: inline-block;
+		/*border: 2px dashed blue;*/
+		width: 45%;
+		/*left: 0;*/
+		margin: 0 !important;
+		padding: 0;
+		position: relative;
+	}
+
+	article.small header.entry-header{
+		/*border: 1px solid blue;*/
+		margin: 0 !important;
+		background: #fff;
+		background-color: rgba(255,255,255,.5);
+		color: #000;
+	}
+	article.small header.entry-header a{
+		color: #000;
+	}
+
+}
+
+
+
+@media screen and (max-width: 460px) {
+
+	html{
+		/*border: 10px dashed yellow;*/
+	}
+
+	article.small img{
+		/*border: 2px solid yellow;*/
+		width: 100%;
+		float: left;
+		display: block;
+	}
+
+	article.small .post-info{
+		display: block;
+		/*border: 2px dashed yellow;*/
+		width: 100%;
+		left: 0;
+		margin: 0 !important;
+		padding: 0;
+		position: relative;
+		/*float: ;*/
+	}
+	article.small header.entry-header{
+		/*border: 1px solid blue;*/
+		margin: 0 !important;
+		background: #fff;
+		background-color: rgba(255,255,255,.5);
+		color: #000;
+	}
+	article.small header.entry-header a{
+		color: #000;
+	}
+
+}
 .gordon{
 	background: pink;
 }
 
 .test{
-	border: 5px dashed orange;
+	/*border: 5px dashed orange;*/
 }
 
 
@@ -85,5 +221,5 @@ Template: twentyfourteen
 }
 
 .post-excerpt.last{
-	border: 1px dashed green;
+	/*border: 1px dashed green;*/
 }

@@ -25,10 +25,6 @@
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 	
-	<hr>
-	<h1>start: the wp footer</h1>
 	<?php wp_footer(); ?>
-	<h2>end: the wp footer</h2>
-	<hr>
 </body>
 </html>
