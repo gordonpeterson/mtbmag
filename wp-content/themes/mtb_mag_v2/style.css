@@ -12,22 +12,48 @@ Template: twentyfourteen
 @import url('old.css');
 
 
+.header-main{
+	position: relative;
+	padding-left: 3px;
+}
 
+.header-main .site-title{
+	text-indent: -9999px;
+	word-wrap: nowrap;
+	top: -1px;
+	margin-right: 25px;
+	background: transparent url("/wp-content/themes/mtb_mag_v2/logo.png") 0 0 no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	vertical-align: top;
+	width: 48px;
+	height: 48px;
+
+}
+
+/******************************************* all ****************************************/
 @media all {
 	div.ad{
 		width: 300px;
 		height: 250px;
-		background: pink;
+		margin: 10px;
 		display: inline-block;
 		vertical-align: top;
 	}
-	div.ad2{
+
+	/*727x90*/
+	div.ad1{ 
 		background-color: orange;
-		width: 100%;
+		width: 97%;
 	}
+	/*300x250*/
+	div.ad2{
+		background-color: pink;
+	}
+	/*727x400*/
 	div.ad3{
 		background-color: green;
-		width: 100%;
+		width: 97%;
 		height: 400px;
 	}
 	
@@ -37,16 +63,58 @@ Template: twentyfourteen
 		/*border: 2px solid green;*/
 	}
 
-	article.small header.entry-header{
+
+	article.small .post-info{
 		background: #000;
 		background-color: rgba(0,0,0,.5);
 		color: #FFF;
+		padding-top: 20px;
+		/*border: 1px solid lime;*/
+
+		top: auto;
+		bottom: -250px;
+	}
+
+	article.small header.entry-header{
+		background: transparent;
+	}
+	article.small .entry-title{
+		font-size: 24px;
 	}
 	article.small header.entry-header a{
 		color: #FFF;
 	}
+	article.small img.attachment-post-thumbnail{
+		width: auto;
+		max-width: none;
+		height: 250px;
+	}
+
+
+	article.small .entry-content{
+		background-color: transparent;
+		/*border: 1px solid lime;*/
+		display: none;
+	}
+	article.small .entry-meta{
+		background-color: transparent;
+	}
+	article.small .comments-link{
+		display: block;
+		margin-top: 5px;
+	}
+
+	article.small footer.entry-meta{
+		background-color: transparent;
+		/*border: 1px solid lime;*/
+		display: none;
+	}
+
 }
 
+
+
+/******************************************* big ****************************************/
 @media all and (min-width: 1008px) {
 
 	html{
@@ -63,9 +131,11 @@ Template: twentyfourteen
 		position: relative;
 	}
 
-	.site:before{
+	.site:before{ /*some sidebar background*/
+		display: none;
 		/*border: 4px solid green;*/
-		background: transparent;
+		/*background: transparent;*/
+
 	}
 
 
@@ -89,17 +159,7 @@ Template: twentyfourteen
 		/*border: 2px dashed orange;*/
 	}
 
-	.site-content .entry-header{
-		background: #000;
-		background: rgba(0,0,0,.5);
-		color: white;
-	}
-	.site-content .entry-header a{
-		color: white;
-	}
-	.site-content .entry-meta{
-		background-color: transparent;
-	}
+
 
 
 	.site-navigation,
@@ -122,27 +182,76 @@ Template: twentyfourteen
 
 	article.small .post-info{
 		position: absolute;
-		/*border: 1px dashed orange;*/
-		/*top: 50%;*/
-		top: 250px;
+		top: auto;
+		bottom: -250px;
+		width: 100%;
+	}
+
+	article.small:hover .post-info{
+		top: auto;
+		bottom: 0;
+		-webkit-transition: bottom .2s ease-out;
+		-moz-transition: bottom .2s ease-out;
+		-ms-transition: bottom .2s ease-out;
+		-o-transition: bottom .2s ease-out;
+		transition: bottom .2s ease-out;
+	}
+
+	article.small .entry-header{
+	}
+	article.small .entry-header a{
+	}
+	article.small .entry-meta{
 	}
 	
 
 }
 
 
-@media screen and (max-width: 1007px) and (min-width: 461px) {
-	html{
-		/*border: 10px dashed blue;*/
+
+/******************************************* medium/small ****************************************/
+@media screen and (max-width: 1007px){
+
+	div.ad{
+		display: block;
+		width: 100%;
+		margin: 0;
 	}
 
 	article.small{
 		display: block;
-		border: 1px double blue;
-		width: 100%;
 		position: relative;
 		margin: 10px auto;
 		padding: 20px;
+		margin: 0;
+	}
+
+	article.small header.entry-header{
+		/*border: 1px solid blue;*/
+		margin: 0 !important;
+		background: #fff;
+		background-color: rgba(255,255,255,.5);
+		color: #000;
+	}
+	article.small header.entry-header a{
+		color: #000;
+	}
+}
+
+
+/******************************************* medium ****************************************/
+@media screen and (max-width: 1007px) and (min-width: 461px) {
+	html{
+		/*border: 10px dashed blue;*/
+	}
+	
+	div.ad{
+		border: 2px solid blue;
+	}
+
+	article.small{
+		border: 1px double blue;
+		width: 100%;
 	}
 
 	article.small img{
@@ -166,23 +275,29 @@ Template: twentyfourteen
 
 	article.small header.entry-header{
 		/*border: 1px solid blue;*/
-		margin: 0 !important;
-		background: #fff;
-		background-color: rgba(255,255,255,.5);
-		color: #000;
-	}
-	article.small header.entry-header a{
-		color: #000;
 	}
 
 }
 
 
 
+/******************************************* small ****************************************/
 @media screen and (max-width: 460px) {
 
 	html{
 		/*border: 10px dashed yellow;*/
+	}
+
+	div.ad{
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+
+	article.small{
+		display: block;
+		width: 100%;
+		margin: 0;
 	}
 
 	article.small img{

@@ -33,13 +33,10 @@ get_header(); ?>
 					$count = 0;
 					$increment = 0;
 					$adArray = array(3,4,5,11);
-					// $blah = $adArray[0];
 
-					// var_dump( $adArray );
-					echo "<hr>";
-					// var_dump( $adArray[0] );
-					// echo "$blah";
-					echo "<hr>";
+					$post_banner1 = get_post_meta($post->ID, 'wt_meta_post_banner1', true);	
+					$post_banner2 = get_post_meta($post->ID, 'wt_meta_post_banner2', true);	
+					$post_banner3 = get_post_meta($post->ID, 'wt_meta_post_banner3', true);	
 
 					while ( have_posts() ) : the_post();
 						$count++;
@@ -54,12 +51,39 @@ get_header(); ?>
 
 						if( $count == $currentIndex ){
 
-							if( $currentIndex == 5 ){
-								echo "<div class='ad ad2'>$adArray[$increment]</div>";
-							} elseif ($currentIndex == 11) {
-								echo "<div class='ad ad3'>$adArray[$increment]</div>";
-							} else {
-								echo "<div class='ad'>$adArray[$increment]</div>";
+							if( $currentIndex == 5 ){ //...the 727x90 banner
+								// echo "<div class='ad ad2'>$adArray[$increment]</div>";
+								if (empty($post_banner1)) { ?>
+									<div class="ad ad1">
+										<div class="ad-inner-wrap">
+											<h1>ad1</h1>
+											<?php echo $post_banner1; ?>
+										</div>			
+									</div>
+										
+								<?php }
+							} elseif ($currentIndex == 11) { //...the 727x400 banner
+								// echo "<div class='ad ad3'>$adArray[$increment]</div>";
+								if (empty($post_banner3)) { ?>
+									<div class="ad ad3">
+											<h1>ad3</h1>
+										<div class="ad-inner-wrap">
+											<?php echo $post_banner3; ?>
+										</div>			
+									</div>
+										
+								<?php }
+							} else { //...the 300x250 banners
+								// echo "<div class='ad'>$adArray[$increment]</div>";
+								if (empty($post_banner2)) { ?>
+									<div class="ad ad2">
+											<h1>ad2</h1>
+										<div class="ad-inner-wrap">
+											<?php echo $post_banner2; ?>
+										</div>			
+									</div>
+										
+								<?php }
 							}
 
 
