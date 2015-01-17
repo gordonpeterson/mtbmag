@@ -32,7 +32,7 @@ get_header(); ?>
 					// Start the Loop.
 					$count = 0;
 					$increment = 0;
-					$adArray = array(3,4,5,11);
+					$adArray = array(3,4,5,11,15);
 
 					$post_banner1 = get_post_meta($post->ID, 'wt_meta_post_banner1', true);	
 					$post_banner2 = get_post_meta($post->ID, 'wt_meta_post_banner2', true);	
@@ -56,7 +56,7 @@ get_header(); ?>
 								if (empty($post_banner1)) { ?>
 									<div class="ad ad1">
 										<div class="ad-inner-wrap">
-											<h1>ad1</h1>
+											<h1>ad1: 727x90</h1>
 											<?php echo $post_banner1; ?>
 										</div>			
 									</div>
@@ -66,7 +66,7 @@ get_header(); ?>
 								// echo "<div class='ad ad3'>$adArray[$increment]</div>";
 								if (empty($post_banner3)) { ?>
 									<div class="ad ad3">
-											<h1>ad3</h1>
+											<h1>ad3: 727x400</h1>
 										<div class="ad-inner-wrap">
 											<?php echo $post_banner3; ?>
 										</div>			
@@ -77,7 +77,7 @@ get_header(); ?>
 								// echo "<div class='ad'>$adArray[$increment]</div>";
 								if (empty($post_banner2)) { ?>
 									<div class="ad ad2">
-											<h1>ad2</h1>
+											<h1>ad2: 300x250</h1>
 										<div class="ad-inner-wrap">
 											<?php echo $post_banner2; ?>
 										</div>			
