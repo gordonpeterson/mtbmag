@@ -7,6 +7,7 @@
  * @package WordPress
  * @subpackage Twenty_Fourteen
  * @since Twenty Fourteen 1.0
+ * Template Name: MTB Category Page
  */
 
 get_header(); ?>
@@ -112,7 +113,6 @@ get_header(); ?>
 			?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
-<!-- <h1>------------this is the category.php file------------</h1> -->
 
 <?php
 get_sidebar( 'content' );
