@@ -1,55 +1,26 @@
-/*
+$mainGrey: #4d4d4d;
+$gutter: 25px;
+$gutterMargin: floor($gutter/2);
 
-Theme Name: mtb-mag.com v2.0
-Description: the sweet new site re-design for mtb-mag.com
-Author: gordon peterson
-Version: 2.0.2
-Template: twentyfourteen
-
-*/
-
-
-
-
-
-@import url('old.css');
-
-
-.header-main{
-	position: relative;
-	padding-left: 3px;
-}
-
-.header-main .site-title{
-	text-indent: -9999px;
-	word-wrap: nowrap;
-	top: -1px;
-	margin-right: 25px;
-	background: transparent url("/wp-content/themes/mtb_mag_v2/logo.png") 0 0 no-repeat;
-	background-size: 100%;
-	display: inline-block;
-	vertical-align: top;
-	width: 48px;
-	height: 48px;
-}
-
-.primary-navigation ul ul a {
-	padding: 18px 12px;
-	white-space: normal;
-	width: 176px;
-	padding: 7px 12px;
-}
-
-	body.single-post article {
-    /*border: 2px dashed orange;*/
-    width: 100%;
-    max-width:none;
-	}
 
 
 
 /******************************************* all ****************************************/
 @media all {
+	@import "site-wrapper";
+}
+
+
+
+
+body.single-post article {
+  width: 100%;
+  max-width:none;
+}
+
+
+
+/******************************************* all ****************************************/
 	body.single-post #content.site-content {
     /*border: 2px dashed grey;*/
     width: 100%;
@@ -59,7 +30,6 @@ Template: twentyfourteen
 	}
 
 	.search-toggle {
-		
 		background-color: black;
 	}
 
@@ -88,7 +58,7 @@ Template: twentyfourteen
 		margin: 10px;
 		display: inline-block;
 		vertical-align: top;
-		background-color: lightgrey;
+		background-color: $mainGrey;
 	}
 
 	/*727x90*/
@@ -196,7 +166,7 @@ Template: twentyfourteen
 
 
 
-}
+// }
 
 
 
@@ -235,7 +205,8 @@ Template: twentyfourteen
 	}
 
 	.site-main{
-		padding-top: 70px;
+		padding-top: 0;
+		margin-top: 49px;	
 	}
 
 	.site-content,
@@ -255,6 +226,36 @@ Template: twentyfourteen
 		/*border: 1px solid orange;*/
 	}
 
+
+	.content-area{
+		padding-top: 0;
+		// border: 2px dashed red;
+	}
+
+
+	#secondary{
+		// background: pink;
+		display: none;
+	}
+
+
+	.archive-header{
+		.full-width &{
+			margin-top: 10px;
+			background: $mainGrey;
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+	.page-title,
+	.archive-title{
+		font-size: 32px;
+		text-align: center;
+	}
+
+
+
 	article.small{
 		display: inline-block;
 		width: 300px;
@@ -262,7 +263,7 @@ Template: twentyfourteen
 		overflow: hidden;
 		position: relative;
 		margin: 10px 1%;
-		background: lightgrey;
+		background: $mainGrey;
 
 	}
 
@@ -418,7 +419,7 @@ Template: twentyfourteen
 		
 		
 		padding-bottom: 90px;
-}
+	}
 	article.small header.entry-header{
 		/*border: 1px solid blue;*/
 		

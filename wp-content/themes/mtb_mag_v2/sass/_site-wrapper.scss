@@ -1,0 +1,29 @@
+html{
+	border: 10px dashed purple;
+}
+
+.header-main{
+	position: relative;
+	padding-left: 3px;
+	background: $mainGrey;
+}
+
+.header-main .site-title{
+	text-indent: -9999px;
+	word-wrap: nowrap;
+	top: -1px;
+	margin-right: 25px;
+	background: transparent url("/wp-content/themes/mtb_mag_v2/logo.png") 0 0 no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	vertical-align: top;
+	width: 48px;
+	height: 48px;
+}
+
+.primary-navigation ul ul a {
+	padding: 18px 12px;
+	white-space: normal;
+	width: 176px;
+	padding: 7px 12px;
+}
