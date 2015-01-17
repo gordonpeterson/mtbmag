@@ -1,0 +1,460 @@
+/*
+
+Theme Name: mtb-mag.com v2.0
+Description: the sweet new site re-design for mtb-mag.com
+Author: gordon peterson
+Version: 2.0.2
+Template: twentyfourteen
+
+*/
+
+
+
+
+
+@import url('old.css');
+
+
+.header-main{
+	position: relative;
+	padding-left: 3px;
+}
+
+.header-main .site-title{
+	text-indent: -9999px;
+	word-wrap: nowrap;
+	top: -1px;
+	margin-right: 25px;
+	background: transparent url("/wp-content/themes/mtb_mag_v2/logo.png") 0 0 no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	vertical-align: top;
+	width: 48px;
+	height: 48px;
+}
+
+.primary-navigation ul ul a {
+	padding: 18px 12px;
+	white-space: normal;
+	width: 176px;
+	padding: 7px 12px;
+}
+
+	body.single-post article {
+    /*border: 2px dashed orange;*/
+    width: 100%;
+    max-width:none;
+	}
+
+
+
+/******************************************* all ****************************************/
+@media all {
+	body.single-post #content.site-content {
+    /*border: 2px dashed grey;*/
+    width: 100%;
+    max-width:none;
+    /*max-width: 300px;*/
+    /*width: 300px;*/
+	}
+
+	.search-toggle {
+		
+		background-color: black;
+	}
+
+	.search-toggle:hover,
+	.search-toggle.active{
+		background-color: #333;
+	}
+
+	div.search-box-wrapper{
+		padding-left: 0;
+	}
+
+	div.search-box{
+		background-color: #333;
+	}
+
+	.primary-navigation ul ul,
+	.primary-navigation li:hover > a, 
+	.primary-navigation li.focus > a{
+		background-color: rgb(143, 143, 143);
+	}
+
+	div.ad{
+		width: 300px;
+		height: 250px;
+		margin: 10px;
+		display: inline-block;
+		vertical-align: top;
+		background-color: lightgrey;
+	}
+
+	/*727x90*/
+	div.ad1{ 
+		width: 97%;
+		height: 110px;
+	}
+	/*300x250*/
+	div.ad2{
+	}
+	/*727x400*/
+	div.ad3{
+		width: 97%;
+		height: 420px;
+	}
+
+	.ad h1 {
+		margin: 0;
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: white;
+		background-color: darkgrey;
+		vertical-align: middle;
+		margin: 0 auto;
+		font-size: 16px;
+/* 		text-indent: -9999px; */
+	}
+
+	.ad1 h1{
+		width: 727px;
+		height: 90px;
+		margin-top: 10px;
+	}
+	.ad2 h1{
+		width: 300px;
+		height: 250px;
+	}
+	.ad3 h1{
+		width: 727px;
+		height: 400px;
+		margin-top: 10px;
+	}
+	
+
+	article.small{
+		vertical-align: top;
+		/*border: 2px solid green;*/
+	}
+
+
+	article.small .post-info{
+		background: #000;
+		background-color: rgba(0,0,0,.5);
+		color: #FFF;
+		padding-top: 20px;
+		/*border: 1px solid lime;*/
+
+		top: auto;
+		bottom: -250px;
+	}
+
+	article.small header.entry-header{
+		background: transparent;
+	}
+	article.small .entry-title{
+		font-size: 24px;
+	
+		padding-top: 26px;
+		margin: 0 14px 14px;
+}
+	article.small header.entry-header a{
+		color: #FFF;
+	}
+	article.small img.attachment-post-thumbnail{
+		width: auto;
+		max-width: none;
+		height: 250px;
+	}
+
+
+	article.small .entry-content{
+		background-color: transparent;
+		/*border: 1px solid lime;*/
+		display: none;
+	}
+	article.small .entry-meta{
+		background-color: transparent;
+	}
+	article.small .comments-link{
+		display: block;
+		margin-top: 5px;
+	}
+
+	article.small footer.entry-meta{
+		background-color: transparent;
+		/*border: 1px solid lime;*/
+		display: none;
+	}
+
+
+
+
+
+
+
+
+}
+
+
+
+/******************************************* big ****************************************/
+@media all and (min-width: 1008px) {
+
+	html{
+		/*border: 10px dashed orange;*/
+	}
+
+	body.page{
+	    /*background-image: none;*/
+	}
+
+	.site {
+		background-color: #fff;
+		max-width: 2400px;
+		position: relative;
+	}
+
+	.site:before{ /*some sidebar background*/
+		display: none;
+		/*border: 4px solid green;*/
+		/*background: transparent;*/
+
+	}
+
+
+	.site-header,
+	.header-main{
+		max-width: 2400px;
+	}
+
+	.site-header{
+		position: fixed;
+	}
+
+	.site-main{
+		padding-top: 70px;
+	}
+
+	.site-content,
+	#content{
+		max-width: 975px;
+		margin: 0 auto;
+		/*border: 2px dashed orange;*/
+	}
+
+
+
+
+	.site-navigation,
+	.primary-navigation{
+		float: left;
+		margin: 0 1px 0 15px;
+		/*border: 1px solid orange;*/
+	}
+
+	article.small{
+		display: inline-block;
+		width: 300px;
+		height: 250px;
+		overflow: hidden;
+		position: relative;
+		margin: 10px 1%;
+		background: lightgrey;
+
+	}
+
+	article.small .post-info{
+		position: absolute;
+		top: auto;
+		bottom: -250px;
+		width: 100%;
+	}
+
+	article.small:hover .post-info{
+		top: auto;
+		bottom: 0;
+		-webkit-transition: bottom .2s ease-out;
+		-moz-transition: bottom .2s ease-out;
+		-ms-transition: bottom .2s ease-out;
+		-o-transition: bottom .2s ease-out;
+		transition: bottom .2s ease-out;
+	}
+
+	article.small .entry-header{
+	}
+	article.small .entry-header a{
+	}
+	article.small .entry-meta{
+	}
+	
+
+}
+
+
+
+/******************************************* medium and small ****************************************/
+@media screen and (max-width: 1007px){
+
+	div.ad{
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+
+	article.small{
+		display: block;
+		position: relative;
+		margin: 10px auto;
+		padding: 20px;
+		margin: 0;
+	}
+
+	article.small .post-info{
+		background-color: #fff;
+		/* background-color: rgba(255,255,255,.5); */
+		color: #000;
+	}
+
+	article.small header.entry-header{
+		/*border: 1px solid blue;*/
+		margin: 0 !important;
+		/*background: #fff;*/
+		background-color: transparent;
+		color: #000;
+	}
+	article.small header.entry-header a{
+		color: #000;
+	}
+}
+
+
+/******************************************* medium ****************************************/
+@media screen and (max-width: 1007px) and (min-width: 461px) {
+	html{
+		/*border: 10px dashed blue;*/
+	}
+	
+	div.ad{
+		border: 2px solid blue;
+	}
+
+	article.small{
+		border: 1px double blue;
+		width: 100%;
+	}
+
+	article.small img{
+		border: 2px solid blue;
+		width: 45%;
+		float: left;
+		display: inline-block;
+	}
+
+	article.small .post-info{
+		display: inline-block;
+		width: 45%;
+		margin: 0 !important;
+		padding: 0;
+		position: relative;
+		top: auto;
+		bottom: auto;
+		right: 0;
+		left: auto;
+		/* float: right; */
+		border: 1px solid lime;
+}
+
+	article.small header.entry-header{
+		/*border: 1px solid blue;*/
+	}
+
+}
+
+
+
+/******************************************* small ****************************************/
+@media screen and (max-width: 460px) {
+
+	html{
+		/*border: 10px dashed yellow;*/
+	}
+
+	div.ad{
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+
+	article.small{
+		display: block;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		/* background: lime; */
+	}
+
+
+	article.small img.attachment-post-thumbnail{
+		/*border: 2px solid yellow;*/
+		width: 100%;
+		height: auto;
+		max-height: 300px;
+		float: left;
+		display: block;
+	}
+
+	article.small .post-info{
+		display: block;
+		
+		width: 95%;
+		margin: 10px 10px 20px !important;
+		top: auto;
+		bottom: auto;
+		padding-top: 5px;
+		height: auto;
+		
+		
+		padding-bottom: 90px;
+}
+	article.small header.entry-header{
+		/*border: 1px solid blue;*/
+		
+	}
+	article.small header.entry-header a{
+		color: #000;
+	}
+
+	
+
+}
+.gordon{
+	background: pink;
+}
+
+.test{
+	/*border: 5px dashed orange;*/
+}
+
+
+
+#content.featured-page{
+	width: 100%;
+	position: relative;
+}
+
+
+
+.post-excerpt{
+	border: 1px solid green;
+	width: 32%;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+.post-excerpt.last{
+	/*border: 1px dashed green;*/
+}
