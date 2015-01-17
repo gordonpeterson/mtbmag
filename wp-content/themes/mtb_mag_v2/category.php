@@ -12,7 +12,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+
 
 			<?php if ( have_posts() ) : ?>
 
@@ -28,6 +28,8 @@ get_header(); ?>
 				?>
 			</header><!-- .archive-header -->
 
+			<div id="content" class="site-content" role="main">
+			
 			<?php
 					// Start the Loop.
 					$count = 0;
