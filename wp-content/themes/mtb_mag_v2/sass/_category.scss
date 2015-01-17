@@ -11,14 +11,15 @@ body.category{
 			// border-color: grey;
 
 			&.hentry{ //...horizontal thumb
-				img.attachment-post-thumbnail{
+				img{
 					width: auto;
 					height: 250px;
 					max-width: none;
+
 				}
 			}
 			&.ventry{ //....vertical thumb
-				img.attachment-post-thumbnail{
+				img{
 					height: auto;
 					width: 250px;
 					max-width: none;

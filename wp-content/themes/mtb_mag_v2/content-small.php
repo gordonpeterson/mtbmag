@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('small'); ?>>
 	
 	<?php //twentyfourteen_post_thumbnail(); ?>
-	<?php the_post_thumbnail(); ?>
+	<?php the_post_thumbnail('wt780_450'); ?>
 
 	<div class="post-info">
 		<header class="entry-header">
