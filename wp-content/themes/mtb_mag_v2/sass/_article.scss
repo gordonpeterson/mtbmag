@@ -1,0 +1,31 @@
+
+
+body.single-post {
+
+	border: 2px dashed purple;
+	
+	#content.site-content {
+    // border: 2px dashed grey;
+		width: 100%;
+		max-width:none;
+    // max-width: 300px;
+    // width: 300px;
+	}
+
+	article {
+	  width: 100%;
+	  max-width:none;
+	}
+
+
+	.full-width .site-content {
+		.hentry.has-post-thumbnail:first-child {
+			margin-top: -72px;
+		}
+	}
+	
+
+
+
+
+}

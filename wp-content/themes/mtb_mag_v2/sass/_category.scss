@@ -1,0 +1,142 @@
+body.archive,
+body.category{
+
+	border: 2px dashed orange;
+	
+
+	article.small{
+		vertical-align: top;
+
+		&.has-post-thumbnail{
+			// border-color: grey;
+
+			&.hentry{ //...horizontal thumb
+				img.attachment-post-thumbnail{
+					width: auto;
+					height: 250px;
+					max-width: none;
+				}
+			}
+			&.ventry{ //....vertical thumb
+				img.attachment-post-thumbnail{
+					height: auto;
+					width: 250px;
+					max-width: none;
+				}
+			}
+			&:first-child{
+				margin-top: 0;
+				border: 1px dashed gold;
+			}
+
+			img.attachment-post-thumbnail{
+			}
+
+		}
+
+
+
+		// ________________children of article.small
+
+
+
+		.post-info{
+			background: #000;
+			background-color: rgba(0,0,0,.5);
+			color: #FFF;
+			padding-top: 20px;
+			/*border: 1px solid lime;*/
+
+			top: auto;
+			bottom: -250px;
+		}
+
+		header.entry-header{
+			background: transparent;
+		}
+		.entry-title{
+			font-size: 24px;
+		
+			padding-top: 26px;
+			margin: 0 14px 14px;
+		}
+		header.entry-header a{
+			color: #FFF;
+		}
+
+
+
+		.entry-content{
+			background-color: transparent;
+			/*border: 1px solid lime;*/
+			display: none;
+		}
+		.entry-meta{
+			background-color: transparent;
+		}
+		.comments-link{
+			display: block;
+			margin-top: 5px;
+		}
+
+		footer.entry-meta{
+			background-color: transparent;
+			/*border: 1px solid lime;*/
+			display: none;
+		}
+	}
+
+
+	// -------------------------------ads
+
+	div.ad{
+		width: 300px;
+		height: 250px;
+		margin: 10px;
+		display: inline-block;
+		vertical-align: top;
+		background-color: $mainGrey;
+	}
+
+	/*727x90*/
+	div.ad1{ 
+		width: 97%;
+		height: 110px;
+	}
+	/*300x250*/
+	div.ad2{
+	}
+	/*727x400*/
+	div.ad3{
+		width: 97%;
+		height: 420px;
+	}
+
+	.ad h1 {
+		margin: 0;
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: white;
+		background-color: darkgrey;
+		vertical-align: middle;
+		margin: 0 auto;
+		font-size: 16px;
+/* 		text-indent: -9999px; */
+	}
+
+	.ad1 h1{
+		width: 727px;
+		height: 90px;
+		margin-top: 10px;
+	}
+	.ad2 h1{
+		width: 300px;
+		height: 250px;
+	}
+	.ad3 h1{
+		width: 727px;
+		height: 400px;
+		margin-top: 10px;
+	}
+}

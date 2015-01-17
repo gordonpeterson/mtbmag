@@ -1,5 +1,19 @@
-html{
-	border: 10px dashed purple;
+$gutter: 25px !default;
+
+.search-toggle {
+	background-color: black;
+	&:hover,
+	&.active{
+		background-color: #333;
+	}
+}
+
+div.search-box-wrapper{
+	padding-left: 0;
+}
+
+div.search-box{
+	background-color: #333;
 }
 
 .header-main{
@@ -21,9 +35,37 @@ html{
 	height: 48px;
 }
 
-.primary-navigation ul ul a {
-	padding: 18px 12px;
-	white-space: normal;
-	width: 176px;
-	padding: 7px 12px;
+.primary-navigation {
+	ul{
+		li{
+			&:hover, //...hover the main nav
+			&.focus{
+				background-color: rgb(143, 143, 143);
+			}
+			a{ //....the main nav link
+
+			}
+		}
+		ul { //....the subnav
+			a{ //.....the subnav link
+				padding: 18px 12px;
+				white-space: normal;
+				width: 176px;
+				padding: 7px 12px;
+			}
+		}
+	}
+}
+
+
+.archive-header{
+	&,
+	.full-width &{
+		margin-top: $gutter;
+		background: $mainGrey;
+		padding: 42px 0;
+		width: 100%;
+		max-width: none;
+		color: white;
+	}
 }
