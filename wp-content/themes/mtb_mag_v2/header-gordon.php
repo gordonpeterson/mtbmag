@@ -107,12 +107,12 @@
 				<? //php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 
 				<div class="menu-inglese-container">
-					<ul id="menu-inglese" class="nav-menu"><li id="menu-item-55080" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55080"><a href="http://localhost:8888/category/mag-2/en/news-en-2/">NEWS</a></li>
-						<li id="menu-item-66758" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-66758"><a href="http://localhost:8888/category/mag-2/en/eurobike-2014-en/">EUROBIKE 2014</a></li>
-						<li id="menu-item-55081" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55081"><a href="http://localhost:8888/category/mag-2/en/reviews-en/">REVIEWS</a></li>
-						<li id="menu-item-55082" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55082"><a href="http://localhost:8888/category/mag-2/en/epics/">EPICS</a></li>
-						<li id="menu-item-61346" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61346"><a href="http://localhost:8888/category/mag-2/en/interviews/">INTERVIEWS</a></li>
-						<li id="menu-item-55083" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55083"><a href="http://localhost:8888/category/mag-2/en/tech-corner-en/">TECH</a></li>
+					<ul id="menu-inglese" class="nav-menu"><li id="menu-item-55080" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55080"><a href="/category/mag-2/en/news-en-2/">NEWS</a></li>
+						<li id="menu-item-66758" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-66758"><a href="/category/mag-2/en/eurobike-2014-en/">EUROBIKE 2014</a></li>
+						<li id="menu-item-55081" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55081"><a href="/category/mag-2/en/reviews-en/">REVIEWS</a></li>
+						<li id="menu-item-55082" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55082"><a href="/category/mag-2/en/epics/">EPICS</a></li>
+						<li id="menu-item-61346" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61346"><a href="/category/mag-2/en/interviews/">INTERVIEWS</a></li>
+						<li id="menu-item-55083" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55083"><a href="/category/mag-2/en/tech-corner-en/">TECH</a></li>
 						<li id="menu-item-55084" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55084"><a href="http://tc.mtb-forum.it/index.php?lang=en">TRAINING CAMP</a></li>
 					</ul>
 				</div>
