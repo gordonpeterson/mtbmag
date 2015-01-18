@@ -1,10 +1,42 @@
 $gutter: 25px !default;
+$linkColor: #333 !default;
+$mainGrey: pink !default;
 
-.search-toggle {
-	background-color: black;
+a{
+	color: $linkColor;
+}
+
+
+.left-nav{
+	float: right;
+	// background: pink;
+	position: relative;
+
+}
+
+.search-toggle,
+.language-toggle,
+.login-toggle{
+	display: inline-block;
+	border-left: 1px solid black;
+	float: left;
+	height: 48px;
+	min-width: 48px;
+	background: transparent;
+
+
+
 	&:hover,
 	&.active{
-		background-color: #333;
+		background-color: darken( $mainGrey, 3% );
+	}
+
+	a{
+		color: #fff;
+		padding: 10px;
+		vertical-align: bottom;
+		display: block;
+		font-weight: lighter;
 	}
 }
 
@@ -63,7 +95,11 @@ div.search-box{
 	border: 2px solid pink;
 	max-height: 540px;
 	overflow: hidden;
-	
+
+}
+
+
+.site-main{
 }
 
 

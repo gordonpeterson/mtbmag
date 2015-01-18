@@ -300,7 +300,7 @@ switch ( $action ) {
 				} else {
 					$_menu_object = wp_get_nav_menu_object( $_nav_menu_selected_id );
 					$nav_menu_selected_id = $_nav_menu_selected_id;
-					$nav_menu_selected_title = $_menu_object->name;
+					$nav_menu_selected_title = $_menu_object->name ? $_menu_object->name : 'gordon';
 					if ( isset( $_REQUEST['menu-item'] ) )
 						wp_save_nav_menu_items( $nav_menu_selected_id, absint( $_REQUEST['menu-item'] ) );
 					if ( isset( $_REQUEST['zero-menu-state'] ) ) {

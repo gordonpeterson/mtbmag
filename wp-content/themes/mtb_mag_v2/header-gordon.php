@@ -44,38 +44,46 @@
 		<div class="header-main">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-			<div class="search-toggle">
+		<div class="left-nav">
+			<span class="search-toggle">
 				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
-			</div>
+			</span>
+			<span class="language-toggle">
+				<div class="select-language"><a href="#language">USA</a></div>
+				<span class="launguage-list hide">
+					<ul>
+						<li><a href="#usa">USA</a></li>
+						<li><a href="#spain">Spain</a></li>
+					</ul>
+				</span>
+			</span>
+			<span class="login-toggle">
+				<div class="login-info"><a href="#login">Login</a></div>
+				<div class="login-form hide"></div>
+			</span>
+		</div>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-				<div class="article-nav">
-					<article class="small"></article>
-					<article class="small"></article>
-					<article class="small"></article>
-					<article class="small"></article>
-					<article class="small"></article>
-					<article class="small"></article>
-					<article class="small"></article>
-					<article class="small"></article>
-				</div>
 			</nav>
 		</div>
 
-		<div class="left-nav">
-			<span id="search-container" class="search-box-wrapper hide">
-				<div class="search-box">
-					<?php get_search_form(); ?>
-				</div>
-			</span>
-			<span class="language-container">
-				<span class="select-language">
-					
-				</span>
-			</span>
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+		<div class="article-nav">
+			<article class="small"></article>
+			<article class="small"></article>
+			<article class="small"></article>
+			<article class="small"></article>
+			<article class="small"></article>
+			<article class="small"></article>
+			<article class="small"></article>
+			<article class="small"></article>
 		</div>
 
 
