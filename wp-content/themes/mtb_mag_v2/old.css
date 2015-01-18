@@ -3460,7 +3460,7 @@ a.post-thumbnail:hover {
 		top: 32px;
 	}
 
-	.masthead-fixed .site-main {
+	header.archive-header {
 		margin-top: 48px;
 	}
 

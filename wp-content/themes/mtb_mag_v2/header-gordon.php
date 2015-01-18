@@ -58,6 +58,7 @@
 
 		
 
+		<script src="/wp-content/themes/mtb_mag_v2/js/app.js"></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -80,25 +81,41 @@
 			<span class="search-toggle">
 				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
 			</span>
-			<span class="language-toggle">
-				<div class="select-language"><a href="#language">USA</a></div>
-				<span class="launguage-list hide">
+			<span class="language-toggle" ng-mouseover='showLang=true' ng-mouseout='showLang=false'>
+				<div class="select-language"><a href="#languagen " >USA</a></div>
+				<span class="launguage-list" ng-show='showLang' ng-cloak>
 					<ul>
 						<li><a href="#usa">USA</a></li>
 						<li><a href="#spain">Spain</a></li>
 					</ul>
 				</span>
 			</span>
-			<span class="login-toggle">
-				<div class="login-info"><a href="#login">Login</a></div>
-				<div class="login-form hide"></div>
+			<span class="login-toggle" ng-mouseover="login=true", ng-mouseout="login=false">
+				<div class="login-info"><a href="#login" >Login</a></div>
+				<div class="login-form" ng-show="login"  ng-cloak>
+					<form action="#">
+						<input type="text">
+						<input type="password">
+					</form>
+				</div>
 			</span>
 		</div>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+				<? //php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+
+				<div class="menu-inglese-container">
+					<ul id="menu-inglese" class="nav-menu"><li id="menu-item-55080" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55080"><a href="http://localhost:8888/category/mag-2/en/news-en-2/">NEWS</a></li>
+						<li id="menu-item-66758" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-66758"><a href="http://localhost:8888/category/mag-2/en/eurobike-2014-en/">EUROBIKE 2014</a></li>
+						<li id="menu-item-55081" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55081"><a href="http://localhost:8888/category/mag-2/en/reviews-en/">REVIEWS</a></li>
+						<li id="menu-item-55082" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55082"><a href="http://localhost:8888/category/mag-2/en/epics/">EPICS</a></li>
+						<li id="menu-item-61346" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61346"><a href="http://localhost:8888/category/mag-2/en/interviews/">INTERVIEWS</a></li>
+						<li id="menu-item-55083" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55083"><a href="http://localhost:8888/category/mag-2/en/tech-corner-en/">TECH</a></li>
+						<li id="menu-item-55084" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55084"><a href="http://tc.mtb-forum.it/index.php?lang=en">TRAINING CAMP</a></li>
+					</ul>
+				</div>
 			</nav>
 		</div>
 
@@ -107,7 +124,9 @@
 				<?php get_search_form(); ?>
 			</div>
 		</div>
-		<div class="article-nav">
+		<div class="article-nav" ng-show='showArticles'  ng-cloak ng-mouseover="showArticles=true" ng-mouseout="showArticles=false">
+			<article class="small"></article>
+			<article class="small"></article>
 			<article class="small"></article>
 			<article class="small"></article>
 			<article class="small"></article>

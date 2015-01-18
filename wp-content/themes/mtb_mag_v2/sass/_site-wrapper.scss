@@ -23,6 +23,7 @@ a{
 	height: 48px;
 	min-width: 48px;
 	background: transparent;
+	position: relative;
 
 
 
@@ -39,6 +40,22 @@ a{
 		font-weight: lighter;
 	}
 }
+
+.launguage-list,
+.login-form{
+	position: absolute;
+	background: $mainGrey;
+	right: 0;
+	border: 1px solid black;
+
+	ul,li{
+		list-style-type: none;
+		margin: 0;
+		padding: 5px;
+	}
+}
+
+
 
 div.search-box-wrapper{
 	padding-left: 0;
@@ -92,10 +109,13 @@ div.search-box{
 
 }
 .article-nav{
-	border: 2px solid pink;
 	max-height: 540px;
 	overflow: hidden;
 
+	article.small{
+		width: 200px;
+		height: 166px;
+	}
 }
 
 
@@ -106,7 +126,7 @@ div.search-box{
 .archive-header{
 	&,
 	.full-width &{
-		margin-top: $gutter;
+		margin-top: $gutter + 40;
 		background: $mainGrey;
 		padding: 42px 0;
 		width: 100%;
