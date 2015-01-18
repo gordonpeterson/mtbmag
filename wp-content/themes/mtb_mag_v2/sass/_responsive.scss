@@ -88,11 +88,11 @@
 		&:hover .post-info{
 			top: auto;
 			bottom: 0;
-			-webkit-transition: bottom .5s ease-out;
-			-moz-transition: bottom .5s ease-out;
-			-ms-transition: bottom .5s ease-out;
-			-o-transition: bottom .5s ease-out;
-			transition: bottom .5s ease-out;
+			-webkit-transition: bottom .3s ease-out;
+			-moz-transition: bottom .3s ease-out;
+			-ms-transition: bottom .3s ease-out;
+			-o-transition: bottom .3s ease-out;
+			transition: bottom .3s ease-out;
 
 		}
 	}
@@ -104,17 +104,21 @@
 /******************************************* medium and small ****************************************/
 @media screen and (max-width: 1007px){
 
-	div.ad{
-		display: block;
-		width: 100%;
-		margin: 0;
-	}
 
 
 
 	body.archive,
 	body.category{
+
+		overflow-x: hidden;
 		
+		div.ad{
+			display: block;
+			width: 100%;
+			margin: 0 0 25px;
+			background: transparent;
+		}
+
 		article.small{
 			display: block;
 			position: relative;
@@ -125,8 +129,8 @@
 
 
 			img{
-				width: auto;
-				height: 100%;
+				height: auto;
+				width: 100%;
 			}
 
 			.post-thumbnail,
@@ -146,6 +150,7 @@
 				color: #000;
 				width: 45%;
 				height: auto;
+				margin: 0 !important;
 			}
 
 			header.entry-header{
@@ -164,7 +169,7 @@
 }
 
 
-/******************************************* medium ****************************************/
+/******************************************* medium only ****************************************/
 @media screen and (max-width: 1007px) and (min-width: 461px) {
 	html{
 		// border: 10px dashed blue;
@@ -175,32 +180,12 @@
 	body.category{
 		
 		article.small{
-			// border: 1px double blue;
-			width: 100%;
-
-			img{
-				// border: 2px solid blue;
-				width: 45%;
-				float: left;
-				display: inline-block;
-			}
 
 			.post-info{
-				display: inline-block;
-				width: 45%;
-				margin: 0 !important;
-				padding: 0;
-				position: relative;
-				top: auto;
-				bottom: auto;
-				right: 0;
-				left: auto;
-				/* float: right; */
-				// border: 1px solid lime;
+
 			}
 
 			header.entry-header{
-				/*border: 1px solid blue;*/
 			}
 		}
 
@@ -212,6 +197,15 @@
 
 }
 
+
+/******************************************* mobile nav menu ****************************************/
+@media screen and (max-width: 782px) {
+	
+	.left-nav{
+		right: 18px;
+	}
+
+}
 
 
 /******************************************* small ****************************************/
