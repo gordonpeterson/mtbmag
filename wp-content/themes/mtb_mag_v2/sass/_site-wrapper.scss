@@ -36,6 +36,7 @@ div.search-box{
 }
 
 .primary-navigation {
+
 	ul{
 		li{
 			&:hover, //...hover the main nav
@@ -55,6 +56,14 @@ div.search-box{
 			}
 		}
 	}
+
+
+}
+.article-nav{
+	border: 2px solid pink;
+	max-height: 540px;
+	overflow: hidden;
+	
 }
 
 

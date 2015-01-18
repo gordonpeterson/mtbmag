@@ -10,7 +10,7 @@
  * Template Name: MTB Category Page
  */
 
-get_header(); ?>
+get_header('gordon'); ?>
 
 	<section id="primary" class="content-area">
 

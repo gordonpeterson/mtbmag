@@ -11,7 +11,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php twentyfourteen_post_thumbnail(); ?>
+
+	<?php 
+	twentyfourteen_post_thumbnail(); 
+	// the_post_thumbnail('wt1600_450');
+	?>
 
 	<header class="entry-header">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
