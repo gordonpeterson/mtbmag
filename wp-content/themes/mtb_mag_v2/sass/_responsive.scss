@@ -88,13 +88,12 @@
 		&:hover .post-info{
 			top: auto;
 			bottom: 0;
-			-webkit-transition: bottom .2s ease-out;
-			-moz-transition: bottom .2s ease-out;
-			-ms-transition: bottom .2s ease-out;
-			-o-transition: bottom .2s ease-out;
-			transition: bottom .2s ease-out;
+			-webkit-transition: bottom .5s ease-out;
+			-moz-transition: bottom .5s ease-out;
+			-ms-transition: bottom .5s ease-out;
+			-o-transition: bottom .5s ease-out;
+			transition: bottom .5s ease-out;
 
-			background: pink;
 		}
 	}
 
