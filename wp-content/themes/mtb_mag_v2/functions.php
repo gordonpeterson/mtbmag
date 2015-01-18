@@ -1,39 +1,27 @@
 <?php
 /**
  * mtb-mag functions
- *
- * Set up the theme and provides some helper functions, which are used in the
- * theme as custom template tags. Others are attached to action and filter
- * hooks in WordPress to change core functionality.
- *
- * When using a child theme you can override certain functions (those wrapped
- * in a function_exists() call) by defining them first in your child theme's
- * functions.php file. The child theme's functions.php file is included before
- * the parent theme's file, so the child theme functions would be used.
- *
- * @link http://codex.wordpress.org/Theme_Development
- * @link http://codex.wordpress.org/Child_Themes
- *
- * Functions that are not pluggable (not wrapped in function_exists()) are
- * instead attached to a filter or action hook.
- *
- * For more information on hooks, actions, and filters,
- * @link http://codex.wordpress.org/Plugin_API
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
+**/
 
-/**
- * Set up the content width value based on the theme's design.
- *
- * @see twentyfourteen_content_width()
- *
- * @since Twenty Fourteen 1.0
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 1008;
+
+function mtb_mag_setup() {
+
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menu( 'secondary', __( 'Footer Menu', 'twentytwelve' ) );
+
+	// New widgetized sidebar area for pages
+	register_sidebar( array(
+		'name' => __( 'Page Sidebar', 'twentytwelve' ),
+		'id' => 'sidebar-4',
+		'description' => __( 'Appears on pages only', 'twentytwelve' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	
 }
+
+add_action( 'after_setup_theme', 'mtb_mag_setup', 11 ); 
 
 
