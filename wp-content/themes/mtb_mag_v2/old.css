@@ -904,6 +904,7 @@ span + .edit-link:before,
 
 .search-toggle .screen-reader-text {
 	left: 5px; /* Avoid a horizontal scrollbar when the site has a long menu */
+	display: none;
 }
 
 .search-box-wrapper {
@@ -1076,8 +1077,9 @@ span + .edit-link:before,
 	background: #b2b2b2 url(images/pattern-light.svg) repeat fixed;
 	display: block;
 	position: relative;
-	width: 100%;
+	
 	z-index: 0;
+	
 }
 
 a.post-thumbnail:hover {
@@ -1087,6 +1089,8 @@ a.post-thumbnail:hover {
 .full-width .post-thumbnail img {
 	display: block;
 	margin: 0 auto;
+	width: 100%;
+	bottom: 0;
 }
 
 
@@ -3277,6 +3281,7 @@ a.post-thumbnail:hover {
 		border-top: 0;
 		padding-top: 0;
 	}
+	
 
 	.archive-header,
 	.page-header {
@@ -3306,7 +3311,7 @@ a.post-thumbnail:hover {
 	}
 
 	.search-toggle {
-		margin-right: 18px;
+		margin-right: 0;
 	}
 
 	.search-box .search-field {
@@ -3340,7 +3345,7 @@ a.post-thumbnail:hover {
 	}
 
 	.singular .site-content .hentry.has-post-thumbnail {
-		margin-top: 0;
+		/* margin-top: 0; */
 	}
 
 	.full-width .site-content {
@@ -3349,7 +3354,7 @@ a.post-thumbnail:hover {
 
 	.full-width .site-content .has-post-thumbnail .entry-header,
 	.full-width .site-content .hentry.has-post-thumbnail:first-child {
-		/*margin-top: -48px;*/
+		/* margin-top: -48px; */
 	}
 
 	#secondary,

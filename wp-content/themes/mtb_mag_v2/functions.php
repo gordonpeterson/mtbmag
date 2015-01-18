@@ -24,4 +24,11 @@ function mtb_mag_setup() {
 
 add_action( 'after_setup_theme', 'mtb_mag_setup', 11 ); 
 
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if(is_single() && $item->title == "Blog"){ //Notice you can change the conditional from is_single() and $item->title
+             $classes[] = "special-class";
+     }
+     return $classes;
+}
 
