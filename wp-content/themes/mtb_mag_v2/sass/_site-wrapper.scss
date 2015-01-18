@@ -7,9 +7,8 @@ a{
 }
 
 
-.left-nav{
+.right-nav{
 	float: right;
-	// background: pink;
 	position: relative;
 
 }
@@ -47,6 +46,7 @@ a{
 	background: $mainGrey;
 	right: 0;
 	border: 1px solid black;
+	z-index: 12;
 
 	ul,li{
 		list-style-type: none;

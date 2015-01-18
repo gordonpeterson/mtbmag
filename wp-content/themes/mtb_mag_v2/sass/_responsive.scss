@@ -201,27 +201,34 @@
 /******************************************* mobile nav menu ****************************************/
 @media screen and (max-width: 782px) {
 	
-	.left-nav{
-		right: 18px;
+	.right-nav{
+		right: 38px;
 	}
 
 }
 
 
 /******************************************* small ****************************************/
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 550px) {
 
 	html{
 		// border: 10px dashed yellow;
 	}
 
+
+
 	body.archive,
 	body.category{
+
+		.archive-header{
+			margin: 24px 0;
+			text-align: center;
+		}
 
 		div.ad{
 			display: block;
 			width: 100%;
-			margin: 0;
+			margin: 25px 0;
 		}
 
 		article.small{
@@ -259,6 +266,17 @@
 				padding-bottom: 90px;
 			}
 
+		}
+	}
+
+
+	body.single-post{
+		p{
+			padding: 10px;
+
+			&>a{
+				margin: 0;
+			}
 		}
 	}
 
