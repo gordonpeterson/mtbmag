@@ -7,7 +7,7 @@
  * @since Twenty Fourteen 1.0
  */
 
-if ( ! function_exists( 'twentyfourteen_paging_nav' ) ) :
+if ( ! function_exists( 'mtb_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
@@ -16,7 +16,7 @@ if ( ! function_exists( 'twentyfourteen_paging_nav' ) ) :
  * @global WP_Query   $wp_query   WordPress Query object.
  * @global WP_Rewrite $wp_rewrite WordPress Rewrite object.
  */
-function twentyfourteen_paging_nav() {
+function mtb_paging_nav() {
 	global $wp_query, $wp_rewrite;
 
 	// Don't print empty markup if there's only one page.
@@ -65,13 +65,13 @@ function twentyfourteen_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'twentyfourteen_post_nav' ) ) :
+if ( ! function_exists( 'mtb_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
  * @since Twenty Fourteen 1.0
  */
-function twentyfourteen_post_nav() {
+function mtb_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -98,19 +98,20 @@ function twentyfourteen_post_nav() {
 }
 endif;
 
-if ( ! function_exists( 'twentyfourteen_posted_on' ) ) :
+if ( ! function_exists( 'mtb_posted_on' ) ) :
 /**
  * Print HTML with meta information for the current post-date/time and author.
  *
  * @since Twenty Fourteen 1.0
  */
-function twentyfourteen_posted_on() {
+function mtb_posted_on() {
 	if ( is_sticky() && is_home() && ! is_paged() ) {
 		echo '<span class="featured-post">' . __( 'Sticky', 'twentyfourteen' ) . '</span>';
 	}
 
 	// Set up and print post meta information.
-	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
+	// printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
+	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard">%5$s</span></span>',
 		esc_url( get_permalink() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
@@ -127,7 +128,7 @@ endif;
  *
  * @return boolean true if blog has more than 1 category
  */
-function twentyfourteen_categorized_blog() {
+function mtb_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'twentyfourteen_category_count' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
@@ -154,7 +155,7 @@ function twentyfourteen_categorized_blog() {
  *
  * @since Twenty Fourteen 1.0
  */
-function twentyfourteen_category_transient_flusher() {
+function mtb_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'twentyfourteen_category_count' );
 }
@@ -169,7 +170,7 @@ add_action( 'save_post',     'twentyfourteen_category_transient_flusher' );
  *
  * @since Twenty Fourteen 1.0
  */
-function twentyfourteen_post_thumbnail() {
+function mtb_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -202,7 +203,7 @@ function twentyfourteen_post_thumbnail() {
 	<?php endif; // End is_singular()
 }
 
-if ( ! function_exists( 'twentyfourteen_excerpt_more' ) && ! is_admin() ) :
+if ( ! function_exists( 'mtb_excerpt_more' ) && ! is_admin() ) :
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ...
  * and a Continue reading link.
@@ -212,7 +213,7 @@ if ( ! function_exists( 'twentyfourteen_excerpt_more' ) && ! is_admin() ) :
  * @param string $more Default Read More excerpt link.
  * @return string Filtered Read More excerpt link.
  */
-function twentyfourteen_excerpt_more( $more ) {
+function mtb_excerpt_more( $more ) {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 			/* translators: %s: Name of current post */
