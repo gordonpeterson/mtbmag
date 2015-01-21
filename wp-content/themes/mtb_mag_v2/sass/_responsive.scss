@@ -87,15 +87,23 @@ $lightBgColor: #b2b2b2;
 			width: 100%;
 		}
 
-		&:hover .post-info{
-			top: auto;
-			bottom: 0;
-			-webkit-transition: bottom .3s ease-out .12s;
-			-moz-transition: bottom .3s ease-out .12s;
-			-ms-transition: bottom .3s ease-out .12s;
-			-o-transition: bottom .3s ease-out .12s;
-			transition: bottom .3s ease-out .12s;
-
+		&:hover {
+			img{
+				-webkit-filter: blur(2px);
+				-moz-filter: blur(2px);
+				-ms-filter: blur(2px);
+				-o-filter: blur(2px);
+				filter: blur(2px);
+			}
+			.post-info{
+				top: auto;
+				bottom: 0;
+				-webkit-transition: bottom .3s ease-out .12s;
+				-moz-transition: bottom .3s ease-out .12s;
+				-ms-transition: bottom .3s ease-out .12s;
+				-o-transition: bottom .3s ease-out .12s;
+				transition: bottom .3s ease-out .12s;
+			}
 		}
 	}
 
