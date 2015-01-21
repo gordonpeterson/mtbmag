@@ -1256,7 +1256,7 @@ a.post-thumbnail:hover {
 .site-content .entry-content,
 .site-content .entry-summary,
 .page-content {
-	background-color: #fff;
+	/* background-color: #fff; */
 	padding: 12px 10px 0;
 }
 

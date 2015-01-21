@@ -35,6 +35,10 @@
 				endif;
 			?>
 
+			<div class="excerpt">
+				<?php the_excerpt(); ?>
+			</div>
+
 			<div class="entry-meta">
 				<?php
 					if ( 'post' == get_post_type() )
