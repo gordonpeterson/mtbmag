@@ -32,3 +32,19 @@ function special_nav_class($classes, $item){
      return $classes;
 }
 
+
+
+// Implement Custom Header features.
+// require get_template_directory() . '/inc/custom-header.php';
+
+// Custom template tags for this theme.
+require get_stylesheet_directory() . '/inc/template-tags.php';
+
+// Add Customizer functionality.
+// require get_template_directory() . '/inc/customizer.php';
+
+
+echo "<h1 class='gordon'>this is the functions.php file</h1>";
+print( get_stylesheet_directory() );
+
+
