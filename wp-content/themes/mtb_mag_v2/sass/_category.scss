@@ -19,21 +19,13 @@ body.category{
 		&.has-post-thumbnail{
 			// border-color: grey;
 
-			&.hentry{ //...horizontal thumb
-				img{
-					width: auto;
-					height: 250px;
-					max-width: none;
+			img{
+				width: auto;
+				height: 250px;
+				max-width: none;
 
-				}
 			}
-			&.ventry{ //....vertical thumb
-				img{
-					height: auto;
-					width: 250px;
-					max-width: none;
-				}
-			}
+		
 			&:first-child{
 				margin-top: 10px !important;
 				// border: 1px dashed gold;

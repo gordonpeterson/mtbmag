@@ -256,6 +256,12 @@ $lightBgColor: #b2b2b2;
 
 
 	body.category {
+
+		.site-main{
+			margin-top: 48px;
+			border: 1px dotted blue;
+		}
+
 		article.small{
 			// border: 2px dashed lime;
 
@@ -277,7 +283,6 @@ $lightBgColor: #b2b2b2;
 	}
 
 
-
 	body.archive,
 	body.category{
 
@@ -295,7 +300,7 @@ $lightBgColor: #b2b2b2;
 		article.small{
 			display: block;
 			width: 100%;
-			margin: 10px 0;
+			margin: 10px 0 !important;
 			padding: 0;
 			height: auto;
 
@@ -323,11 +328,12 @@ $lightBgColor: #b2b2b2;
 				display: block;
 				
 				width: 95%;
-				margin: 10px 10px!important;
+				margin: 10px 10px;
 				top: auto;
 				bottom: auto;
 				padding: 5px;
 				height: auto;
+				max-height: none;
 			}
 
 			header.entry-header{
@@ -350,6 +356,9 @@ $lightBgColor: #b2b2b2;
 
 
 	body.single-post{
+		.post-thumbnail{
+			height: auto;
+		}
 		p{
 			padding: 10px;
 
