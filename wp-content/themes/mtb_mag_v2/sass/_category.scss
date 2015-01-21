@@ -108,12 +108,20 @@ body.category{
 
 
 		.excerpt{
-			font-size: 12px;
+			font-size: 13px;
 			line-height: 1.4em;
-			font-weight: 100;
 			background-color: transparent;
 			display: none;
+		}
 
+		.excerpt,
+		.entry-meta{
+			&,
+			& a{
+				color: #333;
+				font-weight: lighter;
+				
+			}
 		}
 
 		
@@ -132,7 +140,6 @@ body.category{
 				// text-align: center;
 				text-indent: 5px;
 				a{
-					// color: black;
 					&:hover{
 						color: $whiteHover;
 					}

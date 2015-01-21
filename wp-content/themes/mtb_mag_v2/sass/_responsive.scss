@@ -108,6 +108,12 @@ $lightBgColor: #b2b2b2;
 
 
 
+	.archive-header{
+		&,
+		.full-width &{
+			margin: 20px 0;
+		}
+	}
 
 	body.archive,
 	body.category{
@@ -158,7 +164,6 @@ $lightBgColor: #b2b2b2;
 				background: transparent;
 				bottom: 0;
 				width: 50%;
-				float: right;
 			}
 
 			header.entry-header{
@@ -182,7 +187,7 @@ $lightBgColor: #b2b2b2;
 			.entry-meta{
 				position: absolute;
 				background: transparent;
-				bottom: 0;
+				bottom: 5px;
 				height: 48px;
 				width: 100%;
 				background-color: $lightBgColor;
@@ -276,7 +281,6 @@ $lightBgColor: #b2b2b2;
 			margin: 10px 0;
 			padding: 0;
 			height: auto;
-			border: 1px solid red;
 
 
 			img{
@@ -292,17 +296,14 @@ $lightBgColor: #b2b2b2;
 				vertical-align: top;
 				float: none;
 				position: relative;
-				// bottom: 0;
 			}
 
 
 			.post-thumbnail{
-				border: 1px dashed orange;
 			}
 
 			.post-info{
 				display: block;
-				border: 1px dashed yellow;
 				
 				width: 95%;
 				margin: 10px 10px!important;
@@ -318,14 +319,12 @@ $lightBgColor: #b2b2b2;
 			}
 
 			.excerpt{
-				border: 1px solid green;
 			}
 
 			.entry-meta{
 				margin: 0;
 				max-width: none;
 				position: relative;
-				border: 1px dashed blue;
 
 			}
 
