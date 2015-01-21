@@ -44,7 +44,7 @@ require get_stylesheet_directory() . '/inc/template-tags.php';
 // require get_template_directory() . '/inc/customizer.php';
 
 
-echo "<h1 class='gordon'>this is the functions.php file</h1>";
-print( get_stylesheet_directory() );
+// echo "<h1 class='gordon'>this is the functions.php file</h1>";
+// print( get_stylesheet_directory() );
 
 
