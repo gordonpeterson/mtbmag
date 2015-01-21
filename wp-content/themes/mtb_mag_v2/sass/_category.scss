@@ -7,9 +7,14 @@ body.category{
 
 	// border: 2px dashed orange;
 	
+	.archive-title, .page-title{
+		font-size: 3em;
+		text-align: center;
+	}
 
 	article.small{
 		vertical-align: top;
+
 
 		&.has-post-thumbnail{
 			// border-color: grey;
@@ -89,13 +94,12 @@ body.category{
 			background: transparent;
 			padding: 0;
 		}
-		.entry-title{
+		h1.entry-title{
 			font-size: 24px;
-			padding-top: 0px;
-			// margin: 0 14px 14px;
 			margin: 0;
+			padding: 10px 10px 7px;
 			a{
-				padding: 10px;
+				padding: 0;
 				display: block;
 				&:hover{
 					color: $whiteHover;
@@ -109,9 +113,12 @@ body.category{
 
 		.excerpt{
 			font-size: 13px;
-			line-height: 1.4em;
+			line-height: 18px;
 			background-color: transparent;
 			display: none;
+			p{
+				margin-bottom: 0;
+			}
 		}
 
 		.excerpt,
@@ -120,7 +127,7 @@ body.category{
 			& a{
 				color: #333;
 				font-weight: lighter;
-				
+
 			}
 		}
 
