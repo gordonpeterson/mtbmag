@@ -39,7 +39,7 @@ function special_nav_class($classes, $item){
 
 // Custom template tags for this theme.
 require get_stylesheet_directory() . '/inc/template-tags.php';
-require get_stylesheet_directory() . '/inc/nav-menu-template.php';
+// require get_stylesheet_directory() . '/inc/nav-menu-template.php';
 
 // Add Customizer functionality.
 // require get_template_directory() . '/inc/customizer.php';
