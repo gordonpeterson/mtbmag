@@ -2,6 +2,11 @@ $gutter: 25px !default;
 $linkColor: #333 !default;
 $mainGrey: pink !default;
 
+
+body, h1, h2, h3, h4, h5, h6{
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
 a{
 	color: $linkColor;
 }
@@ -64,7 +69,7 @@ div.search-box{
 	background-color: #333;
 }
 
-
+.wpadminbar,
 .site-header{
 	position: fixed;
 }

@@ -58,6 +58,7 @@
 
 		
 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<script src="/wp-content/themes/mtb_mag_v2/js/app.js"></script>
 
 	<?php wp_head(); ?>
