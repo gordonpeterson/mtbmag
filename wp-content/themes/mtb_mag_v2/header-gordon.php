@@ -95,11 +95,6 @@
 				});
 				</script>
 				<!-- MTBMAG-EN-Header -->
-				<div id='div-gpt-ad-1402004698859-0'>
-				<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004698859-0'); });
-				</script>
-				</div>
 			<?php	}
 				else {?>
 					<script type='text/javascript'>
@@ -125,11 +120,6 @@
 					});
 					</script>
 					<!-- MTBMAG-Header-home -->
-					<div id='div-gpt-ad-1402004398340-0'>
-					<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004398340-0'); });
-					</script>
-					</div>
 				
 			<?php } ?>
 
@@ -215,7 +205,7 @@
 
 
 
-			<h1 class='gordon'> ---this is a page-featured template --- </h1>
+			<!-- <h1 class='gordon'>this is the header</h1> -->
 	<?php
 		if ( get_query_var('paged') ) {
 			$paged = get_query_var('paged');

@@ -49,21 +49,40 @@ get_header('gordon'); ?>
 
 							if( $currentIndex == 5 ){ //...the 727x90 banner
 								// echo "<div class='ad ad2'>$adArray[$increment]</div>";
-								if (empty($post_banner1)) { ?>
+								// if (empty($post_banner1)) { ?>
 									<div class="ad ad1">
 										<div class="ad-inner-wrap">
-											<h1>ad1: 727x90</h1>
-											<?php echo $post_banner1; ?>
+											<!-- <h1>ad1: 727x90</h1> -->
+											<?php  
+												if(ICL_LANGUAGE_CODE == 'en'){ 
+														?>
+															<div id='div-gpt-ad-1402004698859-0'>
+															<script type='text/javascript'>
+															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004698859-0'); });
+															</script>
+															</div>
+														<?php 
+												}
+												else{
+														?>
+															<div id='div-gpt-ad-1402004398340-0'>
+															<script type='text/javascript'>
+															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004398340-0'); });
+															</script>
+															</div>
+														<?php 
+												}
+											?>
 										</div>			
 									</div>
 										
-								<?php }
+								<?php //}
 							} elseif ($currentIndex == 11) { //...the 727x400 banner
 								// echo "<div class='ad ad3'>$adArray[$increment]</div>";
 								if (empty($post_banner3)) { ?>
 									<div class="ad ad3">
-											<h1>ad3: 727x400</h1>
 										<div class="ad-inner-wrap">
+											<h1>ad3: 727x400</h1>
 											<?php echo $post_banner3; ?>
 										</div>			
 									</div>
@@ -73,8 +92,8 @@ get_header('gordon'); ?>
 								// echo "<div class='ad'>$adArray[$increment]</div>";
 								if (empty($post_banner2)) { ?>
 									<div class="ad ad2">
-											<h1>ad2: 300x250</h1>
 										<div class="ad-inner-wrap">
+											<h1>ad2: 300x250</h1>
 											<?php echo $post_banner2; ?>
 										</div>			
 									</div>
