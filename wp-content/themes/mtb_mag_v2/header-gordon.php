@@ -82,15 +82,10 @@
 			<span class="search-toggle">
 				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
 			</span>
-			<span class="language-toggle" ng-mouseover='showLang=true' ng-mouseout='showLang=false'>
-				<div class="select-language"><a href="#languagen " >USA</a></div>
-				<span class="launguage-list" ng-show='showLang' ng-cloak>
-					<ul>
-						<li><a href="#usa">USA</a></li>
-						<li><a href="#spain">Spain</a></li>
-					</ul>
-				</span>
+			<span class="language-toggle">
+				<?php do_action('icl_language_selector'); ?>
 			</span>
+		
 			<span class="login-toggle" ng-mouseover="login=true", ng-mouseout="login=false">
 				<div class="login-info"><a href="#login" >Login</a></div>
 				<div class="login-form" ng-show="login"  ng-cloak>
