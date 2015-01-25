@@ -211,3 +211,33 @@
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
+
+
+
+
+			<h1 class='gordon'> ---this is a page-featured template --- </h1>
+	<?php
+		if ( get_query_var('paged') ) {
+			$paged = get_query_var('paged');
+		} elseif ( get_query_var('page') ) {
+			$paged = get_query_var('page');
+		} else {
+			$paged = 1;
+		}
+		
+		if (is_page_template('page-featured.php')&& $paged < 2 ){		
+
+			echo "<h1 class='gordon'> ---this is a page-featured template </h1> ";
+			// $show_slider_section = get_post_meta($post->ID, 'wt_meta_post_show_feat_slider', true);
+						
+			if ( $show_slider_section == 1 ){
+			echo "<h2 class='gordon'> slider section </h2> ";
+				// get_template_part( 'includes/slider-section' );
+			}
+		}
+	?>
+
+
+
+
+
