@@ -18,7 +18,6 @@ a{
 }
 
 .search-toggle,
-.language-toggle,
 .login-toggle{
 	display: inline-block;
 	border-left: 1px solid black;
@@ -44,19 +43,12 @@ a{
 	}
 }
 
-.launguage-list,
 .login-form{
 	position: absolute;
 	background: $mainGrey;
 	right: 0;
 	border: 1px solid black;
 	z-index: 12;
-
-	ul,li{
-		list-style-type: none;
-		margin: 0;
-		padding: 5px;
-	}
 }
 
 
@@ -68,6 +60,18 @@ div.search-box-wrapper{
 div.search-box{
 	background-color: #333;
 }
+
+.search-box {
+	.search-field {
+	  background-color: #fff;
+	  border: 0;
+	  float: right;
+	  font-size: 16px;
+	  padding: 2px 2px 3px 6px;
+	  width: 100%;
+	  margin-right: 10px;
+	}
+ }
 
 .wpadminbar,
 .site-header{

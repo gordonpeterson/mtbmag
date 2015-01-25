@@ -1,0 +1,56 @@
+#lang_sel{
+
+  // border: 1px solid red;
+  display: inline-block;
+  float: left;
+  height: 48px;
+
+  &:hover{
+  	a{
+
+  	}
+  	ul li ul{
+  		display: block;
+  		visibility: visible;
+			top: 45px;
+  	}
+  }
+	
+	a{
+		background-color: $mainGrey;
+		&.lang_sel_sel{
+			background: transparent;
+			border: none;
+			border-left: 1px solid black;
+
+
+		}
+	}
+
+	li{
+		width: 48px;
+		// background: $mainGrey;
+		// background: transparent;
+		
+		a{
+			padding: 9px 10px 9px 13px;
+			background: transparent;
+			max-height: 48px;
+		}
+	}
+
+
+}
+
+#lang_sel ul ul a, 
+#lang_sel ul ul a:visited{
+		padding: 12px 10px 12px 13px;
+		display: block;
+		background: $mainGrey;
+		border-color: black;
+}
+
+#lang_sel :hover > a, 
+#lang_sel ul ul :hover > a{
+	background: darken($mainGrey, .1);
+}
