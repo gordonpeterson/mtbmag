@@ -1,12 +1,6 @@
 <?php
 /**
- * The default template for displaying content
- *
- * Used for both single and index/archive/search.
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * Template Name: MTB-MAG 2.0 Article Template
  */
 ?>
 
