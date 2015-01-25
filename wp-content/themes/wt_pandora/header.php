@@ -116,6 +116,9 @@
 			</div>
 			
 			<div class="links">
+			<?php 
+				define("ICL_LANGUAGE_CODE", "en");
+			 ?>
 			
 			<?php	if(ICL_LANGUAGE_CODE == 'en'){ ?>
 				<script type='text/javascript'>
