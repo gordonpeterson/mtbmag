@@ -19,6 +19,7 @@ function mtb_posted_on() {
 	}
 
 	// Set up and print post meta information.
+	// %4$s <---- the author url param
 	printf( '<span class="entry-date">
 	       <a href="%1$s" rel="bookmark">
 	       `<time class="entry-date" datetime="%2$s">%3$s</time>
@@ -26,7 +27,7 @@ function mtb_posted_on() {
 	       </span> 
 	       <span class="byline">
 	       	<span class="author vcard">
-	       		<a class="url fn n %4$s" href="" rel="author">%5$s</a>
+	       		<a class="url fn n " href="" rel="author">%5$s</a>
 	       		</span>
 	       	</span>',
 		esc_url( get_permalink() ),
