@@ -3,10 +3,10 @@
  * Template Name: Featured Page
  * Description: A Page Template to display featured page content
  *
- * @package  FuzzAgency
+ * @package  WellThemes
  * @file     page-featured.php
- * @author   Fuzz Agency
- * @link 	 http://fuzzagency.com
+ * @author   Well Themes Team
+ * @link 	 http://wellthemes.com
  */
 ?>
 <?php get_header(); ?>
@@ -16,7 +16,6 @@
 
 
 <div id="content" class="featured-page">
-
 	<?php
 	
 		
@@ -84,6 +83,7 @@
 	
 </div>
 
+<?php get_sidebar(); ?>
 
 <div id="language-chooser">
     <h2>CHOOSE YOUR LANGUAGE</h2>
