@@ -9,7 +9,7 @@
  * @link 	 http://wellthemes.com
  */
 ?>
-<?php get_header(); ?>
+<?php get_header('gordon'); ?>
 
 <link type='text/css' href='/wp-content/themes/wt_pandora/css/simplemodal.css' rel='stylesheet' media='screen' />
 
