@@ -144,12 +144,26 @@
 			</span>
 				<?php do_action('icl_language_selector'); ?>
 			<span class="login-toggle" ng-mouseover="login=true", ng-mouseout="login=false">
-				<div class="login-info"><a href="#login" >Login</a></div>
+				<div class="login-info">
+					<a href="#login" ><?php 
+					if ( is_user_logged_in() ) {
+						$current_user = wp_get_current_user();
+						// print_r( $current_user );
+						echo 'Hi ' . $current_user->display_name. '!';
+					} else {
+						echo 'Log In';
+					}
+					?></a>
+					</div>
 				<div class="login-form" ng-show="login"  ng-cloak>
-					<form action="#">
-						<input type="text">
-						<input type="password">
-					</form>
+				<?php
+
+					if ( is_user_logged_in() ) {
+						echo "Log Out";
+					}	else {
+					 	wp_login_form(); 
+					}
+				 ?>
 				</div>
 			</span>
 		</div>
@@ -204,8 +218,6 @@
 
 
 
-
-			<!-- <h1 class='gordon'>this is the header</h1> -->
 	<?php
 		if ( get_query_var('paged') ) {
 			$paged = get_query_var('paged');
@@ -217,11 +229,11 @@
 		
 		if (is_page_template('page-featured.php')&& $paged < 2 ){		
 
-			echo "<h1 class='gordon'> ---this is a page-featured template </h1> ";
-			// $show_slider_section = get_post_meta($post->ID, 'wt_meta_post_show_feat_slider', true);
+			echo "<h1 class='gordon'> header.php is in the page-featured template </h1> ";
+			$show_slider_section = get_post_meta($post->ID, 'wt_meta_post_show_feat_slider', true);
 						
 			if ( $show_slider_section == 1 ){
-			echo "<h2 class='gordon'> slider section </h2> ";
+				// echo "<h2 class='gordon'> slider section </h2> ";
 				// get_template_part( 'includes/slider-section' );
 			}
 		}

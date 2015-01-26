@@ -1,17 +1,5 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme and one
- * of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query,
- * e.g., it puts together the home page when no home.php file exists.
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
  */
 
 get_header('gordon'); ?>
@@ -19,9 +7,8 @@ get_header('gordon'); ?>
 <div id="main-content" class="main-content">
 
 <?php
-	if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
-		// Include the featured content template.
-		get_template_part( 'featured-content' );
+	if ( is_front_page() ) {
+
 	}
 ?>
 
@@ -38,7 +25,7 @@ get_header('gordon'); ?>
 					 * use this in a child theme, then include a file called called content-___.php
 					 * (where ___ is the post format) and that will be used instead.
 					 */
-					get_template_part( 'content', get_post_format() );
+					get_template_part( 'content', 'small' );
 
 				endwhile;
 				// Previous/next post navigation.
@@ -57,5 +44,5 @@ get_header('gordon'); ?>
 </div><!-- #main-content -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
