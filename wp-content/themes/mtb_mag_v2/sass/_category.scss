@@ -13,6 +13,8 @@ body.category{
 		text-align: center;
 	}
 
+
+	article.big,
 	article.small{
 		vertical-align: top;
 
@@ -21,10 +23,9 @@ body.category{
 			// border-color: grey;
 
 			img{
-				width: auto;
-				height: 250px;
-				max-width: none;
-
+		    width: 100%;
+		    height: auto;
+		    max-width: none;
 			}
 		
 			&:first-child{
@@ -158,6 +159,28 @@ body.category{
 		}
 	}
 
+	article.big{
+			width: 100%;
+			max-height: 400px;
+			position: relative;
+			overflow: hidden;
+
+		.post-thumbnail{
+
+			img{
+				width: 100%;
+			}
+		}
+		div.post-info{
+			position: absolute;
+			top: auto;
+			bottom: 0;
+			left: 50%;
+			width: 487px;
+			margin-left: -487px;		
+		}
+		
+	}
 
 	// -------------------------------ads
 

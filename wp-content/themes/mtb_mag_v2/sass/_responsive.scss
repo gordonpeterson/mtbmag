@@ -1,10 +1,32 @@
 $lightBgColor: #b2b2b2;
+$contentMaxWidth: 975px;
 
 
 /******************************************* big ****************************************/
 @media all and (min-width: 1008px) {
 
 	html{
+	}
+
+	body.home{
+		#content{
+			width: 100%;
+			max-width: none;
+			position: relative;
+		}
+
+		.latest-article{
+			img{
+				width: 100%;
+			}
+		}
+
+		.other-articles{
+			max-width: $contentMaxWidth;
+			margin: 0 auto;
+		}
+
+
 	}
 
 	body.page{
@@ -38,7 +60,7 @@ $lightBgColor: #b2b2b2;
 
 	.site-content,
 	#content{
-		max-width: 975px;
+		max-width: $contentMaxWidth;
 		margin: 0 auto;
 	}
 
