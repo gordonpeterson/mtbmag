@@ -6,17 +6,6 @@ get_header('gordon'); ?>
 
 <div id="main-content" class="main-content">
 
-<?php
-	if ( is_front_page() ) {
-
- ?>
-		<div class="gordon">
-			<h1>this is the index.php file</h1>
-		</div>
-		
-<?php 
-	}
-?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
