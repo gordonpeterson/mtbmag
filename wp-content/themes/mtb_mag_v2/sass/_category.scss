@@ -23,9 +23,10 @@ body.category{
 			// border-color: grey;
 
 			img{
-		    width: 100%;
-		    height: auto;
-		    max-width: none;
+
+				width: auto;
+				height: 250px;
+				max-width: none
 			}
 		
 			&:first-child{
@@ -169,6 +170,7 @@ body.category{
 
 			img{
 				width: 100%;
+				height: auto;
 			}
 		}
 		div.post-info{
