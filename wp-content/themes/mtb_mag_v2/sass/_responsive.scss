@@ -234,6 +234,19 @@ $contentMaxWidth: 975px;
 		}
 
 	}
+
+
+	body.home{
+
+		article.big{
+			div.post-info{
+				margin: 0;
+				left: 0;
+				right: 0;
+				width: auto;
+			}
+		}
+	}
 }
 
 
