@@ -35,19 +35,24 @@ body.category{
 			}
 
 
-			img{
-				-webkit-transition: all .5s ease-in-out;
-				-moz-transition: all .5s ease-in-out;
-				-ms-transition: all .5s ease-in-out;
-				-o-transition: all .5s ease-in-out;
-				transition: all .5s ease-in-out;
+		}
 
-				-webkit-transform: scale(1.05);
-				-moz-transform: scale(1.05);
-				-ms-transform: scale(1.05);
-				-o-transform: scale(1.05);
-				transform: scale(1.05);
+		article.small{
+			&.has-post-thumbnail{
+				img{
+					-webkit-transition: all .5s ease-in-out;
+					-moz-transition: all .5s ease-in-out;
+					-ms-transition: all .5s ease-in-out;
+					-o-transition: all .5s ease-in-out;
+					transition: all .5s ease-in-out;
 
+					-webkit-transform: scale(1.05);
+					-moz-transform: scale(1.05);
+					-ms-transform: scale(1.05);
+					-o-transform: scale(1.05);
+					transform: scale(1.05);
+
+				}
 			}
 		}
 
