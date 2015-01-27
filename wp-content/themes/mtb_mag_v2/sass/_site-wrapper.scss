@@ -12,6 +12,11 @@ a{
 }
 
 
+.content-area{
+	padding-top: 3px;
+}
+
+
 .right-nav{
 	float: right;
 	position: relative;
@@ -49,6 +54,8 @@ a{
 	right: 0;
 	border: 1px solid black;
 	z-index: 12;
+	padding: 10px;
+	color: white;
 }
 
 
@@ -80,8 +87,9 @@ div.search-box{
 
 .header-main{
 	position: relative;
-	padding-left: 3px;
+	// padding-left: 3px;
 	background: $mainGrey;
+	padding: 0;
 }
 
 .header-main .site-title{

@@ -191,6 +191,7 @@ $contentMaxWidth: 975px;
 			.post-thumbnail{
 				overflow: hidden;
 				width: 49%;
+				background: grey;
 			}
 
 			.post-info{
@@ -260,6 +261,7 @@ $contentMaxWidth: 975px;
 	body.category{
 		
 		article.small{
+			padding-left: 0;
 
 			.post-info{
 
@@ -272,6 +274,14 @@ $contentMaxWidth: 975px;
 				max-height: 126px;
 				padding: 0 10px;
 				overflow: hidden;
+			}
+
+			.post-thumbnail{
+				max-width: 430px;
+			}
+
+			img{
+				margin: 0 auto;
 			}
 		}
 
@@ -287,7 +297,11 @@ $contentMaxWidth: 975px;
 @media screen and (max-width: 782px) {
 	
 	.right-nav{
-		right: 38px;
+		right: 48px;
+	}
+
+	.login-form{
+		right: -48px;
 	}
 
 
@@ -341,9 +355,12 @@ $contentMaxWidth: 975px;
 			height: auto;
 
 
-			img{
-				max-height: 300px;
-				display: block;
+			&.has-post-thumbnail {
+				img{
+					display: block;
+					width: 100%;
+					height: auto;
+				}
 			}
 
 
@@ -358,6 +375,7 @@ $contentMaxWidth: 975px;
 
 
 			.post-thumbnail{
+				height: 250px;
 			}
 
 			.post-info{
