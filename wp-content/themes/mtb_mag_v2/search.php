@@ -7,9 +7,9 @@
  * @since Twenty Fourteen 1.0
  */
 
-get_header('gordo	n'); ?>
+get_header('gordon'); ?>
 
-	<div class="gordon">search-page.php</div>
+	<div class="gordon">search.php</div>
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
