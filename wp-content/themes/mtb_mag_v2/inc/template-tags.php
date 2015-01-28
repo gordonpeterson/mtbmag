@@ -15,14 +15,14 @@ if ( ! function_exists( 'mtb_posted_on' ) ) :
  */
 function mtb_posted_on() {
 	if ( is_sticky() && is_home() && ! is_paged() ) {
-		echo '<span class="featured-post">' . __( 'Sticky', 'twentyfourteen' ) . '</span>';
+		// echo '<span class="featured-post">' . __( 'Sticky', 'twentyfourteen' ) . '</span>';
 	}
 
 	// Set up and print post meta information.
 	// %4$s <---- the author url param
 	printf( '<span class="entry-date">
 	       <a href="%1$s" rel="bookmark">
-	       `<time class="entry-date" datetime="%2$s">%3$s</time>
+	       	<time class="entry-date" datetime="%2$s">%3$s</time>
 	       </a>
 	       </span> 
 	       <span class="byline">

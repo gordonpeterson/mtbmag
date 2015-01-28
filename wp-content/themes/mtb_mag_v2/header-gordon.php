@@ -145,7 +145,7 @@
 				<?php do_action('icl_language_selector'); ?>
 			<span class="login-toggle" ng-mouseover="login=true", ng-mouseout="login=false">
 				<div class="login-info">
-					<a href="#login" ><?php 
+					<a href="" ><?php 
 					if ( is_user_logged_in() ) {
 						$current_user = wp_get_current_user();
 						// print_r( $current_user );
@@ -159,8 +159,14 @@
 				<?php
 
 					if ( is_user_logged_in() ) {
-						echo "Log Out";
+						?>
+						<div class="logout">
+							<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a>
+						</div>
+						<?php 
 					}	else {
+						?>
+						<?php 
 					 	wp_login_form(); 
 					}
 				 ?>
@@ -173,6 +179,7 @@
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
+			<?php /*
 		<!-- 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
@@ -191,6 +198,7 @@
 				</div>
 			</nav>
 		-->
+			*/ ?>
 		</div>
 
 		<div id="search-container" class="search-box-wrapper hide">
@@ -227,16 +235,6 @@
 			$paged = 1;
 		}
 		
-		if (is_page_template('page-featured.php')&& $paged < 2 ){		
-
-			echo "<h1 class='gordon'> header.php is in the page-featured template </h1> ";
-			$show_slider_section = get_post_meta($post->ID, 'wt_meta_post_show_feat_slider', true);
-						
-			if ( $show_slider_section == 1 ){
-				// echo "<h2 class='gordon'> slider section </h2> ";
-				// get_template_part( 'includes/slider-section' );
-			}
-		}
 	?>
 
 

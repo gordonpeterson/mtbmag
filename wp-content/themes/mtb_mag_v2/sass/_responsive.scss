@@ -302,6 +302,13 @@ $contentMaxWidth: 975px;
 
 	.login-form{
 		right: -48px;
+		.logout{
+			margin-right: 48px;
+		}
+	}
+
+	html #wpadminbar{
+		position: fixed;
 	}
 
 
@@ -309,7 +316,6 @@ $contentMaxWidth: 975px;
 
 		.site-main{
 			margin-top: 48px;
-			border: 1px dotted blue;
 		}
 
 		article.small{
