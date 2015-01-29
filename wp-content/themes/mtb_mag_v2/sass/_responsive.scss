@@ -5,7 +5,20 @@ $contentMaxWidth: 975px;
 /******************************************* big ****************************************/
 @media all and (min-width: 1008px) {
 
-	html{
+	
+	#wpadminbar,
+	.site-header{
+		top: 0;
+		position: fixed;
+	}
+
+	.admin-bar{
+		.site-header{
+			top: 48px;
+		}
+		#wpadminbar{
+			top: 0;
+		}
 	}
 
 	body.home{
@@ -49,9 +62,6 @@ $contentMaxWidth: 975px;
 		max-width: 2400px;
 	}
 
-	.site-header{
-		position: fixed;
-	}
 
 	.site-main{
 		padding-top: 0;
@@ -304,6 +314,21 @@ $contentMaxWidth: 975px;
 		right: -48px;
 		.logout{
 			margin-right: 48px;
+		}
+	}
+
+	#wpadminbar,
+	.site-header{
+		top: 0;
+		position: fixed;
+	}
+
+	.admin-bar{
+		.site-header{
+			top: 46px;
+		}
+		#wpadminbar{
+			top: 0;
 		}
 	}
 

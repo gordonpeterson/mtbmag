@@ -7,7 +7,7 @@
  * @since Twenty Fourteen 1.0
  */
 
-get_header(); ?>
+get_header('gordon'); ?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
@@ -35,6 +35,6 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
+// get_sidebar( 'content' );
+// get_sidebar();
 get_footer();
