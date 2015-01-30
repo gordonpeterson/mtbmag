@@ -56,7 +56,12 @@
 		<script src="/wp-content/themes/mtb_mag_v2/js/bower_components/spark-scroll/src/spark-scroll.js"></script>
 		<script src="/wp-content/themes/mtb_mag_v2/js/bower_components/animation-frame/AnimationFrame.js"></script>
 
-		
+		<script type="text/javascript">
+				var ajaxurl = "<?php echo admin_url('admin-ajax.php')  ?> ";
+				console.log( '--------');
+				console.log( ajaxurl );
+				console.log( '--------');
+		</script>
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<script src="/wp-content/themes/mtb_mag_v2/js/app.js"></script>
