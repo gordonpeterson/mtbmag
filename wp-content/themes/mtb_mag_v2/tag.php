@@ -30,9 +30,9 @@ get_header('gordon'); ?>
 					$increment = 0;
 					$adArray = array(3,4,5,11,15);
 
-					$post_banner1 = get_post_meta($post->ID, 'wt_meta_post_banner1', true);	
-					$post_banner2 = get_post_meta($post->ID, 'wt_meta_post_banner2', true);	
-					$post_banner3 = get_post_meta($post->ID, 'wt_meta_post_banner3', true);	
+					// $post_banner1 = get_post_meta($post->ID, 'wt_meta_post_banner1', true);	
+					// $post_banner2 = get_post_meta($post->ID, 'wt_meta_post_banner2', true);	
+					// $post_banner3 = get_post_meta($post->ID, 'wt_meta_post_banner3', true);	
 
 					while ( have_posts() ) : the_post();
 						$count++;
@@ -79,26 +79,64 @@ get_header('gordon'); ?>
 								<?php //}
 							} elseif ($currentIndex == 11) { //...the 727x400 banner
 								// echo "<div class='ad ad3'>$adArray[$increment]</div>";
-								if (empty($post_banner3)) { ?>
+								// if (empty($post_banner3)) { ?>
 									<div class="ad ad3">
 										<div class="ad-inner-wrap">
-											<h1>ad3: 727x400</h1>
-											<?php echo $post_banner3; ?>
+											<!-- <h1>ad1: 727x90</h1> -->
+											<?php  
+												if(ICL_LANGUAGE_CODE == 'en'){ 
+														?>
+															<div id='div-gpt-ad-1402004698859-0'>
+															<script type='text/javascript'>
+															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004698859-0'); });
+															</script>
+															</div>
+														<?php 
+												}
+												else{
+														?>
+															<div id='div-gpt-ad-1402004398340-0'>
+															<script type='text/javascript'>
+															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004398340-0'); });
+															</script>
+															</div>
+														<?php 
+												}
+											?>
 										</div>			
 									</div>
 										
-								<?php }
+								<?php //}
 							} else { //...the 300x250 banners
 								// echo "<div class='ad'>$adArray[$increment]</div>";
-								if (empty($post_banner2)) { ?>
+								// if (empty($post_banner2)) { ?>
 									<div class="ad ad2">
 										<div class="ad-inner-wrap">
-											<h1>ad2: 300x250</h1>
-											<?php echo $post_banner2; ?>
+											<!-- <h1>ad1: 727x90</h1> -->
+											<?php  
+												if(ICL_LANGUAGE_CODE == 'en'){ 
+														?>
+															<div id='div-gpt-ad-1402004698859-0'>
+															<script type='text/javascript'>
+															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004698859-0'); });
+															</script>
+															</div>
+														<?php 
+												}
+												else{
+														?>
+															<div id='div-gpt-ad-1402004398340-0'>
+															<script type='text/javascript'>
+															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004398340-0'); });
+															</script>
+															</div>
+														<?php 
+												}
+											?>
 										</div>			
 									</div>
 										
-								<?php }
+								<?php //}
 							}
 
 

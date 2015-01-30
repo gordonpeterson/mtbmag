@@ -49,29 +49,31 @@
 			?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
+	
+	<div class="scroll-area">
+		<?php if ( is_search() ) : ?>
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+		<?php else : ?>
+		<div class="entry-content">
+			<?php
+				/* translators: %s: Name of current post */
+				the_content( sprintf(
+					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ),
+					the_title( '<span class="screen-reader-text">', '</span>', false )
+				) );
 
-	<?php if ( is_search() ) : ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ),
-				the_title( '<span class="screen-reader-text">', '</span>', false )
-			) );
+				wp_link_pages( array(
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
+					'after'       => '</div>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+		<?php endif; ?>
 
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
-
-	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+		<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+	</div> <!-- .scroll-ares -->
 </article><!-- #post-## -->
