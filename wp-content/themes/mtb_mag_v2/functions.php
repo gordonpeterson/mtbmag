@@ -70,11 +70,20 @@ function mtb_mag_setup() {
 		'after_title' => '</h3>',
 	) );
 	
+	register_sidebar( array(
+		'name' => __( 'Social Media', 'twentytwelve' ),
+		'id' => 'social-media',
+		'description' => __( 'These are the social media links', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="social-media %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="ad-title">',
+		'after_title' => '</h3>',
+	) );
+	
 	remove_action( 'widgets_init', 'twentyfourteen_widgets_init' );
+
+
 }
-
-
-
 
 add_action( 'after_setup_theme', 'mtb_mag_setup', 11 ); 
 
