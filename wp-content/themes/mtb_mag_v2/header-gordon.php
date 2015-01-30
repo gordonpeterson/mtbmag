@@ -172,7 +172,7 @@
 					}	else {
 						?>
 						<?php 
-					 	wp_login_form(); 
+						wp_login_form(); 
 					}
 				 ?>
 				</div>
@@ -228,6 +228,38 @@
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
+
+
+	<?php 
+	$menu_name = 'primary';
+	$locations = get_nav_menu_locations();
+
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+	$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+
+	$menu_items = wp_get_nav_menu_items($menu->term_id);
+
+	$menu_list = '<ul id="menu-' . $menu_name . '">';
+
+	var_dump( $menu_items );
+
+	foreach ( (array) $menu_items as $key => $menu_item ) {
+	    $title = $menu_item->title;
+	    $url = $menu_item->url;
+
+	    $menu_list .= "<li><a href='" . $url . "'>" . $title . '</a></li>';
+	}
+	$menu_list .= '</ul>';
+    } else {
+	$menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+    }
+    // $menu_list now ready to output
+				?>
+
+			<div class="gordon">
+			<?php echo implode(", ", $locations); ?>
+				<?php echo $menu_list; ?>
+			</div>
 
 
 
