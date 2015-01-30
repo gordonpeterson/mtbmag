@@ -196,7 +196,7 @@ body.category{
 		display: inline-block;
 		vertical-align: top;
 		background-color: $mainGrey;
-		border: 3px dashed transparent;
+		border: none;
 		overflow: hidden;
 	}
 
@@ -204,19 +204,36 @@ body.category{
 	div.ad727x90{
 		width: 97%;
 		height: 110px;
-		border-color: red;
+		display: block;
+		// border-color: red;
+		.ad-inner-wrap{
+			width: 727px;
+			height: 90px;
+			margin-top: 10px;
+
+		}
 	}
 	/*300x250*/
 	div.ad300x250{
 		width: 300px;
 		height: 250px;
-		border-color: green;
+		// border-color: green;
+		.ad-inner-wrap{
+			width: 300px;
+			height: 250px;
+		}
 	}
 	/*727x400*/
 	div.ad727x400{
 		width: 97%;
 		height: 420px;
-		border-color: blue;
+		display: block;
+		// border-color: blue;
+		.ad-inner-wrap{
+			width: 727px;
+			height: 400px;
+			margin-top: 10px;
+		}
 	}
 
 	.ad .ad-inner-wrap {
@@ -232,23 +249,4 @@ body.category{
 /* 		text-indent: -9999px; */
 	}
 
-	.ad h1{
-		margin: 0;
-		display: block;
-	}
-
-	.ad1 .ad-inner-wrap{
-		width: 727px;
-		height: 90px;
-		margin-top: 10px;
-	}
-	.ad2 .ad-inner-wrap{
-		width: 300px;
-		height: 250px;
-	}
-	.ad3 .ad-inner-wrap{
-		width: 727px;
-		height: 400px;
-		margin-top: 10px;
-	}
 }
