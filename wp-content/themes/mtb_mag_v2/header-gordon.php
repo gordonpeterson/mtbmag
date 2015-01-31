@@ -234,31 +234,65 @@
 	$menu_name = 'primary';
 	$locations = get_nav_menu_locations();
 
-    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+		if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
 	$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
 	$menu_items = wp_get_nav_menu_items($menu->term_id);
 
-	$menu_list = '<ul id="menu-' . $menu_name . '">';
+	$gordons_menu = '<ul id="menu-' . $menu_name . '">';
 
-	var_dump( $menu_items );
+	// var_dump( $menu_items );
 
 	foreach ( (array) $menu_items as $key => $menu_item ) {
-	    $title = $menu_item->title;
-	    $url = $menu_item->url;
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$type_label = $menu_item->type_label;
+			$category_name = $menu_item->post_name;
+			$articleCount = 0;
+			echo "<hr>";
+			echo "NEW------------------>$category_name";
+			var_dump( $menu_item );
+			$gordons_menu .= "<li>";
 
-	    $menu_list .= "<li><a href='" . $url . "'>" . $title . '</a></li>';
+			$gordons_menu .= "<a href='" . $url . "'>" . $title . '</a>';
+			if ($type_label == "Category") {
+				$category_query = get_posts( "category_name=$category_name&posts_per_page=8" ); 
+
+				if ( $category_query ) {
+					$gordons_menu .= "<ul class='category-menu'>";
+					echo "<hr>";
+					// var_dump( $category_query[0] );
+					$articleCount++;
+
+					// foreach ( (array) $menu_items as $key => $menu_item ) {
+
+					// }
+					// while ( $category_query->have_posts() ) : $category_query->the_post(); 
+						// $article_title = $category_query->the_title();
+						// $gordons_menu .= "<li>$article_title</li>";
+					// endwhile;
+					$gordons_menu .= "</ul>";
+				} else {
+						// $gordons_menu .= "no----category_query";
+					echo "not found: $category_name";
+				}
+				
+				echo "<hr>";
+				wp_reset_postdata();
+			}
+
+			$gordons_menu .="</li>";
 	}
-	$menu_list .= '</ul>';
-    } else {
-	$menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
-    }
-    // $menu_list now ready to output
+	$gordons_menu .= '</ul>';
+		} else {
+	$gordons_menu = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+		}
+		// $gordons_menu now ready to output
 				?>
 
 			<div class="gordon">
 			<?php echo implode(", ", $locations); ?>
-				<?php echo $menu_list; ?>
+				<?php echo $gordons_menu; ?>
 			</div>
 
 
