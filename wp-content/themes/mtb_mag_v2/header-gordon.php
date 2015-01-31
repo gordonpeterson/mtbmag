@@ -252,24 +252,28 @@
 			$url_obj = parse_url($menu_item->url);
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
-			echo "<hr>";
-			echo "NEW------------------>$base: $base <hr>";
-			var_dump( $menu_item->url );
-			echo "<br>";
-			var_dump( $url_obj );
 			$gordons_menu .= "<li>";
 
 			$gordons_menu .= "<a href='" . $url . "'>" . $title . '</a>';
 			if ($type_label == "Category") {
 				$category_query = get_posts( "category_name=$base&posts_per_page=8" ); 
-				var_dump( $menu_item->ID );
-				echo "$menu_item->post_excerpt" ;
-
 				if ( $category_query ) {
 					$gordons_menu .= "<ul class='category-menu'>";
-					echo "<hr>";
-					// var_dump( $category_query[0] );
 					$articleCount++;
+					// var_dump( $category_query[0] );
+					foreach ( $category_query as $article ) : setup_postdata( $article ); ?>
+					<hr>
+					<a href="<?php the_permalink(); ?>">article: <?php the_title(); ?></a>
+					<hr>
+					<?php //var_dump( $article->the_post_thumbnail('wt780_450'); ); ?>
+					<hr>
+					<?php 
+
+				echo "<hr>";
+					wp_reset_postdata();
+					endforeach; 
+					// ->the_post_thumbnail('wt780_450');
+					// echo apply_filters( 'the_content', $examplePost->post_content );
 
 					// foreach ( (array) $menu_items as $key => $menu_item ) {
 
