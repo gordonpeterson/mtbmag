@@ -237,7 +237,8 @@
 		if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
 	$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
-	$menu_items = wp_get_nav_menu_items($menu->term_id);
+	// $menu_items = wp_get_nav_menu_items($menu->term_id);
+	$menu_items = wp_get_nav_menu_items($menu);
 
 	$gordons_menu = '<ul id="menu-' . $menu_name . '">';
 
@@ -247,16 +248,22 @@
 			$title = $menu_item->title;
 			$url = $menu_item->url;
 			$type_label = $menu_item->type_label;
-			$category_name = $menu_item->post_name;
+			$url =$menu_item->url;
+			$url_obj = parse_url($menu_item->url);
+			$base = basename($url_obj["path"]);
 			$articleCount = 0;
 			echo "<hr>";
-			echo "NEW------------------>$category_name";
-			var_dump( $menu_item );
+			echo "NEW------------------>$base: $base <hr>";
+			var_dump( $menu_item->url );
+			echo "<br>";
+			var_dump( $url_obj );
 			$gordons_menu .= "<li>";
 
 			$gordons_menu .= "<a href='" . $url . "'>" . $title . '</a>';
 			if ($type_label == "Category") {
-				$category_query = get_posts( "category_name=$category_name&posts_per_page=8" ); 
+				$category_query = get_posts( "category_name=$base&posts_per_page=8" ); 
+				var_dump( $menu_item->ID );
+				echo "$menu_item->post_excerpt" ;
 
 				if ( $category_query ) {
 					$gordons_menu .= "<ul class='category-menu'>";
@@ -274,9 +281,9 @@
 					$gordons_menu .= "</ul>";
 				} else {
 						// $gordons_menu .= "no----category_query";
-					echo "not found: $category_name";
+					echo "not found: $base ";
 				}
-				
+
 				echo "<hr>";
 				wp_reset_postdata();
 			}
