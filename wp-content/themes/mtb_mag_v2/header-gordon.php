@@ -179,6 +179,7 @@
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
+				<div class="menu-links-container">
 				<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 
 	<?php //..........start gordons nav
@@ -191,7 +192,7 @@
 	// $menu_items = wp_get_nav_menu_items($menu->term_id);
 	$menu_items = wp_get_nav_menu_items($menu);
 	
-	echo '<ul id="menu-' . $menu_name . '" class="gordon-menu">';
+	echo '<ul id="menu-' . $menu_name . '" class="gordon-menu menu-nav">';
 
 	// var_dump( $menu_items );
 
@@ -227,7 +228,7 @@
 				echo"</li>";
 			} else {
 				echo "<li class='menu-item'>";
-				echo "--------";
+				echo "<a href='" . $url . "'>$type_label:" . $title . '</a>';
 				echo"</li>";
 			}
 
@@ -242,7 +243,7 @@
 
 
 
-
+				</div>
 			</nav>
 			<?php /*
 		<!-- 

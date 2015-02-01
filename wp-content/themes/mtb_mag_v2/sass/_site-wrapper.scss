@@ -24,9 +24,7 @@ ul.gordon-menu {
     &:hover,
     &:focus{
 			ul.category{
-				background: yellowgreen;
 				display: block;
-
 			}
     }
     ul.category{
@@ -40,22 +38,41 @@ ul.gordon-menu {
     	li.article{
     		display: inline-block;
     		margin: 10px;
+    		.post{
+    			margin: 0;
+    		}
+    		.entry-title{
+    			font-size: 20px;
+    		}
+
+			&:hover, //...hover the main nav
+			&.focus{
+				background: transparent;
+			}
+    		a{
+    			width: 100%;
+    			padding: 0;
+    			&:hover{
+    				background: transparent;
+    			}
+    			
+    		}
     	}
     }
 	}
 }
 
 
-.nav-menu{
-	.category{
-		background: pink;
-		right: 0;
-		width: auto;
-		.article{
-			display: inline-block;
-		}
-	}
-}
+// .nav-menu{
+// 	.category{
+// 		background: pink;
+// 		right: 0;
+// 		width: auto;
+// 		.article{
+// 			display: inline-block;
+// 		}
+// 	}
+// }
 
 
 
