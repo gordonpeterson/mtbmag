@@ -56,12 +56,7 @@
 		<script src="/wp-content/themes/mtb_mag_v2/js/bower_components/spark-scroll/src/spark-scroll.js"></script>
 		<script src="/wp-content/themes/mtb_mag_v2/js/bower_components/animation-frame/AnimationFrame.js"></script>
 
-		<script type="text/javascript">
-				var ajaxurl = "<?php echo admin_url('admin-ajax.php')  ?> ";
-				console.log( '--------');
-				console.log( ajaxurl );
-				console.log( '--------');
-		</script>
+		
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<script src="/wp-content/themes/mtb_mag_v2/js/app.js"></script>
@@ -141,7 +136,9 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-main">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</h1>
 
 		<div class="right-nav">
 			<span class="search-toggle">
@@ -182,7 +179,70 @@
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+				<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+
+	<?php //..........start gordons nav
+	$menu_name = 'primary';
+	$locations = get_nav_menu_locations();
+
+		if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+	$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+
+	// $menu_items = wp_get_nav_menu_items($menu->term_id);
+	$menu_items = wp_get_nav_menu_items($menu);
+	
+	echo '<ul id="menu-' . $menu_name . '" class="gordon-menu">';
+
+	// var_dump( $menu_items );
+
+	foreach ( (array) $menu_items as $key => $menu_item ) {
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$type_label = $menu_item->type_label;
+			$url =$menu_item->url;
+			$url_obj = parse_url($menu_item->url);
+			$base = basename($url_obj["path"]);
+			$articleCount = 0;
+			
+			if ($type_label == "Category") {
+				echo "<li class='menu-item category-container'>";
+				echo "<a href='" . $url . "'>$type_label:" . $title . '</a>';
+				$category_query = get_posts( "category_name=$base&posts_per_page=8" ); 
+
+				// var_dump( $category_query->have_posts() );
+
+				if ( $category_query ) {?>
+						<?php echo "<ul class='category'>" ?>
+					<?php foreach ( $category_query as $post ) : setup_postdata( $post ); ?>
+						<li class="article">
+							<?php get_template_part('content', 'small') ?>
+						</li>
+					<?php endforeach; ?>
+					<?php echo "</ul>";
+				} else {
+						// echo "no----category_query";
+					echo "not found: $base ";
+				}
+
+				echo"</li>";
+			} else {
+				echo "<li class='menu-item'>";
+				echo "--------";
+				echo"</li>";
+			}
+
+			wp_reset_postdata();
+	}
+	echo '</ul>';
+		} else {
+	echo '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+		} 
+		//...........end gordons nav
+		?>
+
+
+
+
 			</nav>
 			<?php /*
 		<!-- 
@@ -211,99 +271,11 @@
 				<?php get_search_form(); ?>
 			</div>
 		</div>
-		<div class="article-nav" ng-show='showArticles'  ng-cloak ng-mouseover="showArticles=true" ng-mouseout="showArticles=false">
-			<article class="small"></article>
-			<article class="small"></article>
-			<article class="small"></article>
-			<article class="small"></article>
-			<article class="small"></article>
-			<article class="small"></article>
-			<article class="small"></article>
-			<article class="small"></article>
-			<article class="small"></article>
-			<article class="small"></article>
-		</div>
 
 
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
-
-
-	<?php 
-	$menu_name = 'primary';
-	$locations = get_nav_menu_locations();
-
-		if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-	$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-
-	// $menu_items = wp_get_nav_menu_items($menu->term_id);
-	$menu_items = wp_get_nav_menu_items($menu);
-
-	echo '<ul id="menu-' . $menu_name . '">';
-
-	// var_dump( $menu_items );
-
-	foreach ( (array) $menu_items as $key => $menu_item ) {
-			$title = $menu_item->title;
-			$url = $menu_item->url;
-			$type_label = $menu_item->type_label;
-			$url =$menu_item->url;
-			$url_obj = parse_url($menu_item->url);
-			$base = basename($url_obj["path"]);
-			$articleCount = 0;
-			echo "<li>";
-
-			echo "<a href='" . $url . "'>" . $title . '</a>';
-			if ($type_label == "Category") {
-				$category_query = get_posts( "category_name=$base&posts_per_page=8" ); 
-
-				// var_dump( $category_query->have_posts() );
-
-				if ( $category_query ) { 
-					?>
-						<style type="text/css">
-						.blah{
-							border: 1px dashed orange;
-							padding: 10px;
-							margin: 0 50px 50px;
-							background-color: lightyellow;
-						}
-						.blah.name,
-						.blah.id{
-							background: orange;
-							margin: 0 50px;
-						}
-						.blah.name{
-							background: lime;
-						}
-						</style>
-						<?php echo "<ul>" ?>
-					<?php foreach ( $category_query as $post ) : setup_postdata( $post ); ?>
-					<?php  $article_title=the_title(); ?>
-					<?php echo "<li>$article_title</li>" ?>
-					<?php endforeach; ?>
-						<?php echo "<ul>" ?>
-					<?php 
-					echo "</ul>";
-				} else {
-						// echo "no----category_query";
-					echo "not found: $base ";
-				}
-
-				echo "<hr>";
-				wp_reset_postdata();
-			}
-
-			echo"</li>";
-	}
-	echo '</ul>';
-		} else {
-	echo '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
-		}
-		// $gordons_menu now ready to output
-				?>
-
 
 
 
@@ -317,7 +289,6 @@
 		}
 		
 	?>
-
 
 
 

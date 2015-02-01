@@ -12,24 +12,7 @@ body.category{
 		text-align: center;
 	}
 
-	article.small{
-		&.has-post-thumbnail{
-			img{
-				-webkit-transition: all .5s ease-in-out;
-				-moz-transition: all .5s ease-in-out;
-				-ms-transition: all .5s ease-in-out;
-				-o-transition: all .5s ease-in-out;
-				transition: all .5s ease-in-out;
 
-				-webkit-transform: scale(1.05);
-				-moz-transform: scale(1.05);
-				-ms-transform: scale(1.05);
-				-o-transform: scale(1.05);
-				transform: scale(1.05);
-
-			}
-		}
-	}
 
 
 	article.big,
@@ -47,10 +30,7 @@ body.category{
 				max-width: none
 			}
 		
-			&:first-child{
-				margin-top: 10px !important;
-				// border: 1px dashed gold;
-			}
+
 
 
 		}
@@ -165,11 +145,32 @@ body.category{
 		}
 	}
 
+
+	article.small{
+		&.has-post-thumbnail{
+			img{
+				-webkit-transition: all .5s ease-in-out;
+				-moz-transition: all .5s ease-in-out;
+				-ms-transition: all .5s ease-in-out;
+				-o-transition: all .5s ease-in-out;
+				transition: all .5s ease-in-out;
+
+				-webkit-transform: scale(1.05);
+				-moz-transform: scale(1.05);
+				-ms-transform: scale(1.05);
+				-o-transform: scale(1.05);
+				transform: scale(1.05);
+
+			}
+		}
+	}
+
 	article.big{
-			width: 100%;
-			max-height: 400px;
-			position: relative;
-			overflow: hidden;
+		width: 100%;
+		max-height: 400px;
+		position: relative;
+		overflow: hidden;
+		margin-top: 0px !important;
 
 		.post-thumbnail{
 
@@ -183,11 +184,13 @@ body.category{
 			top: auto;
 			bottom: 0;
 			left: 50%;
-			width: 487px;
+			width: 477px;
 			margin-left: -487px;		
 		}
 		
 	}
+
+
 
 	// -------------------------------ads
 
@@ -196,16 +199,21 @@ body.category{
 		display: inline-block;
 		vertical-align: top;
 		background-color: $mainGrey;
+		border: 2px dashed transparent;
 		border: none;
 		overflow: hidden;
 	}
 
 	/*727x90*/
+	div.ad1,
 	div.ad727x90{
-		width: 97%;
+		// width: 950px;
+		width: percentage(950/975);
 		height: 110px;
 		display: block;
-		// border-color: red;
+
+		// max-width: 975px;
+		border-color: red;
 		.ad-inner-wrap{
 			width: 727px;
 			height: 90px;
@@ -214,21 +222,24 @@ body.category{
 		}
 	}
 	/*300x250*/
+	div.ad2,
 	div.ad300x250{
 		width: 300px;
 		height: 250px;
-		// border-color: green;
+		border-color: green;
 		.ad-inner-wrap{
 			width: 300px;
 			height: 250px;
 		}
 	}
 	/*727x400*/
+	div.ad3,
 	div.ad727x400{
-		width: 97%;
+		// width: 950px;
+		width: percentage(950/975);
 		height: 420px;
 		display: block;
-		// border-color: blue;
+		border-color: blue;
 		.ad-inner-wrap{
 			width: 727px;
 			height: 400px;

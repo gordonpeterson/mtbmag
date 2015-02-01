@@ -14,6 +14,51 @@ a{
 }
 
 
+ul.gordon-menu {
+	li.menu-item{
+		background: pink;
+	}
+	 li.category-container {
+	 	background: transparent;
+    position: initial;
+    &:hover,
+    &:focus{
+			ul.category{
+				background: yellowgreen;
+				display: block;
+
+			}
+    }
+    ul.category{
+    	background: $mainGrey;
+    	right: 0;
+    	width: 100%;
+    	left: 0;
+    	display: none;
+    	max-height: 596px;
+
+    	li.article{
+    		display: inline-block;
+    		margin: 10px;
+    	}
+    }
+	}
+}
+
+
+.nav-menu{
+	.category{
+		background: pink;
+		right: 0;
+		width: auto;
+		.article{
+			display: inline-block;
+		}
+	}
+}
+
+
+
 .right-nav{
 	float: right;
 	position: relative;
