@@ -37,6 +37,7 @@ ul.gordon-menu {
     	max-height: 0;
     	max-width: 1400px;
     	overflow: hidden;
+			font-size: 13px;
 
     	-webkit-transition: max-height .3s ease-in-out;
     	-moz-transition: max-height .3s ease-in-out;
@@ -47,12 +48,7 @@ ul.gordon-menu {
     	li.article{
     		display: inline-block;
     		margin: 10px;
-    		.post{
-    			margin: 0;
-    		}
-    		.entry-title{
-    			font-size: 20px;
-    		}
+    		
 
 			&:hover, //...hover the main nav
 			&.focus{
@@ -60,7 +56,10 @@ ul.gordon-menu {
 			}
     		a{
     			width: 100%;
-    			padding: 0;
+    			padding: 4px;
+    			color: white;
+    			font-size: 12px;
+
     			&:hover{
     				background: transparent;
     			}
@@ -70,6 +69,39 @@ ul.gordon-menu {
     }
 	}
 }
+
+.nav-article{
+	width: 144px;
+	height: 144px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 0;
+
+	&:hover{
+		.post-info{
+			bottom: -80;
+		}
+	}
+
+	.post-thumbnail{
+
+	}
+
+	.post-info{
+		position: absolute;
+		bottom: 0px;
+		background: rgba(0,0,0,.5);
+
+		-webkit-transition: bottom .3s ease-in-out;
+		-moz-transition: bottom .3s ease-in-out;
+		-ms-transition: bottom .3s ease-in-out;
+		-o-transition: bottom .3s ease-in-out;
+		transition: bottom .3s ease-in-out;
+		}
+
+}
+
+
 
 
 // .nav-menu{

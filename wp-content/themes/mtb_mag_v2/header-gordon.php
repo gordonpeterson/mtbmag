@@ -205,11 +205,12 @@
 			$url_obj = parse_url($menu_item->url);
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
-			
+
+
 			if ( $post_status == 'publish' && ($type_label == "Category" || $type_label == "Categoria") ) {
 				echo "<li class='menu-item category-container $post_status'>";
 				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>" . $title . '</a>';
-				$category_query = get_posts( "category_name=$base&posts_per_page=8" ); 
+				$category_query = get_posts( "category_name=$base&posts_per_page=10" ); 
 
 				// var_dump( $category_query->have_posts() );
 
@@ -217,7 +218,7 @@
 						<?php echo "<ul class='category'>" ?>
 					<?php foreach ( $category_query as $post ) : setup_postdata( $post ); ?>
 						<li class="article">
-							<?php get_template_part('content', 'small') ?>
+							<?php get_template_part('content', 'nav') ?>
 						</li>
 					<?php endforeach; ?>
 					<?php echo "</ul>";
