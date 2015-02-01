@@ -240,7 +240,7 @@
 	// $menu_items = wp_get_nav_menu_items($menu->term_id);
 	$menu_items = wp_get_nav_menu_items($menu);
 
-	$gordons_menu = '<ul id="menu-' . $menu_name . '">';
+	echo '<ul id="menu-' . $menu_name . '">';
 
 	// var_dump( $menu_items );
 
@@ -252,9 +252,9 @@
 			$url_obj = parse_url($menu_item->url);
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
-			$gordons_menu .= "<li>";
+			echo "<li>";
 
-			$gordons_menu .= "<a href='" . $url . "'>" . $title . '</a>';
+			echo "<a href='" . $url . "'>" . $title . '</a>';
 			if ($type_label == "Category") {
 				$category_query = get_posts( "category_name=$base&posts_per_page=8" ); 
 
@@ -278,24 +278,16 @@
 							background: lime;
 						}
 						</style>
+						<?php echo "<ul>" ?>
+					<?php foreach ( $category_query as $post ) : setup_postdata( $post ); ?>
+					<?php  $article_title=the_title(); ?>
+					<?php echo "<li>$article_title</li>" ?>
+					<?php endforeach; ?>
+						<?php echo "<ul>" ?>
 					<?php 
-					echo "<hr><div>*********start*********</div> ";
-					foreach ( $category_query as $post ) : setup_postdata( $post ); ?>
-						<li>
-							<a href="<?php the_permalink(); ?>">the_title: <?php the_title(); ?></a>
-						</li>
-					<?php endforeach; 
-					// var_dump( $post );
-					echo "</div> <!-- .blah -->";
-					echo "<div>***********end**************</div><hr>";
-
-					?>
-					
-
-					<?php 
-					$gordons_menu .= "</ul>";
+					echo "</ul>";
 				} else {
-						// $gordons_menu .= "no----category_query";
+						// echo "no----category_query";
 					echo "not found: $base ";
 				}
 
@@ -303,19 +295,15 @@
 				wp_reset_postdata();
 			}
 
-			$gordons_menu .="</li>";
+			echo"</li>";
 	}
-	$gordons_menu .= '</ul>';
+	echo '</ul>';
 		} else {
-	$gordons_menu = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+	echo '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
 		}
 		// $gordons_menu now ready to output
 				?>
 
-			<div class="gordon">
-			<?php echo implode(", ", $locations); ?>
-				<?php echo $gordons_menu; ?>
-			</div>
 
 
 
