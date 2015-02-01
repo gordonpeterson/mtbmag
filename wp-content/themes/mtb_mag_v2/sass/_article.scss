@@ -7,37 +7,79 @@ body.single-post {
 		max-width:none;
 	}
 
-	article {
+	article.post {
 		width: 100%;
 		max-width:none;
 		position: relative;
 		margin-bottom: 0;
-	}
 
-	.entry-header{
-		// margin: 0 auto;
-		margin-top: 400px;
-		background: white;
-		background: rgba(white, .95);
-		max-width: none;
-		padding-top: 1px;
+		.entry-header{
+			// margin: 0 auto;
+			margin-top: 400px;
+			background: white;
+			background: rgba(white, .95);
+			max-width: none;
+			padding-top: 1px;
+
+			.entry-title{
+				text-align: center;
+				margin: 30px auto 20px;
+				max-width: 750px;
+			}
+			.entry-meta{
+				text-align: center;
+				max-width: 750px;
+				background: transparent;
+				margin-bottom: 10px;
+
+				&>span{
+					margin: 5px;
+				}
+			}
+		} //.entry-header
+
+		.entry-content,
+		.entry-summary,
+		.entry-meta,
+		.page-content {
+			margin: 0 auto;
+			max-width: 750px;
+		}
+
+		.post-thumbnail{
+			width: 100%;
+			height: 400px;
+			overflow: hidden;
+			position: fixed;
+		}
 
 		.entry-title{
 			text-align: center;
-			margin: 30px auto 20px;
-			max-width: 750px;
+			margin: 30px auto;
 		}
 		.entry-meta{
 			text-align: center;
-			max-width: 750px;
-			background: transparent;
-			margin-bottom: 10px;
+		}
 
-			&>span{
-				margin: 5px;
+		p{
+			max-width: 750px;
+			// border: 1px solid orange;
+			display: block;
+			margin: 20px auto;
+			padding: 0 65px;
+
+
+			&>a{
+				margin: 0 -65px;
+				display: block;
+				padding: 0;
+				&>img{
+
+				}
 			}
 		}
-	} //.entry-header
+		
+	} //article.post
 
 	.scroll-area{
 		width: 100%;
@@ -48,46 +90,6 @@ body.single-post {
 	}
 
 
-	.entry-content,
-	.entry-summary,
-	.entry-meta,
-	.page-content {
-		margin: 0 auto;
-		max-width: 750px;
-	}
-
-	.post-thumbnail{
-		width: 100%;
-		height: 400px;
-		overflow: hidden;
-		position: fixed;
-	}
-
-	.entry-title{
-		text-align: center;
-		margin: 30px auto;
-	}
-	.entry-meta{
-		text-align: center;
-	}
-
-	p{
-		max-width: 750px;
-		// border: 1px solid orange;
-		display: block;
-		margin: 20px auto;
-		padding: 0 65px;
-
-
-		&>a{
-			margin: 0 -65px;
-			display: block;
-			padding: 0;
-			&>img{
-
-			}
-		}
-	}
 
 
 	.full-width .site-content {

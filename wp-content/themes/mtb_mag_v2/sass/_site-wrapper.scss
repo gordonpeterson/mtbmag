@@ -48,12 +48,14 @@ ul.gordon-menu {
     	li.article{
     		display: inline-block;
     		margin: 10px;
+    		background: #e0e0e0;
     		
 
-			&:hover, //...hover the main nav
-			&.focus{
-				background: transparent;
-			}
+				&:hover, //...hover the main nav
+				&.focus{
+					// background: transparent;
+				}
+
     		a{
     			width: 100%;
     			padding: 4px;
@@ -91,6 +93,7 @@ ul.gordon-menu {
 		position: absolute;
 		bottom: 0px;
 		background: rgba(0,0,0,.5);
+		width: 100%;
 
 		-webkit-transition: bottom .3s ease-in-out;
 		-moz-transition: bottom .3s ease-in-out;
