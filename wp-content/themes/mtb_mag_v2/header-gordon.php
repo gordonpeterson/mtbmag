@@ -201,13 +201,14 @@
 			$url = $menu_item->url;
 			$type_label = $menu_item->type_label;
 			$url =$menu_item->url;
+			$post_status = $menu_item->post_status;
 			$url_obj = parse_url($menu_item->url);
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
 			
-			if ($type_label == "Category") {
-				echo "<li class='menu-item category-container'>";
-				echo "<a href='" . $url . "'>$type_label:" . $title . '</a>';
+			if ( $post_status == 'publish' && ($type_label == "Category" || $type_label == "Categoria") ) {
+				echo "<li class='menu-item category-container $post_status'>";
+				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>" . $title . '</a>';
 				$category_query = get_posts( "category_name=$base&posts_per_page=8" ); 
 
 				// var_dump( $category_query->have_posts() );
@@ -227,8 +228,8 @@
 
 				echo"</li>";
 			} else {
-				echo "<li class='menu-item'>";
-				echo "<a href='" . $url . "'>$type_label:" . $title . '</a>';
+				echo "<li class='menu-item $post_status'>";
+				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>" . $title . '</a>';
 				echo"</li>";
 			}
 
