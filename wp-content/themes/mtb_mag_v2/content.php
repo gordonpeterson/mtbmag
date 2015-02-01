@@ -74,6 +74,33 @@
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
+
+					<?php 
+					$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
+					 ?>
+
+					<div class="ad ad300x250">
+						<div class="ad-inner-wrap">
+						<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
+							<div class="widget no-widget">
+									<p><?php _e("$adText ad1 300x250", 'twentytwelve'); ?></p>
+							</div>
+						<?php endif; ?>
+						</div>			
+					</div>
+
+					<div class="ad ad300x250">
+						<div class="ad-inner-wrap">
+						<?php if ( ! dynamic_sidebar( 'ad-widget2' ) ) : ?>
+							<div class="widget no-widget">
+									<p><?php _e("$adText ad2 300x250", 'twentytwelve'); ?></p>
+							</div>
+						<?php endif; ?>
+						</div>			
+					</div>
+
+
+
 		<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
 	</div> <!-- .scroll-ares -->
 </article><!-- #post-## -->
