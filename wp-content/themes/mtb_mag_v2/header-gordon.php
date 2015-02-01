@@ -257,31 +257,42 @@
 			$gordons_menu .= "<a href='" . $url . "'>" . $title . '</a>';
 			if ($type_label == "Category") {
 				$category_query = get_posts( "category_name=$base&posts_per_page=8" ); 
-				if ( $category_query ) {
-					$gordons_menu .= "<ul class='category-menu'>";
-					$articleCount++;
-					// var_dump( $category_query[0] );
-					foreach ( $category_query as $article ) : setup_postdata( $article ); ?>
-					<hr>
-					<a href="<?php the_permalink(); ?>">article: <?php the_title(); ?></a>
-					<hr>
-					<?php //var_dump( $article->the_post_thumbnail('wt780_450'); ); ?>
-					<hr>
+
+				// var_dump( $category_query->have_posts() );
+
+				if ( $category_query ) { 
+					?>
+						<style type="text/css">
+						.blah{
+							border: 1px dashed orange;
+							padding: 10px;
+							margin: 0 50px 50px;
+							background-color: lightyellow;
+						}
+						.blah.name,
+						.blah.id{
+							background: orange;
+							margin: 0 50px;
+						}
+						.blah.name{
+							background: lime;
+						}
+						</style>
 					<?php 
+					echo "<hr><div>*********start*********</div> ";
+					foreach ( $category_query as $post ) : setup_postdata( $post ); ?>
+						<li>
+							<a href="<?php the_permalink(); ?>">the_title: <?php the_title(); ?></a>
+						</li>
+					<?php endforeach; 
+					// var_dump( $post );
+					echo "</div> <!-- .blah -->";
+					echo "<div>***********end**************</div><hr>";
 
-				echo "<hr>";
-					wp_reset_postdata();
-					endforeach; 
-					// ->the_post_thumbnail('wt780_450');
-					// echo apply_filters( 'the_content', $examplePost->post_content );
+					?>
+					
 
-					// foreach ( (array) $menu_items as $key => $menu_item ) {
-
-					// }
-					// while ( $category_query->have_posts() ) : $category_query->the_post(); 
-						// $article_title = $category_query->the_title();
-						// $gordons_menu .= "<li>$article_title</li>";
-					// endwhile;
+					<?php 
 					$gordons_menu .= "</ul>";
 				} else {
 						// $gordons_menu .= "no----category_query";
