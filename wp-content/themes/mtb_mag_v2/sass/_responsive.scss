@@ -46,7 +46,7 @@ $contentMaxWidth: 975px;
 	}
 
 	.site {
-		background-color: #e0e0e0;
+		
 		max-width: 2400px;
 		position: relative;
 	}
@@ -66,12 +66,14 @@ $contentMaxWidth: 975px;
 	.site-main{
 		padding-top: 0;
 		// margin-top: 49px;	
+		background-color: #e0e0e0;
 	}
 
 	.site-content,
 	#content{
 		max-width: $contentMaxWidth;
 		margin: 0 auto;
+
 	}
 
 
@@ -109,7 +111,7 @@ $contentMaxWidth: 975px;
 		height: 250px;
 		overflow: hidden;
 		position: relative;
-		margin: 10px 1%;
+		margin: 10px 10px;
 		background: $mainGrey;
 
 		.post-info{

@@ -26,16 +26,17 @@ ul.gordon-menu {
 			ul.category{
 				display: block;
     		max-height: 596px;
+    		background: white;
 			}
     }
     ul.category{
-    	background: $mainGrey;
+    	background: white;
     	// right: 0;
     	width: 100%;
     	left: 0;
     	display: none;
     	max-height: 0;
-    	max-width: 1400px;
+    	// max-width: 1400px;
     	overflow: hidden;
 			font-size: 13px;
 
@@ -229,9 +230,12 @@ div.search-box{
 			}
 		}
 	}
-
-
 }
+.primary-navigation li:hover > a{
+	background: white;
+	color: $mainGrey;
+}
+
 .article-nav{
 	max-height: 540px;
 	overflow: hidden;
