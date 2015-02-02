@@ -104,12 +104,13 @@ body.single-post {
 		max-width: none;
 		border: none;
 		position: relative;
-		background: white;
+		background: $siteBgColor;
 		margin: 0;
 	}
 
 	.nav-links{
 		// border: 1px solid rgba(0, 0, 0, 0.1);
+
 
 		a{
 			max-width: 48%;
@@ -118,6 +119,15 @@ body.single-post {
 			border: none;
 			border: 1px solid #eee;
 			border: 1px solid rgba(0, 0, 0, 0.1);
+			margin-bottom: 1px;
+			&:hover{
+				background: $mainGrey;
+				color: white;
+			}
+
+			&:first-child{
+
+			}
 
 			&:last-child{
 				text-align: right;
@@ -127,12 +137,12 @@ body.single-post {
 	}
 
 	.comments-area{
-		background: white;
+		background: $siteBgColor;
 		max-width: none;
 		width: 100%;
 		position: relative;
-		padding-top: 48px;
-		margin-top: -1px;
+		padding: 35px;
+		margin: 0;
 	}
 
 	

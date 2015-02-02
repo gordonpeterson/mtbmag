@@ -22,27 +22,34 @@ ul.gordon-menu {
     &:hover,
     &:focus{
 			ul.category{
-				display: block;
+				// display: block;
     		max-height: 596px;
     		background: white;
+    		z-index: 20;
+	    	-webkit-transition: max-height .3s ease-in-out .4s;
+	    	-moz-transition: max-height .3s ease-in-out .4s;
+	    	-ms-transition: max-height .3s ease-in-out .4s;
+	    	-o-transition: max-height .3s ease-in-out .4s;
+	    	transition: max-height .3s ease-in-out .4s;
 			}
     }
     ul.category{
     	background: white;
+    	z-index: auto;
     	// right: 0;
     	width: 100%;
     	left: 0;
-    	display: none;
+    	// display: none;
     	max-height: 0;
     	// max-width: 1400px;
     	overflow: hidden;
 			font-size: 13px;
+  		-webkit-transition: max-height .3s ease-in-out 0s;
+  		-moz-transition: max-height .3s ease-in-out 0s;
+  		-ms-transition: max-height .3s ease-in-out 0s;
+  		-o-transition: max-height .3s ease-in-out 0s;
+  		transition: max-height .3s ease-in-out 0s;
 
-    	-webkit-transition: max-height .3s ease-in-out;
-    	-moz-transition: max-height .3s ease-in-out;
-    	-ms-transition: max-height .3s ease-in-out;
-    	-o-transition: max-height .3s ease-in-out;
-    	transition: max-height .3s ease-in-out;
 
     	li.article{
     		display: inline-block;
