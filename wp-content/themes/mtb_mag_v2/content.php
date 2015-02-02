@@ -78,7 +78,8 @@
 					<?php 
 					$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
 					 ?>
-
+					
+					<div class="ads-row">
 					<div class="ad ad300x250">
 						<div class="ad-inner-wrap">
 						<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
@@ -97,6 +98,7 @@
 							</div>
 						<?php endif; ?>
 						</div>			
+					</div>
 					</div>
 
 
