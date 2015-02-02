@@ -271,6 +271,8 @@ $contentMaxWidth: 975px;
 	body.home,
 	body.archive,
 	body.category{
+
+
 		
 		article.small{
 			padding-left: 0;
@@ -339,9 +341,13 @@ $contentMaxWidth: 975px;
 	}
 
 	.primary-navigation{
-		border: 2px dashed orange;
 		// margin-top: 48px;
 		padding-top: 48px;
+	}
+
+	.menu-toggle{
+		display: block !important;
+		// border: 2px dashed orange;
 	}
 
 
