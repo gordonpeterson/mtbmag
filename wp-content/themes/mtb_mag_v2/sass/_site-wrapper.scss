@@ -1,5 +1,3 @@
-$lightGrey: #e0e0e0;
-
 body, h1, h2, h3, h4, h5, h6{
 	font-family: 'Open Sans', Arial, sans-serif;
 }
@@ -49,7 +47,7 @@ ul.gordon-menu {
     	li.article{
     		display: inline-block;
     		margin: 10px;
-    		background: #e0e0e0;
+    		background: $siteBgColor;
     		
 
 				&:hover, //...hover the main nav
@@ -246,7 +244,9 @@ div.search-box{
 	}
 }
 
-
+.site{
+	background: $siteBgColor;
+}
 .site-main{
 	margin-top: 48px;
 }

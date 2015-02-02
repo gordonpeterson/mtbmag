@@ -1,6 +1,7 @@
 $mainGrey: #4d4d4d;
 $linkColor: #333;
 $gutter: 25px;
+$siteBgColor: #e0e0e0;
 $gutterMargin: floor($gutter/2);
 
 
@@ -13,6 +14,7 @@ $gutterMargin: floor($gutter/2);
 	@import "site-wrapper";
 	@import "category";
 	@import "article";
+	@import "ads";
 	@import "language";
 }
 

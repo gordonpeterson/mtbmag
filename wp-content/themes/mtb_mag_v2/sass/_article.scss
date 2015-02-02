@@ -7,17 +7,19 @@ body.single-post {
 		max-width:none;
 	}
 
+
 	article.post {
 		width: 100%;
 		max-width:none;
 		position: relative;
 		margin-bottom: 0;
 
+
 		.entry-header{
 			// margin: 0 auto;
 			margin-top: 400px;
-			background: #e0e0e0;
-			background: rgba(#e0e0e0, .95);
+			background: $siteBgColor;
+			background: rgba($siteBgColor, .95);
 			max-width: none;
 			padding-top: 1px;
 
@@ -83,7 +85,7 @@ body.single-post {
 
 	.scroll-area{
 		width: 100%;
-		background: #e0e0e0;
+		background: $siteBgColor;
 		position: relative;
 		padding-bottom: 48px;
 		margin-top: -1px;

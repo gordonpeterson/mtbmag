@@ -59,3 +59,10 @@
 #lang_sel ul ul :hover > a{
 	background: darken($mainGrey, .1);
 }
+
+
+#lang_sel_footer{
+	position: relative;
+	background: black;
+	border: none;
+}
