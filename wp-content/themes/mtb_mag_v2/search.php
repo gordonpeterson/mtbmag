@@ -9,7 +9,6 @@
 
 get_header('gordon'); ?>
 
-	<div class="gordon">search.php</div>
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
