@@ -140,41 +140,41 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</h1>
 
-		<div class="right-nav">
-			<span class="search-toggle">
-				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
-			</span>
-				<?php do_action('icl_language_selector'); ?>
-			<span class="login-toggle" ng-mouseover="login=true", ng-mouseout="login=false">
-				<div class="login-info">
-					<a href="" ><?php 
-					if ( is_user_logged_in() ) {
-						$current_user = wp_get_current_user();
-						// print_r( $current_user );
-						echo 'Hi ' . $current_user->display_name. '!';
-					} else {
-						echo 'Log In';
-					}
-					?></a>
-					</div>
-				<div class="login-form" ng-show="login"  ng-cloak>
-				<?php
-
-					if ( is_user_logged_in() ) {
-						?>
-						<div class="logout">
-							<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a>
+			<div class="right-nav">
+				<span class="search-toggle">
+					<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+				</span>
+					<?php do_action('icl_language_selector'); ?>
+				<span class="login-toggle" ng-mouseover="login=true", ng-mouseout="login=false">
+					<div class="login-info">
+						<a href="" ><?php 
+						if ( is_user_logged_in() ) {
+							$current_user = wp_get_current_user();
+							// print_r( $current_user );
+							echo 'Hi ' . $current_user->display_name. '!';
+						} else {
+							echo 'Log In';
+						}
+						?></a>
 						</div>
-						<?php 
-					}	else {
-						?>
-						<?php 
-						wp_login_form(); 
-					}
-				 ?>
-				</div>
-			</span>
-		</div>
+					<div class="login-form" ng-show="login"  ng-cloak>
+					<?php
+
+						if ( is_user_logged_in() ) {
+							?>
+							<div class="logout">
+								<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a>
+							</div>
+							<?php 
+						}	else {
+							?>
+							<?php 
+							wp_login_form(); 
+						}
+					 ?>
+					</div>
+				</span>
+			</div>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
@@ -245,29 +245,10 @@
 
 
 
-				</div>
-			</nav>
-			<?php /*
-		<!-- 
-			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
-				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-				<? //php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-
-				<div class="menu-inglese-container">
-					<ul id="menu-inglese" class="nav-menu"><li id="menu-item-55080" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55080"><a href="/category/mag-2/en/news-en-2/">NEWS</a></li>
-						<li id="menu-item-66758" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-66758"><a href="/category/mag-2/en/eurobike-2014-en/">EUROBIKE 2014</a></li>
-						<li id="menu-item-55081" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55081"><a href="/category/mag-2/en/reviews-en/">REVIEWS</a></li>
-						<li id="menu-item-55082" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55082"><a href="/category/mag-2/en/epics/">EPICS</a></li>
-						<li id="menu-item-61346" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61346"><a href="/category/mag-2/en/interviews/">INTERVIEWS</a></li>
-						<li id="menu-item-55083" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55083"><a href="/category/mag-2/en/tech-corner-en/">TECH</a></li>
-						<li id="menu-item-55084" ng-mouseover='showArticles=true' ng-mouseout='showArticles=false' class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55084"><a href="http://tc.mtb-forum.it/index.php?lang=en">TRAINING CAMP</a></li>
-					</ul>
-				</div>
-			</nav>
-		-->
-			*/ ?>
-		</div>
+				</div> <!-- end menu-links-container -->
+			</nav>  <!-- end primary-navigation -->
+	
+		</div> <!-- end header-main -->
 
 		<div id="search-container" class="search-box-wrapper hide">
 			<div class="search-box">
