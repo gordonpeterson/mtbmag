@@ -197,7 +197,7 @@
 	?>
 	<div class="gordon">
 	<?php 
-		var_dump( $menu_items );
+		// var_dump( $menu_items );
 	?> 
 	</div>
 	<?php 
@@ -213,7 +213,7 @@
 			$url_obj = parse_url($menu_item->url);
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
-			$url_target = $menu_item->TARGET
+			$url_target = $menu_item->TARGET;
 
 
 

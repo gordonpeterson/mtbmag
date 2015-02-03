@@ -1663,7 +1663,6 @@ a.post-thumbnail:hover {
 	/* border: 1px solid rgba(0, 0, 0, 0.1); */
 	hyphens:         auto;
 	word-wrap: break-word;
-	background: yellow;
 }
 
 .post-navigation,

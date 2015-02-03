@@ -52,6 +52,7 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 	
+	<?php $adText = 'You have not added content for this ad space. Go to your widgets section and select '; ?>
 	<div class="scroll-area">
 		<?php if ( is_search() ) : ?>
 		<div class="entry-summary full">
@@ -78,7 +79,6 @@
 		<?php endif; ?>
 
 
-					<?php $adText = 'You have not added content for this ad space. Go to your widgets section and select '; ?>
 					
 					<div class="ads-row">
 					<div class="ad ad300x250">
