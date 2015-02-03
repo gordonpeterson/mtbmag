@@ -79,20 +79,6 @@ get_header('gordon'); ?>
 									</div>
 										
 								<?php 
-							} elseif ($currentIndex == 11) { //...ad4 727x400
-								 ?>
-									<div class="ad ad727x400">
-										<div class="ad-inner-wrap">
-										<?php if ( ! dynamic_sidebar( 'ad-widget4' ) ) : ?>
-											<div class="widget no-widget">
-													<p><?php _e("$adText ad4 272x400", 'twentytwelve'); ?></p>
-											</div>
-										<?php endif; ?>
-										</div>
-									</div>
-										
-								<?php 
-
 							} elseif ($currentIndex == 15) { //...ad5 300x250
 								?>
 									<div class="ad ad300x250">

@@ -1,13 +1,7 @@
 <?php
-/**
- * The default template for displaying content
- *
- * Used for both single and index/archive/search.
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
+/*
+Template Name Posts: Article Full
+*/
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

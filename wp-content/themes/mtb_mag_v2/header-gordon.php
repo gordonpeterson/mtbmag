@@ -68,7 +68,7 @@
 
 <!-- start -->
 			<?php 
-				define("ICL_LANGUAGE_CODE", "en");
+				// define("ICL_LANGUAGE_CODE", "en");
 			 ?>
 			
 			<?php	if(ICL_LANGUAGE_CODE == 'en'){ ?>
@@ -194,7 +194,15 @@
 	
 	echo '<ul id="menu-' . $menu_name . '" class="gordon-menu menu-nav">';
 
-	// var_dump( $menu_items );
+	?>
+	<div class="gordon">
+	<?php 
+		var_dump( $menu_items );
+	?> 
+	</div>
+	<?php 
+
+
 
 	foreach ( (array) $menu_items as $key => $menu_item ) {
 			$title = $menu_item->title;
@@ -205,6 +213,8 @@
 			$url_obj = parse_url($menu_item->url);
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
+			$url_target = $menu_item->TARGET
+
 
 
 			if ( $post_status == 'publish' && ($type_label == "Category" || $type_label == "Categoria") ) {

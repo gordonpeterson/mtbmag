@@ -5,13 +5,15 @@
 .ads-row{
 	margin: 0 auto;
 	display: table;
+
+	
 }
 
 div.ad{
 	margin: 10px;
 	display: inline-block;
 	vertical-align: top;
-	background-color: $mainGrey;
+	background-color: $adBgColor;
 	border: 2px dashed transparent;
 	border: none;
 	overflow: hidden;
