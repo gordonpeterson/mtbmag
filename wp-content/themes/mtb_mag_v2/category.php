@@ -28,7 +28,7 @@ get_header('gordon'); ?>
 					// Start the Loop.
 					$count = 0;
 					$increment = 0;
-					$adArray = array(3,4,5,11,15);
+					$adArray = array(3,4,5,15);
 					$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
 
 					while ( have_posts() ) : the_post();
