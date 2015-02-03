@@ -66,6 +66,64 @@
 
 <body <?php body_class(); ?> ng-app="mtbMagApp">
 
+<!-- start -->
+			<?php 
+				// define("ICL_LANGUAGE_CODE", "en");
+			 ?>
+			
+			<?php	if(ICL_LANGUAGE_CODE == 'en'){ ?>
+				<script type='text/javascript'>
+				var googletag = googletag || {};
+				googletag.cmd = googletag.cmd || [];
+				(function() {
+				var gads = document.createElement('script');
+				gads.async = true;
+				gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'http:') + 
+				'//www.googletagservices.com/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+				})();
+				</script>
+
+				<script type='text/javascript'>
+				googletag.cmd.push(function() {
+				googletag.defineSlot('/1031065/MTBMAG-EN-Header', [[728, 90], [950, 150]], 'div-gpt-ad-1402004698859-0').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+				});
+				</script>
+				<!-- MTBMAG-EN-Header -->
+			<?php	}
+				else {?>
+					<script type='text/javascript'>
+					var googletag = googletag || {};
+					googletag.cmd = googletag.cmd || [];
+					(function() {
+					var gads = document.createElement('script');
+					gads.async = true;
+					gads.type = 'text/javascript';
+					var useSSL = 'https:' == document.location.protocol;
+					gads.src = (useSSL ? 'https:' : 'http:') + 
+					'//www.googletagservices.com/tag/js/gpt.js';
+					var node = document.getElementsByTagName('script')[0];
+					node.parentNode.insertBefore(gads, node);
+					})();
+					</script>
+
+					<script type='text/javascript'>
+					googletag.cmd.push(function() {
+					googletag.defineSlot('/1031065/MTBMAG-Header-home', [[728, 90], [950, 150]], 'div-gpt-ad-1402004398340-0').addService(googletag.pubads());
+					googletag.pubads().enableSingleRequest();
+					googletag.enableServices();
+					});
+					</script>
+					<!-- MTBMAG-Header-home -->
+				
+			<?php } ?>
+
+			<!-- end -->
 
 <div id="page" class="hfeed site">
 	<?php if ( get_header_image() ) : ?>
