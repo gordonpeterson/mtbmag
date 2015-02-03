@@ -39,6 +39,16 @@ function mtb_mag_setup() {
 		'before_title' => '<h3 class="ad-title">',
 		'after_title' => '</h3>',
 	) );
+
+	register_sidebar( array(
+		'name' => __( 'Ad4 300x250', 'twentytwelve' ),
+		'id' => 'ad-widget4',
+		'description' => __( 'The second 300x250 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="ad4 ad300x250 %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="ad-title">',
+		'after_title' => '</h3>',
+	) );
 	
 	
 	register_sidebar( array(
