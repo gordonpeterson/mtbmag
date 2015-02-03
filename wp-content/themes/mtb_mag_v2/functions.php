@@ -40,15 +40,6 @@ function mtb_mag_setup() {
 		'after_title' => '</h3>',
 	) );
 	
-	register_sidebar( array(
-		'name' => __( 'Ad4 727x400', 'twentytwelve' ),
-		'id' => 'ad-widget4',
-		'description' => __( 'The fourth 727x400 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="ad4 ad727x400 %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="ad-title">',
-		'after_title' => '</h3>',
-	) );
 	
 	register_sidebar( array(
 		'name' => __( 'Ad5 300x250', 'twentytwelve' ),
@@ -65,6 +56,16 @@ function mtb_mag_setup() {
 		'id' => 'ad-widget6',
 		'description' => __( 'The sixth 300x250 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="ad6 ad300x250 %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="ad-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Ad Full', 'twentytwelve' ),
+		'id' => 'ad-widget-full',
+		'description' => __( 'The full page ad slot for article pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="ad-full %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="ad-title">',
 		'after_title' => '</h3>',

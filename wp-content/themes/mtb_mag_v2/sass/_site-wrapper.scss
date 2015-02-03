@@ -26,39 +26,40 @@ ul.gordon-menu {
     		max-height: 596px;
     		background: white;
     		z-index: 20;
-	    	-webkit-transition: max-height .3s ease-in-out .4s;
-	    	-moz-transition: max-height .3s ease-in-out .4s;
-	    	-ms-transition: max-height .3s ease-in-out .4s;
-	    	-o-transition: max-height .3s ease-in-out .4s;
-	    	transition: max-height .3s ease-in-out .4s;
-				border: 3px solid red;
+			  // padding: 10px 10px 0 10px;
+			  padding-top: 10px;
+	    	-webkit-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+	    	-moz-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+	    	-ms-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+	    	-o-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+	    	transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 			}
     }
     ul.category{
+    	// right: 0;
+    	// display: none;
+    	// max-width: 1400px;
     	background: white;
     	z-index: auto;
-    	// right: 0;
     	width: 100%;
     	left: 0;
-    	// display: none;
     	max-height: 0;
-    	// max-width: 1400px;
-  	  padding-top: 10px;
+		  padding-top: 0;
 		  padding-left: 10px;
-		  padding-right: 10px;
     	overflow: hidden;
 			font-size: 13px;
-  		-webkit-transition: max-height .3s ease-in-out 0s;
-  		-moz-transition: max-height .3s ease-in-out 0s;
-  		-ms-transition: max-height .3s ease-in-out 0s;
-  		-o-transition: max-height .3s ease-in-out 0s;
-  		transition: max-height .3s ease-in-out 0s;
+  		-webkit-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+  		-moz-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+  		-ms-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+  		-o-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+  		transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
 
 
     	li.article{
     		display: inline-block;
     		margin: 10px;
     		background: $siteBgColor;
+
     		
 
 				&:hover, //...hover the main nav

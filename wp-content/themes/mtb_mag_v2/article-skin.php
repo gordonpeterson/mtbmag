@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name Posts: Article Full
+Template Name Posts: Full Skin Ad
 */
 
 get_header('gordon'); ?>
@@ -16,7 +16,7 @@ get_header('gordon'); ?>
 					 * use this in a child theme, then include a file called called content-___.php
 					 * (where ___ is the post format) and that will be used instead.
 					 */
-					get_template_part( 'content', 'full' );
+					get_template_part( 'content', 'skin' );
 
 					// Previous/next post navigation.
 					twentyfourteen_post_nav();

@@ -5,8 +5,7 @@
 .ads-row{
 	margin: 0 auto;
 	display: table;
-
-	
+	position: relative;
 }
 
 div.ad{
@@ -17,6 +16,17 @@ div.ad{
 	border: 2px dashed transparent;
 	border: none;
 	overflow: hidden;
+}
+
+div.ad-full{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+	// border: 1px solid red;
+	// background: pink;
 }
 
 /*727x90*/

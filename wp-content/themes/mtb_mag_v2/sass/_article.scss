@@ -8,6 +8,7 @@ body.single-post {
 	}
 
 
+
 	article.post {
 		width: 100%;
 		max-width:none;
@@ -26,7 +27,6 @@ body.single-post {
 			.entry-title{
 				text-align: center;
 				margin: 30px auto 20px;
-				max-width: 750px;
 			}
 			.entry-meta{
 				text-align: center;
@@ -46,11 +46,15 @@ body.single-post {
 		.page-content {
 			margin: 0 auto;
 			max-width: 750px;
+			&.full{
+				max-width: none;
+				padding: 0 20px;
+			}
 		}
 
 		.post-thumbnail{
 			width: 100%;
-			height: 400px;
+			height: 525px;
 			overflow: hidden;
 			position: fixed;
 		}
@@ -63,16 +67,30 @@ body.single-post {
 			text-align: center;
 		}
 
+		.entry-content{
+			position: relative;
+			background: $siteBgColor;
+			&.skin{
+				border: 1px dashed purple;
+			}
+			&.full{
+				border: 1px dashed green;
+				
+			}
+			
+
+		}
+
 		p{
-			max-width: 750px;
+			// max-width: 750px;
 			// border: 1px solid orange;
 			display: block;
 			margin: 20px auto;
-			padding: 0 65px;
+			padding: 0;
 
 
 			&>a{
-				margin: 0 -65px;
+				margin: 0;
 				display: block;
 				padding: 0;
 				&>img{
@@ -110,6 +128,7 @@ body.single-post {
 		position: relative;
 		background: $siteBgColor;
 		margin: 0;
+		padding-top: 20px;
 	}
 
 	.nav-links{
