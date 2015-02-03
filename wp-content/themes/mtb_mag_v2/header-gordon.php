@@ -220,7 +220,7 @@
 			if ( $post_status == 'publish' && ($type_label == "Category" || $type_label == "Categoria") ) {
 				echo "<li class='menu-item category-container $post_status'>";
 				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>" . $title . '</a>';
-				$category_query = get_posts( "category_name=$base&posts_per_page=10" ); 
+				$category_query = get_posts( "category_name=$base&posts_per_page=17" ); 
 
 				// var_dump( $category_query->have_posts() );
 
