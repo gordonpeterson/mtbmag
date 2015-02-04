@@ -2,6 +2,21 @@ $lightBgColor: #b2b2b2;
 $contentMaxWidth: 975px;
 
 
+/**************************************** really big *************************************/
+@media all and (min-width: 1308px) {
+
+	// body.home{
+	// 	border: 8px dashed pink;
+	// 	article.big{
+	// 		height: 750px;
+	// 		.post-thumbnail{
+	// 			height: 750px;
+	// 		}
+	// 	}
+	// }
+}
+
+
 /******************************************* big ****************************************/
 @media all and (min-width: 1008px) {
 
@@ -37,6 +52,13 @@ $contentMaxWidth: 975px;
 		.other-articles{
 			max-width: $contentMaxWidth;
 			margin: 0 auto;
+		}
+
+		article.big{
+			height: 400px;
+			.post-thumbnail{
+				height: 400px;
+			}
 		}
 
 
@@ -265,8 +287,6 @@ $contentMaxWidth: 975px;
 
 /******************************************* medium only ****************************************/
 @media screen and (max-width: 1007px) and (min-width: 590px) {
-	html{
-	}
 	
 	body.home,
 	body.archive,
@@ -301,6 +321,13 @@ $contentMaxWidth: 975px;
 
 
 		div.ad{
+		}
+	}
+
+	article.big{
+		height: 400px;
+		.post-thumbnail{
+			height: 400px;
 		}
 	}
 
@@ -450,6 +477,14 @@ $contentMaxWidth: 975px;
 
 			}
 
+		}
+	}
+
+
+	article.big{
+		height: 350px;
+		.post-thumbnail{
+			height: 350px;
 		}
 	}
 

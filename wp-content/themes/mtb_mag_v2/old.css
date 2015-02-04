@@ -3197,7 +3197,7 @@ a.post-thumbnail:hover {
 	}
 
 	.site-content .entry-meta > span {
-		/* margin-right: 10px; */
+		margin-right: 10px;
 	}
 
 	.site-content .format-video .post-format a:before {

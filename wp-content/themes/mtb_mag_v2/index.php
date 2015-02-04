@@ -10,7 +10,6 @@ get_header('gordon'); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
-		<div class="latest-article">
 		<?php
 			if ( have_posts() ) :
 				// Start the Loop.
@@ -115,10 +114,13 @@ get_header('gordon'); ?>
 						}
 
 
-					if ($count == 1) {
+					if ($count == 1) { ?>
+					<div class="latest-article">
+					 <?php 
 						get_template_part( 'content', 'big' );
 						?>
 						</div> <!-- .latest-article -->
+						<div class="scroll-area">
 						<div class="other-articles">
 						<?php 
 
@@ -137,6 +139,7 @@ get_header('gordon'); ?>
 			endif;
 		?>
 			</div> <!-- .other-articles -->
+			</div> <!-- .scroll-area -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
 	<?php get_sidebar( 'content' ); ?>

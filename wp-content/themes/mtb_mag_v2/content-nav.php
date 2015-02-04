@@ -8,7 +8,8 @@
 	
 	<?php //twentyfourteen_post_thumbnail(); ?>
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail('thumbnail'); ?>
+		<?php //the_post_thumbnail('thumbnail'); ?>
+		<?php the_post_thumbnail(array(260,125)); ?>
 	</div>
 
 	<div class="post-info">
