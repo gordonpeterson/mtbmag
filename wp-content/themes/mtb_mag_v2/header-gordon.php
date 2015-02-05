@@ -196,8 +196,9 @@
 
 	?>
 		<script type="text/javascript">
+				var menuItems =  JSON.parse('<?php echo json_encode( $menu_items ) ?>');
 				console.log('----start----');
-				console.log( JSON.parse('<?php echo json_encode( $menu_items ) ?>') );
+				console.log( menuItems );
 			</script>
 	<?php 
 
@@ -213,7 +214,7 @@
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
 			$url_target = $menu_item->TARGET;
-			$post_parent = $menu_item->post_parent;
+			$parent = $menu_item->menu_item_parent;
 
 			?>
 
@@ -222,7 +223,7 @@
 				echo "<li class='menu-item category-container $post_status'>";
 					echo "<a href='" . $url . "'>";
 						echo "<span style='display:none;'>$type_label:</span>";
-						echo "$post_parent: $title";
+						echo "$parent: $title";
 					echo '</a>';
 				$category_query = get_posts( "category_name=$base&posts_per_page=17" ); 
 
@@ -244,7 +245,7 @@
 				echo"</li>";
 			} else {
 				echo "<li class='menu-item $post_status'>";
-				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>$post_parent: " . $title . '</a>';
+				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>$parent: " . $title . '</a>';
 				echo"</li>";
 			}
 
