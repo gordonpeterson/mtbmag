@@ -23,7 +23,7 @@ var mm = function( item ) {
 	if ( !previous_item ) {
 		debugger;
 		console.log( '-----------the first-------------');
-	} else if ( item.menu_item_parent != selected_parent ) {
+	} else if ( selected_parent != -1 && item.menu_item_parent != selected_parent ) {
 
 		console.log('		>>>>end the container<<<<');
 		selected_parent = -1;
