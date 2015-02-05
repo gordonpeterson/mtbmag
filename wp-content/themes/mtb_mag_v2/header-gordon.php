@@ -207,7 +207,7 @@
 	foreach ( (array) $menu_items as $key => $menu_item ) {
 			$title = $menu_item->title;
 			$url = $menu_item->url;
-			$type_label = $menu_item->type_label;
+			$type = $menu_item->object;
 			$url =$menu_item->url;
 			$post_status = $menu_item->post_status;
 			$url_obj = parse_url($url);
@@ -218,43 +218,43 @@
 			$category_ul = '';
 			?>
 
-			<li class="menu-item category-container <?php $post_status ?>">
+			<li class="menu-item category-container <?php echo $type ?>">
 				<a href="<?php $url ?>">
 					<span class="title"><?php echo $title; ?></span>
-					<span class="type-label" style="display:none;"><?php echo $type_label ?></span>
+					<span class="type-label" style="display:none;"><?php echo "($type)" ?></span>
 				</a>
 				
 
 			<?php 
 			// ...........create a categories ul
-			if ( $post_status == 'publish' && ($type_label == "Category" || $type_label == "Categoria") ) {
+			if ( $post_status == 'publish' && $type == "category" ) {
 				$category_query = get_posts( "category_name=$url_base&posts_per_page=17" ); 
 				if ( $category_query ) {?>
 					<ul class='category'>
+					<!-- start the loop -->
 					<?php foreach ( $category_query as $post ) : setup_postdata( $post ); ?>
 						<li class="article">
 							<?php get_template_part('content', 'nav') //...show content-nav.php template ?>
 						</li>
 					<?php endforeach; ?>
+					<!-- end the loop -->
 					</ul> <!-- end ul.category -->
 				<?php 
 				} else {
-					echo "<ul> <li class='error'>could not find category:$url_base</li> </ul>";
+					echo "<ul> <li class='error'>could not query the category:$url_base</li> </ul>";
 				}
 				
-			} else {
-				// echo "<li class='menu-item $post_status'>";
-				// echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>$parent: " . $title . '</a>';
-			}
+			} //...end categories ul
+
 
 			wp_reset_postdata();
 			?>
-			</li> <!-- close the main item -->
+			</li> <!-- close the menu-item -->
 			<?php 
 	}
 	echo '</ul>'; //...close the main ul;
 		} else {
-	echo '<ul><li>the "' . $menu_name . '" menu is not defined.</li></ul>';
+	echo '<ul><li class="error">the "' . $menu_name . '" menu is not defined.</li></ul>';
 		} 
 		//...........end gordons nav
 		?>
