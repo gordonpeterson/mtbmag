@@ -211,42 +211,36 @@
 			$url =$menu_item->url;
 			$post_status = $menu_item->post_status;
 			$url_obj = parse_url($url);
-			$base = basename($url_obj["path"]);
+			$url_base = basename($url_obj["path"]);
 			$articleCount = 0;
 			$url_target = $menu_item->TARGET;
 			$parent = $menu_item->menu_item_parent;
+			$category_ul = '';
 			?>
 
 			<li class="menu-item category-container <?php $post_status ?>">
-				<a href="$url">
-					<span class="title"><?php $title; ?></span>
-					<span class="type-label" style="display:none;"><?php $type_label ?></span>
+				<a href="<?php $url ?>">
+					<span class="title"><?php echo $title; ?></span>
+					<span class="type-label" style="display:none;"><?php echo $type_label ?></span>
 				</a>
+				
 
 			<?php 
+			// ...........create a categories ul
 			if ( $post_status == 'publish' && ($type_label == "Category" || $type_label == "Categoria") ) {
-				// echo "<li class='menu-item category-container $post_status'>";
-					// echo "<a href='" . $url . "'>";
-						// echo "<span style='display:none;'>$type_label:</span>";
-						// echo "$parent: $title";
-					// echo '</a>';
-				$category_query = get_posts( "category_name=$base&posts_per_page=17" ); 
-
-				// var_dump( $category_query->have_posts() );
-
+				$category_query = get_posts( "category_name=$url_base&posts_per_page=17" ); 
 				if ( $category_query ) {?>
-						<?php echo "<ul class='category'>" ?>
+					<ul class='category'>
 					<?php foreach ( $category_query as $post ) : setup_postdata( $post ); ?>
 						<li class="article">
-							<?php get_template_part('content', 'nav') ?>
+							<?php get_template_part('content', 'nav') //...show content-nav.php template ?>
 						</li>
 					<?php endforeach; ?>
-					<?php echo "</ul>";
+					</ul> <!-- end ul.category -->
+				<?php 
 				} else {
-						// echo "no----category_query";
-					echo "not found: $base ";
+					echo "<ul> <li class='error'>could not find category:$url_base</li> </ul>";
 				}
-
 				
 			} else {
 				// echo "<li class='menu-item $post_status'>";
