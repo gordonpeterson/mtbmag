@@ -234,6 +234,7 @@
 			} else if ( $selected_parent != -1 && $menu_item->menu_item_parent != $selected_parent ) {
 					// echo "<!-- <<<<<<<<<<< end the container >>>>>>>>>>>>> -->";
 				echo "</ul> <!-- end the .sub-menu -->";
+				$selected_parent = -1;
 			}
 
 
