@@ -195,11 +195,10 @@
 	echo '<ul id="menu-' . $menu_name . '" class="gordon-menu menu-nav">';
 
 	?>
-	<div class="gordon">
-	<?php 
-		// var_dump( $menu_items );
-	?> 
-	</div>
+		<script type="text/javascript">
+				console.log('----start----');
+				console.log( JSON.parse('<?php echo json_encode( $menu_items ) ?>') );
+			</script>
 	<?php 
 
 
@@ -214,12 +213,17 @@
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
 			$url_target = $menu_item->TARGET;
+			$post_parent = $menu_item->post_parent;
 
+			?>
 
-
+			<?php 
 			if ( $post_status == 'publish' && ($type_label == "Category" || $type_label == "Categoria") ) {
 				echo "<li class='menu-item category-container $post_status'>";
-				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>" . $title . '</a>';
+					echo "<a href='" . $url . "'>";
+						echo "<span style='display:none;'>$type_label:</span>";
+						echo "$post_parent: $title";
+					echo '</a>';
 				$category_query = get_posts( "category_name=$base&posts_per_page=17" ); 
 
 				// var_dump( $category_query->have_posts() );
@@ -240,7 +244,7 @@
 				echo"</li>";
 			} else {
 				echo "<li class='menu-item $post_status'>";
-				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>" . $title . '</a>';
+				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>$post_parent: " . $title . '</a>';
 				echo"</li>";
 			}
 
