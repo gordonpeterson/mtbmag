@@ -210,21 +210,26 @@
 			$type_label = $menu_item->type_label;
 			$url =$menu_item->url;
 			$post_status = $menu_item->post_status;
-			$url_obj = parse_url($menu_item->url);
+			$url_obj = parse_url($url);
 			$base = basename($url_obj["path"]);
 			$articleCount = 0;
 			$url_target = $menu_item->TARGET;
 			$parent = $menu_item->menu_item_parent;
-
 			?>
+
+			<li class="menu-item category-container <?php $post_status ?>">
+				<a href="$url">
+					<span class="title"><?php $title; ?></span>
+					<span class="type-label" style="display:none;"><?php $type_label ?></span>
+				</a>
 
 			<?php 
 			if ( $post_status == 'publish' && ($type_label == "Category" || $type_label == "Categoria") ) {
-				echo "<li class='menu-item category-container $post_status'>";
-					echo "<a href='" . $url . "'>";
-						echo "<span style='display:none;'>$type_label:</span>";
-						echo "$parent: $title";
-					echo '</a>';
+				// echo "<li class='menu-item category-container $post_status'>";
+					// echo "<a href='" . $url . "'>";
+						// echo "<span style='display:none;'>$type_label:</span>";
+						// echo "$parent: $title";
+					// echo '</a>';
 				$category_query = get_posts( "category_name=$base&posts_per_page=17" ); 
 
 				// var_dump( $category_query->have_posts() );
@@ -242,18 +247,20 @@
 					echo "not found: $base ";
 				}
 
-				echo"</li>";
+				
 			} else {
-				echo "<li class='menu-item $post_status'>";
-				echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>$parent: " . $title . '</a>';
-				echo"</li>";
+				// echo "<li class='menu-item $post_status'>";
+				// echo "<a href='" . $url . "'><span style='display:none;'>$type_label:</span>$parent: " . $title . '</a>';
 			}
 
 			wp_reset_postdata();
+			?>
+			</li> <!-- close the main item -->
+			<?php 
 	}
-	echo '</ul>';
+	echo '</ul>'; //...close the main ul;
 		} else {
-	echo '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+	echo '<ul><li>the "' . $menu_name . '" menu is not defined.</li></ul>';
 		} 
 		//...........end gordons nav
 		?>
