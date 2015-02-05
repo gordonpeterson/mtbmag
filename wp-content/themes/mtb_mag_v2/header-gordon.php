@@ -217,23 +217,18 @@
 			$url_obj = parse_url($url);
 			$url_base = basename($url_obj["path"]);
 			$articleCount = 0;
+
+			
 			$url_target = $menu_item->TARGET;
-			$parent = $menu_item->menu_item_parent;
-			$no_parent = $parent == 0;
 			$category_ul = '';
 
-			if( $selected_parent > 0 && $no_parent && $selected_parent != $parent ){
-				echo "</ul> <!-- end ul $selected_parent -->";
-			}
+			$parent = $menu_item->menu_item_parent;
+			$menu_order = $menu_item->menu_order;
+			$menu_index = $menu_order-1;
 
-			if ( $no_parent ) {
-				$selected_parent = $item_id;
-				echo "<ul class=\"$selected_parent\">";
-			}
+			$previous_item = $menu_items[ $menu_index-1 ];
+			$next_item = $menu_items[ $menu_index+1 ];
 
-			if ( $selected_parent == $parent ) {
-				echo "<!-- $selected_parent == $parent -->";
-			}
 
 
 			?>
