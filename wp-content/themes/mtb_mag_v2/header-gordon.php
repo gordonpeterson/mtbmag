@@ -203,8 +203,12 @@
 	<?php 
 
 
+	$selected_parent = -1;
+	$count = 0;
+	$sub_count = 0;
 
 	foreach ( (array) $menu_items as $key => $menu_item ) {
+			$item_id = $menu_item->ID;
 			$title = $menu_item->title;
 			$url = $menu_item->url;
 			$type = $menu_item->object;
@@ -215,7 +219,23 @@
 			$articleCount = 0;
 			$url_target = $menu_item->TARGET;
 			$parent = $menu_item->menu_item_parent;
+			$no_parent = $parent == 0;
 			$category_ul = '';
+
+			if( $selected_parent > 0 && $no_parent && $selected_parent != $parent ){
+				echo "</ul> <!-- end ul $selected_parent -->";
+			}
+
+			if ( $no_parent ) {
+				$selected_parent = $item_id;
+				echo "<ul class=\"$selected_parent\">";
+			}
+
+			if ( $selected_parent == $parent ) {
+				echo "<!-- $selected_parent == $parent -->";
+			}
+
+
 			?>
 
 			<li class="menu-item category-container <?php echo $type ?>">
@@ -223,9 +243,11 @@
 					<span class="title"><?php echo $title; ?></span>
 					<span class="type-label" style="display:none;"><?php echo "($type)" ?></span>
 				</a>
+			<?php 
+
+			
 				
 
-			<?php 
 			// ...........create a categories ul
 			if ( $post_status == 'publish' && $type == "category" ) {
 				$category_query = get_posts( "category_name=$url_base&posts_per_page=17" ); 
@@ -243,13 +265,14 @@
 				} else {
 					echo "<ul> <li class='error'>could not query the category:$url_base</li> </ul>";
 				}
-				
 			} //...end categories ul
 
+			
 
+			$count++;
 			wp_reset_postdata();
 			?>
-			</li> <!-- close the menu-item -->
+			</li> 
 			<?php 
 	}
 	echo '</ul>'; //...close the main ul;
