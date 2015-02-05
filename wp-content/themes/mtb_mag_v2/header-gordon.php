@@ -229,6 +229,12 @@
 			$previous_item = $menu_items[ $menu_index-1 ];
 			$next_item = $menu_items[ $menu_index+1 ];
 
+			if ( !$previous_item ) {
+				echo "<!-- -------------------the first --------------------- -->";
+			} else if ( $selected_parent != -1 && $menu_item->menu_item_parent != $selected_parent ) {
+					// echo "<!-- <<<<<<<<<<< end the container >>>>>>>>>>>>> -->";
+				echo "</ul> <!-- end the .sub-menu -->";
+			}
 
 
 			?>
@@ -238,11 +244,8 @@
 					<span class="title"><?php echo $title; ?></span>
 					<span class="type-label" style="display:none;"><?php echo "($type)" ?></span>
 				</a>
+
 			<?php 
-
-			
-				
-
 			// ...........create a categories ul
 			if ( $post_status == 'publish' && $type == "category" ) {
 				$category_query = get_posts( "category_name=$url_base&posts_per_page=17" ); 
@@ -260,15 +263,26 @@
 				} else {
 					echo "<ul> <li class='error'>could not query the category:$url_base</li> </ul>";
 				}
-			} //...end categories ul
-
+			} 
+			?>
+			</li>  <!-- end li.menu-item -->
+			<?php 
 			
+				
+
+
+			if ( !$next_item ) {
+				echo "<!-- -------------------the last --------------------- -->";
+			} else if( $next_item->menu_item_parent == $item_id ){
+				$selected_parent = $item_id;
+					// echo "<!-- <<<<<<<<<<< start the container >>>>>>>>>>>>> -->";
+				echo "<ul class='sub-menu'>";
+
+			}
+
 
 			$count++;
 			wp_reset_postdata();
-			?>
-			</li> 
-			<?php 
 	}
 	echo '</ul>'; //...close the main ul;
 		} else {
