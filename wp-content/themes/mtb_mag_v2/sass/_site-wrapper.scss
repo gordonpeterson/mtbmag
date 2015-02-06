@@ -17,16 +17,13 @@ ul.gordon-menu {
 		// background: pink;
 	}
 	 li.category-container {
-	 	// background: transparent;
     position: initial;
     &:hover,
     &:focus{
 			ul.category{
-				// display: block;
     		max-height: 360px;
     		background: white;
     		z-index: 20;
-			  // padding: 10px 10px 0 10px;
 			  padding-top: 10px;
 	    	-webkit-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 	    	-moz-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
@@ -36,9 +33,6 @@ ul.gordon-menu {
 			}
     }
     ul.category{
-    	// right: 0;
-    	// display: none;
-    	// max-width: 1400px;
     	background: white;
     	z-index: auto;
     	width: 100%;

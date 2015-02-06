@@ -240,7 +240,7 @@
 
 			?>
 
-			<li class="menu-item category-container <?php echo $type ?>">
+			<li class="menu-item <?php echo $type ?>-container">
 				<a href="<?php $url ?>">
 					<span class="title"><?php echo $title; ?></span>
 					<span class="type-label" style="display:none;"><?php echo "($type)" ?></span>
