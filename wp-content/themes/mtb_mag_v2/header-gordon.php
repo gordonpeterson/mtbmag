@@ -244,7 +244,7 @@
 			?>
 
 			<li class="menu-item <?php echo $type ?>-container <?php echo $custom_class ?>">
-				<a href="<?php $url ?>">
+				<a href="<?php echo $url ?>">
 					<span class="title"><?php echo $title; ?></span>
 					<span class="type-label" style="display:none;"><?php echo "($type)" ?></span>
 				</a>
