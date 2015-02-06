@@ -16,94 +16,157 @@ ul.gordon-menu {
 	li.menu-item{
 		position: relative;
 		display: inline-block;
-		border: 1px dashed yellow;
+		
 		&:hover{
 			a{
 				background: lighten( $mainGrey, 8% );
 				color: white;
 			}
 			.sub-menu{
-				display: block;
+				// display: block;
+				max-height: 400px;
+				-webkit-transition: max-height .3s ease-in-out .4s;
+				-moz-transition: max-height .3s ease-in-out .4s;
+				-ms-transition: max-height .3s ease-in-out .4s;
+				-o-transition: max-height .3s ease-in-out .4s;
+				transition: max-height .3s ease-in-out .4s;
 			}
 		}
 	}
-	ul.sub-menu{
-		display: block;
-		position: absolute;
-		visibility: visible;
-		background: pink;
 
-		top: 10px;
-		left: 0px;
-		width: auto;
 
-		border: 1px dashed red;
-		
-
-		li{
-			display: block;
-		}
-
-	}
-
-	 li.category-container {
-    position: initial;
-    &:hover,
-    &:focus{
+	li.category-container {
+		position: initial;
+		&:hover,
+		&:focus{
 			ul.category{
-    		max-height: 360px;
-    		background: white;
-    		z-index: 20;
-			  padding-top: 10px;
-	    	-webkit-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
-	    	-moz-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
-	    	-ms-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
-	    	-o-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
-	    	transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+				max-height: 360px;
+				background: white;
+				background: rgba(white, .85);
+				z-index: 20;
+				padding-top: 10px;
+				-webkit-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+				-moz-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+				-ms-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+				-o-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
+				transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 			}
-    }
-    ul.category{
-    	background: white;
-    	z-index: auto;
-    	width: 100%;
-    	left: 0;
-    	max-height: 0;
-		  padding-top: 0;
-		  padding-left: 10px;
-    	overflow: hidden;
+		}
+		ul.category{
+			background: white;
+			background: rgba(white, .85);
+			z-index: auto;
+			width: 100%;
+			left: 0;
+			max-height: 0;
+			padding-top: 0;
+			padding-left: 10px;
+			overflow: hidden;
 			font-size: 13px;
-  		-webkit-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
-  		-moz-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
-  		-ms-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
-  		-o-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
-  		transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+			-webkit-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+			-moz-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+			-ms-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+			-o-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+			transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
 
 
-    	li.article{
-    		display: inline-block;
-    		margin: 10px;
-    		background: $siteBgColor;
+			li.article{
+				display: inline-block;
+				margin: 10px;
+				background: $siteBgColor;
 
-    		
+				
 
 				&:hover, //...hover the main nav
 				&.focus{
 					// background: transparent;
 				}
 
-    		a{
-    			width: 100%;
-    			padding: 4px;
-    			color: white;
-    			font-size: 12px;
+				a{
+					width: 100%;
+					padding: 4px;
+					color: white;
+					font-size: 12px;
 
-    			&:hover{
-    				background: transparent;
-    			}
-    			
-    		}
-    	}
-    }
+					&:hover{
+						background: transparent;
+					}
+					
+				}
+			}
+		}
+	} //...end li.category-container
+	
+	li.is-first{ //....the magazine articles need to be in the first slot
+		position: initial;
+		border: 1px dashed red;
+		ul.sub-menu{
+			/* width: 170px; */
+			left: 0;
+			right: 0;
+			background: transparent;
+			&>li a{
+				width: 176px;
+				border: 1px solid purple;
+			}
+		}
+	}
+
+	ul.sub-menu{
+		// display: none;
+		position: absolute;
+
+		background: lighten( $mainGrey, 8% );
+		-webkit-transition: max-height .3s ease-in-out .0s;
+		-moz-transition: max-height .3s ease-in-out .0s;
+		-ms-transition: max-height .3s ease-in-out .0s;
+		-o-transition: max-height .3s ease-in-out .0s;
+		transition: max-height .3s ease-in-out .0s;
+
+		top: 48px;
+		left: 0px;
+		width: auto;
+		max-height: 0;
+		overflow: hidden;
+
+		&:hover{
+			a{
+				background: lighten( $mainGrey, 12%);
+			}
+		}
+		
+
+		li{
+			display: block;
+		}
+
+		li.category-container { //....the third layer (III)
+			// border-right: 4px solid white;
+			&:hover,
+			&:focus{
+				// left: 200px;
+				ul.category{
+					max-height: 100%;
+					opacity: 1;
+				}
+			}
+			ul.category{
+				top: 0;
+				left: 170px;
+				right: 0px;
+				max-height: 0;
+				width: auto;
+				opacity: 0;
+				padding: 0;
+				padding: 10px;
+
+				-webkit-transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
+				-moz-transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
+				-ms-transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
+				-o-transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
+				transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
+			}
+		}
 	}
 }
 
@@ -208,13 +271,13 @@ div.search-box{
 
 .search-box {
 	.search-field {
-	  background-color: #fff;
-	  border: 0;
-	  float: right;
-	  font-size: 16px;
-	  padding: 2px 2px 3px 6px;
-	  width: 100%;
-	  margin-right: 10px;
+		background-color: #fff;
+		border: 0;
+		float: right;
+		font-size: 16px;
+		padding: 2px 2px 3px 6px;
+		width: 100%;
+		margin-right: 10px;
 	}
  }
 
