@@ -217,6 +217,7 @@
 			$url_obj = parse_url($url);
 			$url_base = basename($url_obj["path"]);
 			$articleCount = 0;
+			$custom_class = "";
 
 			
 			$url_target = $menu_item->TARGET;
@@ -231,6 +232,7 @@
 
 			if ( !$previous_item ) {
 				echo "<!-- -------------------the first --------------------- -->";
+				$custom_class = "is-first";
 			} else if ( $selected_parent != -1 && $menu_item->menu_item_parent != $selected_parent ) {
 					// echo "<!-- <<<<<<<<<<< end the container >>>>>>>>>>>>> -->";
 				echo "</ul> <!-- end the .sub-menu -->";
@@ -241,7 +243,7 @@
 
 			?>
 
-			<li class="menu-item <?php echo $type ?>-container">
+			<li class="menu-item <?php echo $type ?>-container <?php echo $custom_class ?>">
 				<a href="<?php $url ?>">
 					<span class="title"><?php echo $title; ?></span>
 					<span class="type-label" style="display:none;"><?php echo "($type)" ?></span>
