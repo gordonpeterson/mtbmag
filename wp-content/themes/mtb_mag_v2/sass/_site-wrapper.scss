@@ -14,8 +14,38 @@ a{
 
 ul.gordon-menu {
 	li.menu-item{
-		// background: pink;
+		position: relative;
+		display: inline-block;
+		border: 1px dashed yellow;
+		&:hover{
+			a{
+				background: lighten( $mainGrey, 8% );
+				color: white;
+			}
+			.sub-menu{
+				display: block;
+			}
+		}
 	}
+	ul.sub-menu{
+		display: block;
+		position: absolute;
+		visibility: visible;
+		background: pink;
+
+		top: 10px;
+		left: 0px;
+		width: auto;
+
+		border: 1px dashed red;
+		
+
+		li{
+			display: block;
+		}
+
+	}
+
 	 li.category-container {
     position: initial;
     &:hover,

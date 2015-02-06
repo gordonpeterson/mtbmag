@@ -234,6 +234,7 @@
 			} else if ( $selected_parent != -1 && $menu_item->menu_item_parent != $selected_parent ) {
 					// echo "<!-- <<<<<<<<<<< end the container >>>>>>>>>>>>> -->";
 				echo "</ul> <!-- end the .sub-menu -->";
+				echo "</li> <!-- close the parent -->";
 				$selected_parent = -1;
 			}
 
@@ -265,9 +266,6 @@
 					echo "<ul> <li class='error'>could not query the category:$url_base</li> </ul>";
 				}
 			} 
-			?>
-			</li>  <!-- end li.menu-item -->
-			<?php 
 			
 				
 
@@ -278,7 +276,8 @@
 				$selected_parent = $item_id;
 					// echo "<!-- <<<<<<<<<<< start the container >>>>>>>>>>>>> -->";
 				echo "<ul class='sub-menu'>";
-
+			} else {
+				?> </li>  <!-- end li.menu-item --> <?php
 			}
 
 
