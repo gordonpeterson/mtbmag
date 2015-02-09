@@ -36,6 +36,12 @@ $contentMaxWidth: 975px;
 		}
 	}
 
+
+	ul.gordon-menu {
+		max-height: 48px;
+		overflow: hidden;
+	}
+
 	body.home{
 		#content{
 			width: 100%;
@@ -104,7 +110,7 @@ $contentMaxWidth: 975px;
 	.site-navigation,
 	.primary-navigation{
 		float: left;
-		margin: 0 1px 0 15px;
+		margin: 0 1px 0 5px;
 	}
 
 
@@ -363,6 +369,76 @@ $contentMaxWidth: 975px;
 		}
 	}
 
+
+
+	ul.gordon-menu {
+		position: absolute;
+		z-index: 50;
+		overflow: visible;
+		max-height: none;
+		// border: 1px solid lime;
+		width: 100%;
+		height: auto;
+		background: lighten( $mainGrey, 8%);
+		display: none;
+		&.show{
+			display: block;
+		}
+
+
+		li{
+			display: block;
+			// background: rgba( orange, .5);
+			width: 100%;
+			border-top: 1px solid black;
+
+		}
+
+		a{
+			padding: 13px 0;
+		}
+
+		li.menu-item{
+			a{
+				padding-left: 10px;
+			}
+			&:hover{
+				// border: 1px dashed purple;
+				ul.sub-menu{
+					max-height: 900px;
+				}
+			}
+		}
+
+		ul{
+			position: relative;
+			padding-left: 20px;
+			// background: gold;
+		}
+
+		ul.sub-menu{
+			// overflow: visible;
+			z-index: 55;
+			top: 0;
+			max-height: 0;
+			position: relative;
+			margin-left: 0;
+			padding: 0;
+			width: 100%;
+			a{
+				padding-left: 25px;
+				width: 100%;
+			}
+		}
+
+
+		ul.category{
+			// background: purple;
+			// opacity: .7;
+			display: none;
+		}
+	}
+
 	html #wpadminbar{
 		position: fixed;
 	}
@@ -375,6 +451,7 @@ $contentMaxWidth: 975px;
 	.menu-toggle{
 		display: block !important;
 		// border: 2px dashed orange;
+		border-right: 1px solid black;
 	}
 
 

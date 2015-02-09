@@ -13,6 +13,9 @@ a{
 
 
 ul.gordon-menu {
+	max-height: 48px;
+	overflow: hidden;
+	
 	li.menu-item{
 		position: relative;
 		display: inline-block;
@@ -32,6 +35,10 @@ ul.gordon-menu {
 				transition: max-height .3s ease-in-out .4s;
 			}
 		}
+		a{
+			font-size: 13px;
+			// background: pink;
+		}
 	}
 
 
@@ -40,11 +47,12 @@ ul.gordon-menu {
 		&:hover,
 		&:focus{
 			ul.category{
-				max-height: 360px;
-				background: white;
-				background: rgba(white, .85);
+				max-height: 325px;
+				background: lighten( $mainGrey, 8% );
+				// background: rgba(white, .85);
 				z-index: 20;
 				padding-top: 10px;
+				top: 47px;
 				-webkit-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 				-moz-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 				-ms-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
@@ -54,10 +62,12 @@ ul.gordon-menu {
 		}
 		ul.category{
 			background: white;
-			background: rgba(white, .85);
+			background: lighten( $mainGrey, 8% );
+			// background: rgba(white, .85);
 			z-index: auto;
 			width: 100%;
 			left: 0;
+			top: 47px;
 			max-height: 0;
 			padding-top: 0;
 			padding-left: 10px;
@@ -151,7 +161,7 @@ ul.gordon-menu {
 				// left: 200px;
 				ul.category{
 					// max-height: 100%;
-					max-height: 340px;
+					max-height: 310px;
 					opacity: 1;
 				}
 			}
@@ -295,13 +305,16 @@ div.search-box{
 	// padding-left: 3px;
 	background: $mainGrey;
 	padding: 0;
+	border-bottom: 1px solid black;
+
+	// border-bottom: 1px solid lighten( $mainGrey, 8%);
 }
 
 .header-main .site-title{
 	text-indent: -9999px;
 	word-wrap: nowrap;
 	top: -1px;
-	margin-right: 25px;
+	margin-right: 0px;
 	background: transparent url("/wp-content/themes/mtb_mag_v2/logo.png") 0 0 no-repeat;
 	background-size: 100%;
 	display: inline-block;

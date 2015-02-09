@@ -11,12 +11,12 @@
  */
 angular
 	.module('mtbMagApp', [
-		// 'ngAnimate',
-		// 'ngCookies',
-		// 'ngResource',
-		// 'ngRoute',
-		// 'ngSanitize',
-		// 'ngTouch',
+		'ngAnimate',
+		'ngCookies',
+		'ngResource',
+		'ngRoute',
+		'ngSanitize',
+		'ngTouch',
 	])
 
 } )();

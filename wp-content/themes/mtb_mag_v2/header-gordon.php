@@ -145,7 +145,7 @@
 					<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
 				</span>
 					<?php do_action('icl_language_selector'); ?>
-				<span class="login-toggle" ng-mouseover="login=true", ng-mouseout="login=false">
+				<span class="login-toggle" ng-mouseover="login=true" ng-mouseout="login=false">
 					<div class="login-info">
 						<a href="" ><?php 
 						if ( is_user_logged_in() ) {
@@ -177,7 +177,10 @@
 			</div>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
+				<button class="menu-toggle" ng-click="toggleMenu = !toggleMenu">
+					<span>{{toggleMenu}}</span>
+					<?php _e( 'Primary Menu', 'twentyfourteen' ); ?>
+				</button>
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<div class="menu-links-container">
 				<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
@@ -191,8 +194,9 @@
 
 	// $menu_items = wp_get_nav_menu_items($menu->term_id);
 	$menu_items = wp_get_nav_menu_items($menu);
+	$blah = "{'toggleMenu'}";
 	
-	echo '<ul id="menu-' . $menu_name . '" class="gordon-menu menu-nav">';
+	echo '<ul id="menu-' . $menu_name . '" class="gordon-menu menu-nav" ng-class="{\'show\': toggleMenu}">';
 
 	?>
 		<script type="text/javascript">
@@ -244,7 +248,7 @@
 			?>
 
 			<li class="menu-item <?php echo $type ?>-container <?php echo $custom_class ?>">
-				<a href="<?php echo $url ?>">
+				<a href="<?php echo $url ?>" target="<?php $url_target ?>">
 					<span class="title"><?php echo $title; ?></span>
 					<span class="type-label" style="display:none;"><?php echo "($type)" ?></span>
 				</a>
