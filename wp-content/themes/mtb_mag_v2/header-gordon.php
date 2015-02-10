@@ -194,7 +194,6 @@
 
 	// $menu_items = wp_get_nav_menu_items($menu->term_id);
 	$menu_items = wp_get_nav_menu_items($menu);
-	$blah = "{'toggleMenu'}";
 	
 	echo '<ul id="menu-' . $menu_name . '" class="gordon-menu menu-nav" ng-class="{\'show\': toggleMenu}">';
 
@@ -235,7 +234,7 @@
 			$next_item = $menu_items[ $menu_index+1 ];
 
 			if ( !$previous_item ) {
-				echo "<!-- -------------------the first --------------------- -->";
+				// echo "<!-- -------------------the first --------------------- -->";
 				$custom_class = "is-first";
 			} else if ( $selected_parent != -1 && $menu_item->menu_item_parent != $selected_parent ) {
 					// echo "<!-- <<<<<<<<<<< end the container >>>>>>>>>>>>> -->";

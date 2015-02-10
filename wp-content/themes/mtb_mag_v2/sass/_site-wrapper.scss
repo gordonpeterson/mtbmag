@@ -14,7 +14,7 @@ a{
 
 ul.gordon-menu {
 	max-height: 48px;
-	overflow: hidden;
+	// overflow: hidden;
 	
 	li.menu-item{
 		position: relative;
@@ -60,7 +60,7 @@ ul.gordon-menu {
 				color: $mainGrey;
 				z-index: 20;
 				padding-top: 10px;
-				top: 48px;
+				top: 47px;
 				-webkit-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 				-moz-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 				-ms-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
@@ -73,6 +73,8 @@ ul.gordon-menu {
 			background: lighten( $mainGrey, 8% );
 			background: $lightGrey;
 			color: $mainGrey;
+			border: 1px solid $mainGrey;
+			border-top: 0;
 			z-index: auto;
 			width: 100%;
 			left: 0;
@@ -87,6 +89,7 @@ ul.gordon-menu {
 			-ms-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
 			-o-transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
 			transition: max-height .3s ease-in-out 0s, padding .2s ease-in-out 0;
+
 
 
 			li.article{
@@ -124,7 +127,7 @@ ul.gordon-menu {
 			right: 0;
 			&>li {
 				background: transparent;
-				background: $lightGrey;
+				// background: $lightGrey;
 				&:hover{
 					// background: transparent;
 				}
@@ -145,23 +148,26 @@ ul.gordon-menu {
 		-o-transition: max-height .3s ease-in-out .0s;
 		transition: max-height .3s ease-in-out .0s;
 
-		top: 48px;
+		top: 47px;
 		left: 0px;
 		width: auto;
 		max-height: 0;
 		overflow: hidden;
 		background: transparent;
+		background: rgba($lightGrey, .4);
 
 		a{
 			background: lighten( $mainGrey, 8% );
-			&:hover{
-				background: lighten( $mainGrey, 12%);
-				color: white;
-			}
 		}
 		
 		li{
 			display: block;
+			&:hover{
+				a{
+					background: lighten( $mainGrey, 8%);
+					color: white;
+				}
+			}
 		}
 
 		li.category-container { //....the third layer (III)
@@ -173,26 +179,26 @@ ul.gordon-menu {
 					// max-height: 100%;
 					// max-height: 310px;
 					opacity: 1;
-					margin-top: 0;
+					padding-top: 10px;
 				}
 			}
 			ul.category{
 				top: 0;
 				left: 170px;
 				right: 0px;
-				margin-top: 5px;
 				min-height: 310px;
 				// max-height: 0;
 				height: 310px;
 				width: auto;
 				opacity: 0;
 				padding: 10px;
+				padding-top: 15px;
 
-				-webkit-transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
-				-moz-transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
-				-ms-transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
-				-o-transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
-				transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
+				-webkit-transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
+				-moz-transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
+				-ms-transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
+				-o-transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
+				transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
 			}
 		}
 	}
@@ -311,6 +317,7 @@ div.search-box{
 // .wpadminbar,
 .site-header{
 	position: fixed;
+	border-bottom: 1px solid black;
 }
 
 .header-main{
@@ -318,9 +325,8 @@ div.search-box{
 	// padding-left: 3px;
 	background: $mainGrey;
 	padding: 0;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid blue;
 
-	// border-bottom: 1px solid lighten( $mainGrey, 8%);
 }
 
 .header-main .site-title{
