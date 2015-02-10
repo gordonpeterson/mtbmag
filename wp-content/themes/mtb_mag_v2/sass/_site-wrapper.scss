@@ -19,25 +19,32 @@ ul.gordon-menu {
 	li.menu-item{
 		position: relative;
 		display: inline-block;
+		border-left: 1px solid transparent;
+		border-right: 1px solid transparent;
+
 		
 		&:hover{
+			border-color: black;
 			a{
-				background: lighten( $mainGrey, 8% );
-				color: white;
+				background: $lightGrey;
+				color: $mainGrey;
 			}
 			.sub-menu{
 				// display: block;
-				max-height: 400px;
+				max-height: 900px;
 				-webkit-transition: max-height .3s ease-in-out .4s;
 				-moz-transition: max-height .3s ease-in-out .4s;
 				-ms-transition: max-height .3s ease-in-out .4s;
 				-o-transition: max-height .3s ease-in-out .4s;
 				transition: max-height .3s ease-in-out .4s;
+				&:hover{
+					overflow: visible;
+				}
 			}
 		}
 		a{
 			font-size: 13px;
-			// background: pink;
+			color: white;
 		}
 	}
 
@@ -49,10 +56,11 @@ ul.gordon-menu {
 			ul.category{
 				max-height: 325px;
 				background: lighten( $mainGrey, 8% );
-				// background: rgba(white, .85);
+				background: $lightGrey;
+				color: $mainGrey;
 				z-index: 20;
 				padding-top: 10px;
-				top: 47px;
+				top: 48px;
 				-webkit-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 				-moz-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 				-ms-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
@@ -63,7 +71,8 @@ ul.gordon-menu {
 		ul.category{
 			background: white;
 			background: lighten( $mainGrey, 8% );
-			// background: rgba(white, .85);
+			background: $lightGrey;
+			color: $mainGrey;
 			z-index: auto;
 			width: 100%;
 			left: 0;
@@ -110,14 +119,14 @@ ul.gordon-menu {
 	
 	li.is-first{ //....the magazine articles need to be in the first slot
 		position: initial;
-		// border: 1px dashed red;
 		ul.sub-menu{
 			left: 0;
 			right: 0;
 			&>li {
 				background: transparent;
+				background: $lightGrey;
 				&:hover{
-					background: transparent;
+					// background: transparent;
 				}
 				a{
 					width: 170px;
@@ -147,6 +156,7 @@ ul.gordon-menu {
 			background: lighten( $mainGrey, 8% );
 			&:hover{
 				background: lighten( $mainGrey, 12%);
+				color: white;
 			}
 		}
 		
@@ -155,30 +165,34 @@ ul.gordon-menu {
 		}
 
 		li.category-container { //....the third layer (III)
-			// border-right: 4px solid white;
 			&:hover,
 			&:focus{
+				overflow: visible;
 				// left: 200px;
 				ul.category{
 					// max-height: 100%;
-					max-height: 310px;
+					// max-height: 310px;
 					opacity: 1;
+					margin-top: 0;
 				}
 			}
 			ul.category{
 				top: 0;
 				left: 170px;
 				right: 0px;
-				max-height: 0;
+				margin-top: 5px;
+				min-height: 310px;
+				// max-height: 0;
+				height: 310px;
 				width: auto;
 				opacity: 0;
 				padding: 10px;
 
-				-webkit-transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
-				-moz-transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
-				-ms-transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
-				-o-transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
-				transition: max-height .3s ease-in-out, opacity .2s ease-in-out;
+				-webkit-transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
+				-moz-transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
+				-ms-transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
+				-o-transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
+				transition: margin-top .3s ease-in-out, opacity .2s ease-in-out;
 			}
 		}
 	}
@@ -221,7 +235,6 @@ ul.gordon-menu {
 
 // .nav-menu{
 // 	.category{
-// 		background: pink;
 // 		right: 0;
 // 		width: auto;
 // 		.article{
