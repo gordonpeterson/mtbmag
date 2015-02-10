@@ -85,9 +85,9 @@ function mtb_mag_setup() {
 		'name' => __( 'Social Media', 'twentytwelve' ),
 		'id' => 'social-media',
 		'description' => __( 'These are the social media links', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="social-media %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="ad-title">',
+		'before_widget' => '<nav id="%1$s" class="social-media %2$s">',
+		'after_widget' => '</nav>',
+		'before_title' => '<h3 class="social-media-title">',
 		'after_title' => '</h3>',
 	) );
 	
