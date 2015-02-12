@@ -256,7 +256,7 @@
 			<?php 
 			// ...........create a categories ul
 			if ( $post_status == 'publish' && $type == "category" ) {
-				$category_query = get_posts( "category_name=$url_base&posts_per_page=17" ); 
+				$category_query = get_posts( "category_name=$url_base&posts_per_page=10" ); 
 				if ( $category_query ) {?>
 					<ul class='category'>
 					<!-- start the loop -->
