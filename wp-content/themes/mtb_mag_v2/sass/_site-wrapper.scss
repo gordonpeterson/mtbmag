@@ -132,7 +132,7 @@ ul.gordon-menu {
 					// background: transparent;
 				}
 				a{
-					width: 170px;
+					width: 185px;
 				}
 			}
 		}
@@ -154,7 +154,7 @@ ul.gordon-menu {
 		max-height: 0;
 		overflow: hidden;
 		background: transparent;
-		background: rgba($lightGrey, .4);
+		// background: rgba($lightGrey, .4);
 
 		a{
 			background: lighten( $mainGrey, 8% );
@@ -171,6 +171,42 @@ ul.gordon-menu {
 		}
 
 		li.category-container { //....the third layer (III)
+			&:hover{
+				&>a .title{
+					background: transparent;
+					&:before{
+						border-color: transparent transparent transparent white;
+					}
+					&:after{
+						border-color: transparent transparent transparent lighten($mainGrey, 8%);
+					}
+				}
+			}
+			&>a .title{
+				position: relative;
+				&:before{
+					content: "";
+					position: absolute;
+					right: -23px;
+					font-weight: 700;
+					font-size: 1.2em;
+					border: 6px solid;
+					border-color: transparent transparent transparent $mainGrey;
+					top: 3px;
+					border-width: 6px 6px 6px 9px;
+				}
+				&:after{
+					content: "";
+					position: absolute;
+					right: -19px;
+					font-weight: 700;
+					font-size: 1.2em;
+					border: 6px solid;
+					border-color: transparent transparent transparent $lightGrey;
+					top: 3px;
+					border-width: 6px 6px 6px 9px;
+				}
+			}
 			&:hover,
 			&:focus{
 				overflow: visible;
@@ -179,12 +215,12 @@ ul.gordon-menu {
 					// max-height: 100%;
 					// max-height: 310px;
 					opacity: 1;
-					padding-top: 10px;
+					padding-left: 10px;
 				}
 			}
 			ul.category{
 				top: 0;
-				left: 170px;
+				left: 185px + 1;
 				right: 0px;
 				min-height: 310px;
 				// max-height: 0;
@@ -192,13 +228,13 @@ ul.gordon-menu {
 				width: auto;
 				opacity: 0;
 				padding: 10px;
-				padding-top: 15px;
+				padding-left: 5px;
 
-				-webkit-transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
-				-moz-transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
-				-ms-transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
-				-o-transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
-				transition: padding-top .3s ease-in-out, opacity .2s ease-in-out;
+				-webkit-transition: padding-left .3s ease-in-out, opacity .2s ease-in-out;
+				-moz-transition: padding-left .3s ease-in-out, opacity .2s ease-in-out;
+				-ms-transition: padding-left .3s ease-in-out, opacity .2s ease-in-out;
+				-o-transition: padding-left .3s ease-in-out, opacity .2s ease-in-out;
+				transition: padding-left .3s ease-in-out, opacity .2s ease-in-out;
 			}
 		}
 	}
@@ -252,8 +288,10 @@ ul.gordon-menu {
 
 
 .right-nav{
-	float: right;
-	position: relative;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+	background: $mainGrey;
 }
 
 .search-toggle,
@@ -325,7 +363,7 @@ div.search-box{
 	// padding-left: 3px;
 	background: $mainGrey;
 	padding: 0;
-	border-bottom: 1px solid blue;
+	// border-bottom: 1px solid black;
 
 }
 

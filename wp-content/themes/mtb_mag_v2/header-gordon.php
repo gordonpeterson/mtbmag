@@ -221,6 +221,7 @@
 			$url_base = basename($url_obj["path"]);
 			$articleCount = 0;
 			$custom_class = "";
+			$classes = implode(" ", $menu_item->classes);
 
 			
 			$url_target = $menu_item->TARGET;
@@ -246,7 +247,7 @@
 
 			?>
 
-			<li class="menu-item <?php echo $type ?>-container <?php echo $custom_class ?>">
+			<li class="menu-item <?php echo $type ?>-container <?php echo $custom_class ?> <?php echo $classes ?>">
 				<a href="<?php echo $url ?>" target="<?php $url_target ?>">
 					<span class="title"><?php echo $title; ?></span>
 					<span class="type-label" style="display:none;"><?php echo "($type)" ?></span>

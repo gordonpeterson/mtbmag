@@ -64,7 +64,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	font-family: inherit;
-	font-size: 100%;
+	/* font-size: 100%; */
 	font-style: inherit;
 	font-weight: inherit;
 	margin: 0;
@@ -3507,7 +3507,7 @@ a.post-thumbnail:hover {
 	.primary-navigation li {
 		border: 0;
 		display: inline-block;
-		height: 47px;
+		height: 48px;
 		line-height: 48px;
 		position: relative;
 	}
