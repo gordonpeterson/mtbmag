@@ -9,6 +9,45 @@ body.single-post {
 
 
 
+	.site-content{
+
+		blockquote, 
+		.wp-caption,
+		img.size-full, 
+		img.size-large, 
+		img.size-medium{
+			margin: 7px 24px 7px 0;
+			&.alignright{
+				margin: 7px 24px 7px 0;
+				float: none;
+			}
+			&.alignleft{
+				margin: 7px 24px 7px 0;
+				float: none;
+			}
+		}
+	}
+
+
+	.entry-content,
+	.entry-summary,
+	.entry-meta,
+	.post-navigation .nav-links,
+	.comments-area .comment-list,
+	.comments-area .comments-title,
+	.comment-respond,
+	.page-content {
+		margin: 0 auto;
+		max-width: 750px;
+		// border: 1px dashed red;
+		&.full{
+			padding: 0 20px;
+			max-width: 1600px;
+		}
+	}
+
+
+
 	article.post {
 		width: 100%;
 		max-width:none;
@@ -40,17 +79,7 @@ body.single-post {
 			}
 		} //.entry-header
 
-		.entry-content,
-		.entry-summary,
-		.entry-meta,
-		.page-content {
-			margin: 0 auto;
-			max-width: 750px;
-			&.full{
-				padding: 0 20px;
-				max-width: 1600px;
-			}
-		}
+
 
 		.post-thumbnail{
 			width: 100%;
@@ -168,6 +197,9 @@ body.single-post {
 
 	}
 
+	.form-allowed-tags{
+		display: none;
+	}
 	
 
 

@@ -187,13 +187,13 @@ ul.gordon-menu {
 				&:before{
 					content: "";
 					position: absolute;
-					right: -23px;
+					right: -20px;
 					font-weight: 700;
 					font-size: 1.2em;
 					border: 6px solid;
 					border-color: transparent transparent transparent $mainGrey;
-					top: 3px;
-					border-width: 6px 6px 6px 9px;
+					top: 4px;
+					border-width: 5px 5px 5px 7px;
 				}
 				&:after{
 					content: "";
@@ -204,7 +204,8 @@ ul.gordon-menu {
 					border: 6px solid;
 					border-color: transparent transparent transparent $lightGrey;
 					top: 3px;
-					border-width: 6px 6px 6px 9px;
+					border-width: 5px 5px 5px 7px;
+					display: none;
 				}
 			}
 			&:hover,
@@ -436,3 +437,33 @@ div.search-box{
 		color: white;
 	}
 }
+
+
+
+.site-footer {
+		.social-media {
+	    width: 184px;
+	    margin: 0 auto;
+	    a{
+		    display: inline-block;
+		    text-align: center;
+		    color: $lightGrey;
+		    position: relative;
+		    margin: 20px 5px;
+	    }
+			.at4-icon{
+			    display: inline-block;
+			    text-align: center;
+			    width: 26px;
+			    height: 26px;
+			    background-size: 25px !important;
+			    left: 10px;
+			    border-radius: 2px;
+			}
+			.addthis_follow_label {
+			    display: block;
+			}
+
+	}
+}
+
