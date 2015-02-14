@@ -153,11 +153,26 @@
 							// print_r( $current_user );
 							echo 'Hi ' . $current_user->display_name. '!';
 						} else {
-							echo '<a href="http://www.mtb-forum.it/community/forum/usercp.php">Log In</a></li>';
+							echo 'Log In';
 						}
 						?></a>
 						</div>
-				
+					<div class="login-form" ng-show="login"  ng-cloak>
+					<?php
+
+						if ( is_user_logged_in() ) {
+							?>
+							<div class="logout">
+								<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a>
+							</div>
+							<?php 
+						}	else {
+							?>
+							<?php 
+							wp_login_form(); 
+						}
+					 ?>
+					</div>
 				</span>
 			</div>
 
