@@ -379,6 +379,7 @@ $contentMaxWidth: 975px;
 				&>a>.title{
 					&:before{
 						border-top-color: $mainGrey;
+						border-top-color: orange;
 					}
 					&:after{
 						border-top-color: $lightGrey;

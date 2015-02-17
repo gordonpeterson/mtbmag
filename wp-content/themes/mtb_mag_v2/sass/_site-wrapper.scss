@@ -6,28 +6,61 @@ a{
 	color: $linkColor;
 }
 
+.paging-navigation a:hover,
+.paging-navigation .page-numbers.current{
+	border-color: orange;
+}
+
 
 .content-area{
 	padding-top: 3px;
 }
 
+#wpadminbar{
+	z-index: 0;
+	.admin-bar &{
+		z-index: 3;
+	}
+}
+
+
+
 
 ul.gordon-menu {
 	max-height: 48px;
-	// overflow: hidden;
+	// border-bottom: 1px solid lime;
+
+
 	
 	li.menu-item{
 		position: relative;
 		display: inline-block;
 		border-left: 1px solid transparent;
 		border-right: 1px solid transparent;
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+
+		&>a{
+			background: transparent;
+			color: white;
+		}
+		
+		a{
+			background: transparent;
+			font-size: 13px;
+			color: white;
+			&:hover{
+				color: orange;
+			}
+		}
 
 		
 		&:hover{
-			border-color: black;
-			a{
-				background: $lightGrey;
-				color: $mainGrey;
+			border-color: white white #1f1f1f white;
+			background: #1f1f1f;
+			&>a{
+				background: transparent;
+				color: orange;
 			}
 			.sub-menu{
 				// display: block;
@@ -42,10 +75,10 @@ ul.gordon-menu {
 				}
 			}
 		}
-		a{
-			font-size: 13px;
-			color: white;
-		}
+	}
+
+	&>li.menu-item{
+		height: 49px; 
 	}
 
 
@@ -57,10 +90,12 @@ ul.gordon-menu {
 				max-height: 325px;
 				background: lighten( $mainGrey, 8% );
 				background: $lightGrey;
+				background: black;
+				background: #1f1f1f;
 				color: $mainGrey;
 				z-index: 20;
 				padding-top: 10px;
-				top: 47px;
+				top: 49px;
 				-webkit-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 				-moz-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
 				-ms-transition: max-height .3s ease-in-out .4s, padding .2s ease-in-out .4s;
@@ -69,12 +104,15 @@ ul.gordon-menu {
 			}
 		}
 		ul.category{
-			background: white;
 			background: lighten( $mainGrey, 8% );
 			background: $lightGrey;
+			background: black;
+			background: #1f1f1f;
 			color: $mainGrey;
 			border: 1px solid $mainGrey;
+			border-top: 1px solid white;
 			border-top: 0;
+			border: none;
 			z-index: auto;
 			width: 100%;
 			left: 0;
@@ -127,12 +165,30 @@ ul.gordon-menu {
 			right: 0;
 			&>li {
 				background: transparent;
-				// background: $lightGrey;
-				&:hover{
-					// background: transparent;
+				border: none;
+				width: 185px;
+				border-left: 1px solid white;
+				border-right: 1px solid white;
+				&>a{
+					width: 183px;
+					background: black;
+					background: #1f1f1f;
+					// border-top: 1px solid transparent;
+					// border-bottom: 1px solid transparent;
+					&:hover{
+					}
 				}
-				a{
-					width: 185px;
+				&:last-child{
+					border-bottom: 1px solid white;
+				}
+				&:hover{
+					border-right-color: #1f1f1f;
+					border-top: 1px solid white;
+					border-bottom: 1px solid white;
+					&>a{
+						color: orange;
+					}
+					// background: black;
 				}
 			}
 		}
@@ -148,7 +204,7 @@ ul.gordon-menu {
 		-o-transition: max-height .3s ease-in-out .0s;
 		transition: max-height .3s ease-in-out .0s;
 
-		top: 47px;
+		top: 49px;
 		left: 0px;
 		width: auto;
 		max-height: 0;
@@ -175,7 +231,7 @@ ul.gordon-menu {
 				&>a .title{
 					background: transparent;
 					&:before{
-						border-color: transparent transparent transparent white;
+						border-color: transparent transparent transparent orange;
 					}
 					&:after{
 						border-color: transparent transparent transparent lighten($mainGrey, 8%);
@@ -221,7 +277,7 @@ ul.gordon-menu {
 			}
 			ul.category{
 				top: 0;
-				left: 185px + 1;
+				left: 185px;
 				right: 0px;
 				min-height: 310px;
 				// max-height: 0;
@@ -293,6 +349,7 @@ ul.gordon-menu {
 	right: 0;
 	z-index: 2;
 	background: $mainGrey;
+	background: transparent;
 }
 
 .search-toggle,
@@ -356,15 +413,17 @@ div.search-box{
 // .wpadminbar,
 .site-header{
 	position: fixed;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid white;
+	z-index: 3;
 }
 
 .header-main{
 	position: relative;
 	// padding-left: 3px;
 	background: $mainGrey;
+	background: black;
 	padding: 0;
-	// border-bottom: 1px solid black;
+	// border-bottom: 1px solid white;
 
 }
 
@@ -387,7 +446,7 @@ div.search-box{
 		li{
 			&:hover, //...hover the main nav
 			&.focus{
-				background-color: rgb(143, 143, 143);
+				// background-color: rgb(143, 143, 143);
 			}
 			a{ //....the main nav link
 
@@ -435,6 +494,12 @@ div.search-box{
 		width: 100%;
 		max-width: none;
 		color: white;
+		color: #000;
+		max-width: 945px;
+		background: transparent;
+		margin: 40px auto;
+		padding: 0;
+		text-align: center;
 	}
 }
 

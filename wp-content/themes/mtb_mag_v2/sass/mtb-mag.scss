@@ -30,6 +30,11 @@ $gutterMargin: floor($gutter/2);
 	/*border: 5px dashed orange;*/
 }
 
+::selection {
+	background: orange;
+	color: #fff;
+	text-shadow: none;
+}
 
 
 #content.featured-page{
