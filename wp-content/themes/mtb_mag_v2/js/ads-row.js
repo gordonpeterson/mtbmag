@@ -1,4 +1,4 @@
-<div class="ad-row">
+<div class="ads-row">
 
 <div class="ad300x250 ad">
 	<script type='text/javascript'>
