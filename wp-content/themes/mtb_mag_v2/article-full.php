@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name Posts: Article Full
+Template Name Posts: Fullscreen
 */
 
 get_header('gordon'); ?>
