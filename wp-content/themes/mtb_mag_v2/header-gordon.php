@@ -152,6 +152,7 @@
 							$current_user = wp_get_current_user();
 							// print_r( $current_user );
 							echo 'Hi ' . $current_user->display_name. '!';
+							// echo '<span classs="avatar">'.get_avatar($user_ID, $size = '38').'</span>';
 						} else {
 							echo 'Log In';
 						}
@@ -169,7 +170,30 @@
 						}	else {
 							?>
 							<?php 
-							wp_login_form(); 
+							echo '<form action="' . get_site_option(VBSSO_NAMED_EVENT_FIELD_LOGIN_VBULLETIN_URL, '') . '" method="post">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td><label for="username" style="margin-right:10px;">' . __('Login') . '</label></td>
+                                <td><input class="input" type="text" name="vb_login_username" id="vb_username" style="width:100%; padding:3px;" accesskey="u" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="password" style="margin-right:10px;">' . __('Password') . '</label></td>
+                                <td><input class="input" type="password" name="vb_login_password" id="vb_password" style="width:100%; padding:3px;" /></td>
+                            </tr>
+                        </table>
+
+                        <label for="vb_cookieuser" class="remember-me"><input class="input" type="checkbox" name="cookieuser" value="1" id="vb_cookieuser" accesskey="c" />'.__('Remember me').'</label>
+                        <input class="button-primary" type="submit" value="' . __('Login') . '" accesskey="s" />
+
+                        <input type="hidden" name="do" value="login" />
+                        </form>';
+
+                echo "<ul class='login-options'>";
+                echo wp_register(null, null, false);
+                echo '<li><a href="http://www.mtb-mag.com/login-con-facebook/">Facebook Login</a></li>';
+                echo '<li><a href="' . wp_lostpassword_url() . '" rel="nofollow">' . __('Lost password?') . '</a></li>';
+                echo "</ul>";
+
 						}
 					 ?>
 					</div>

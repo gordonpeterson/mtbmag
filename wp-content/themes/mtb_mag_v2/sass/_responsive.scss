@@ -37,6 +37,16 @@ $contentMaxWidth: 975px;
 	}
 
 
+	body.no-customize-support{
+		.site-header{
+			top: 0;
+		}
+		#wpadminbar{
+			display: none;
+		}
+	}
+
+
 	ul.gordon-menu {
 		max-height: 48px;
 		// overflow: hidden;
@@ -175,6 +185,18 @@ $contentMaxWidth: 975px;
 
 /******************************************* medium and small ****************************************/
 @media screen and (max-width: 1007px){
+
+
+
+	body.no-customize-support{
+		.site-header{
+			top: 0;
+		}
+		#wpadminbar{
+			opacity: .5;
+			display: none;
+		}
+	}
 
 
 
@@ -344,6 +366,18 @@ $contentMaxWidth: 975px;
 /******************************************* desktop nav menu ****************************************/
 @media screen and (min-width: 783px) {
 
+
+
+	body.no-customize-support{
+		.site-header{
+			top: 0;
+		}
+		#wpadminbar{
+			opacity: .5;
+			display: none;
+		}
+	}
+
 	ul.gordon-menu {
 
 		&>li>a{
@@ -419,6 +453,16 @@ $contentMaxWidth: 975px;
 		}
 		#wpadminbar{
 			top: 0;
+		}
+	}
+
+	body.no-customize-support{
+		.site-header{
+			top: 0;
+		}
+		#wpadminbar{
+			opacity: .5;
+			display: none;
 		}
 	}
 

@@ -21,6 +21,10 @@ a{
 	.admin-bar &{
 		z-index: 3;
 	}
+	.no-customize-support &{
+		z-index: 0;
+		border: 1px dashed red;
+	}
 }
 
 
@@ -386,6 +390,34 @@ ul.gordon-menu {
 	z-index: 12;
 	padding: 10px;
 	color: white;
+	width: 250px;
+
+	table{
+	    margin-bottom: 9px;
+	}
+
+	.remember-me {
+	    display: block;
+	    text-align: center;
+	}
+
+	input[type="submit"]{
+	    background-color: orange;
+	    display: block;
+	    margin: 8px auto 16px;
+	    width: 200px;
+	}
+	ul.login-options{
+		font-size: .9em;
+		li{
+			list-style: none;
+			display: block;
+			margin: 2px;
+		}
+		a{
+			padding: 1px;
+		}
+	}
 }
 
 
