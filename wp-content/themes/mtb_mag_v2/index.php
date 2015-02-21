@@ -15,11 +15,20 @@ get_header('gordon'); ?>
 				// Start the Loop.
 				$count = 0;
 				$increment = 0;
-				$adArray = array(4,5,6,10,14,15);
+				$adArray = array(3,4,5,9,13,14);
 				$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
 
+					?>
+					<div class="latest-article">
+						<h1>the latest cover article</h1>
+					 <?php 
+						// get_template_part( 'content', 'big' );
+						?>
+						</div> <!-- .latest-article -->
+						<div class="scroll-area">
+						<div class="other-articles">
 
-
+				<?php 
 				while ( have_posts() ) : the_post();
 					$count++;
 
@@ -30,52 +39,52 @@ get_header('gordon'); ?>
 
 						if( $count == $currentIndex ){
 
-							if( $currentIndex == 4 ){ //...ad1 300x250
+							if( $currentIndex == 3 ){ //...ad1 300x250
 							?>
 										<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
-												<div class="widget no-widget">
+												<div class="widget no-widget ad ad300x250">
 													<p><?php _e("$adText ad1 300x250", 'twentytwelve'); ?></p>
 												</div>
 											<?php endif; ?>
 							<?php 
-							}else if( $currentIndex == 5 ){ //...ad2 300x250
+							}else if( $currentIndex == 4 ){ //...ad2 300x250
 							 ?>
 										<?php if ( ! dynamic_sidebar( 'ad-widget2' ) ) : ?>
-											<div class="widget no-widget">
+											<div class="widget no-widget ad ad300x250">
 													<p><?php _e("$adText  ad2 300x250", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
 							 <?php 
-							}else if( $currentIndex == 6 ){ //...ad3 727z90
+							}else if( $currentIndex == 5 ){ //...ad3 727z90
 								?>
 										<?php if ( ! dynamic_sidebar( 'ad-widget3' ) ) : ?>
-											<div class="widget no-widget">
+											<div class="widget no-widget ad ad272x90">
 													<p><?php _e("$adText ad3 272x90", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
 								<?php 
-							}else if( $currentIndex == 10 ){ //...ad2 300x250
+							}else if( $currentIndex == 9 ){ //...ad2 300x250
 							 ?>
 										<?php if ( ! dynamic_sidebar( 'ad-widget4' ) ) : ?>
-											<div class="widget no-widget">
+											<div class="widget no-widget ad ad300x250">
 													<p><?php _e("$adText ad4 300x250", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
 							 <?php 
 
-							} elseif ($currentIndex == 14) { //...ad5 300x250
+							} elseif ($currentIndex == 13) { //...ad5 300x250
 								?>
 										<?php if ( ! dynamic_sidebar( 'ad-widget5' ) ) : ?>
-											<div class="widget no-widget">
+											<div class="widget no-widget ad ad300x250">
 													<p><?php _e("$adText ad5 300x250", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
 								<?php
 
-							} else if(15) { //...ad6 300x250
+							} else if(14) { //...ad6 300x250
 								?>
 										<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
-											<div class="widget no-widget">
+											<div class="widget no-widget ad ad300x250">
 													<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
@@ -87,19 +96,7 @@ get_header('gordon'); ?>
 						}
 
 
-					if ($count == 1) { ?>
-					<div class="latest-article">
-					 <?php 
-						get_template_part( 'content', 'big' );
-						?>
-						</div> <!-- .latest-article -->
-						<div class="scroll-area">
-						<div class="other-articles">
-						<?php 
-
-					} else{
 						get_template_part( 'content', 'small' );
-					}
 
 				endwhile;
 				// Previous/next post navigation.
