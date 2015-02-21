@@ -1,6 +1,6 @@
-<div class="ads-row">
+<div class='ads-row'>
 
-<div class="ad300x250 ad">
+<div class='ad300x250 ad'>
 	<script type='text/javascript'>
 	var googletag = googletag || {};
 	googletag.cmd = googletag.cmd || [];
@@ -32,7 +32,7 @@
 </div>
 
 
-<div class="ad300x250 ad">
+<div class='ad300x250 ad'>
 	<script type='text/javascript'>
 	var googletag = googletag || {};
 	googletag.cmd = googletag.cmd || [];

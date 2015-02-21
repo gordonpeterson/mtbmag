@@ -32,80 +32,53 @@ get_header('gordon'); ?>
 
 							if( $currentIndex == 4 ){ //...ad1 300x250
 							?>
-									<div class="ad ad300x250">
-										<div class="ad-inner-wrap">
 										<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
 												<div class="widget no-widget">
 													<p><?php _e("$adText ad1 300x250", 'twentytwelve'); ?></p>
 												</div>
 											<?php endif; ?>
-										</div>
-									</div>
 							<?php 
 							}else if( $currentIndex == 5 ){ //...ad2 300x250
 							 ?>
-									<div class="ad ad300x250">
-										<div class="ad-inner-wrap">
 										<?php if ( ! dynamic_sidebar( 'ad-widget2' ) ) : ?>
 											<div class="widget no-widget">
 													<p><?php _e("$adText  ad2 300x250", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
-										</div>
-									</div>
 							 <?php 
 							}else if( $currentIndex == 6 ){ //...ad3 727z90
 								?>
-									<div class="ad ad727x90">
-										<div class="ad-inner-wrap">
 										<?php if ( ! dynamic_sidebar( 'ad-widget3' ) ) : ?>
 											<div class="widget no-widget">
 													<p><?php _e("$adText ad3 272x90", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
-										</div>
-									</div>
-										
 								<?php 
 							}else if( $currentIndex == 10 ){ //...ad2 300x250
 							 ?>
-									<div class="ad ad300x250">
-										<div class="ad-inner-wrap">
 										<?php if ( ! dynamic_sidebar( 'ad-widget4' ) ) : ?>
 											<div class="widget no-widget">
 													<p><?php _e("$adText ad4 300x250", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
-										</div>
-									</div>
 							 <?php 
 
 							} elseif ($currentIndex == 14) { //...ad5 300x250
 								?>
-									<div class="ad ad300x250">
-										<div class="ad-inner-wrap">
 										<?php if ( ! dynamic_sidebar( 'ad-widget5' ) ) : ?>
 											<div class="widget no-widget">
 													<p><?php _e("$adText ad5 300x250", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
-										</div>			
-									</div>
-										
 								<?php
 
 							} else if(15) { //...ad6 300x250
 								?>
-									<div class="ad ad300x250">
-										<div class="ad-inner-wrap">
 										<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
 											<div class="widget no-widget">
 													<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
-										</div>			
-									</div>
-										
 								<?php
 							}
 
