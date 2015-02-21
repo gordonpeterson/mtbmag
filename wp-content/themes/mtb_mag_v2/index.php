@@ -10,6 +10,28 @@ get_header('gordon'); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
+		<div class="latest-article">
+		 <?php 
+
+			$category_id = get_cat_ID('cover');
+			$category_query = get_posts( "category=$category_id&posts_per_page=1" ); 
+			$cover_article = -1;
+
+			if ( $category_query ) {
+					$cover_article = $category_query[0];
+					$cover_article = $cover_article->ID;
+					get_template_part( 'content', 'big' );
+			} 
+			?>
+			</div> <!-- .latest-article -->
+			<div class="scroll-area">
+			<div class="other-articles">
+
+<!-- test -->
+<h2>id:<?php echo $cover_article ?></h2>
+
+<!-- test -->
+
 		<?php
 			if ( have_posts() ) :
 				// Start the Loop.
@@ -18,18 +40,10 @@ get_header('gordon'); ?>
 				$adArray = array(3,4,5,9,13,14);
 				$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
 
-					?>
-					<div class="latest-article">
-						<h1>the latest cover article</h1>
-					 <?php 
-						// get_template_part( 'content', 'big' );
-						?>
-						</div> <!-- .latest-article -->
-						<div class="scroll-area">
-						<div class="other-articles">
-
-				<?php 
 				while ( have_posts() ) : the_post();
+				
+					if ( $cover_article != get_the_ID()) {
+					}
 					$count++;
 
 					if (array_key_exists($increment, $adArray)) {
@@ -94,7 +108,6 @@ get_header('gordon'); ?>
 
 							$increment++;
 						}
-
 
 						get_template_part( 'content', 'small' );
 
