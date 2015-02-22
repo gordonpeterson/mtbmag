@@ -11,7 +11,7 @@
 		<?php the_post_thumbnail('wt780_450'); ?>
 	</div>
 
-	<div class="post-info">
+	<div class="post-info post_<?php the_ID(); ?>">
 		<header class="entry-header">
 			<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 				<!-- 
@@ -28,6 +28,7 @@
 					the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 				endif;
 			?>
+
 
 			<div class="excerpt">
 				<?php the_excerpt(); ?>
