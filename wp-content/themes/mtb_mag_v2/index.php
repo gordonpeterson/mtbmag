@@ -13,26 +13,51 @@ get_header('gordon'); ?>
 		<div class="latest-article">
 		 <?php 
 
+		 	$orig_query = $wp_query;
+
 			$category_id = get_cat_ID('cover');
 			$category_query = get_posts( "category=$category_id&posts_per_page=1" ); 
 			$cover_article = -1;
+			$exclude_ids = array();
 
 			if ( $category_query ) {
+					// wp_reset_query();
 					$cover_article = $category_query[0];
-					$cover_article = $cover_article->ID;
+					$cover_article_id = $cover_article->ID;
+					$exclude_ids[0] = $cover_article_id;
 					get_template_part( 'content', 'big' );
-			} 
+					//include(locate_template('inc/my-script.php'))
+			} else {
+				echo "<h1>no cover article</h1>";
+			}
+
 			?>
 			</div> <!-- .latest-article -->
 			<div class="scroll-area">
 			<div class="other-articles">
 
 <!-- test -->
-<h2>id:<?php echo $cover_article ?></h2>
+<div class="gordon">
+	<h2>id:<?php echo $cover_article_id . "; ids: ". implode(',', $exclude_ids)  ?></h2>
+</div>
 
 <!-- test -->
 
+
 		<?php
+			global $wp_query;
+			$args = 
+					// array_merge( 
+              // $wp_query->query_vars, 
+              array( 
+              'post__not_in' => $exclude_ids,
+              'showposts' => 15,
+               // ) 
+              );
+
+      // wp_reset_query();
+			// query_posts( $args );
+			query_posts( $orig_query->query );
 			if ( have_posts() ) :
 				// Start the Loop.
 				$count = 0;
@@ -40,10 +65,11 @@ get_header('gordon'); ?>
 				$adArray = array(3,4,5,9,13,14);
 				$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
 
+
+
 				while ( have_posts() ) : the_post();
-				
-					if ( $cover_article != get_the_ID()) {
-					}
+
+					
 					$count++;
 
 					if (array_key_exists($increment, $adArray)) {
