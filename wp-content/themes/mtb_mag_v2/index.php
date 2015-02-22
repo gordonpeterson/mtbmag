@@ -24,8 +24,10 @@ get_header('gordon'); ?>
 					// wp_reset_query();
 					$cover_article = $category_query[0];
 					$cover_article_id = $cover_article->ID;
-					$exclude_ids[0] = $cover_article_id;
+					$exclude_ids = array( $cover_article_id );
+					setup_postdata( $cover_article ); 
 					get_template_part( 'content', 'big' );
+					// $postName = (locate_template('page-' . $post->post_name . '.php') == '') ? 'page' : $post->post_name;
 					//include(locate_template('inc/my-script.php'))
 			} else {
 				echo "<h1>no cover article</h1>";
@@ -39,6 +41,9 @@ get_header('gordon'); ?>
 <!-- test -->
 <div class="gordon">
 	<h2>id:<?php echo $cover_article_id . "; ids: ". implode(',', $exclude_ids)  ?></h2>
+	<div>
+		<?php implode(', ', $orig_query->query) ?>
+	</div>
 </div>
 
 <!-- test -->
@@ -47,17 +52,17 @@ get_header('gordon'); ?>
 		<?php
 			global $wp_query;
 			$args = 
-					// array_merge( 
-              // $wp_query->query_vars, 
+					array_merge( 
+              $orig_query->query, 
               array( 
               'post__not_in' => $exclude_ids,
               'showposts' => 15,
-               // ) 
+               ) 
               );
 
       // wp_reset_query();
-			// query_posts( $args );
-			query_posts( $orig_query->query );
+			query_posts( $args );
+			// query_posts( $orig_query->query );
 			if ( have_posts() ) :
 				// Start the Loop.
 				$count = 0;
@@ -103,7 +108,7 @@ get_header('gordon'); ?>
 											</div>
 										<?php endif; ?>
 								<?php 
-							}else if( $currentIndex == 9 ){ //...ad2 300x250
+							}else if( $currentIndex == 9 ){ //...ad4 300x250
 							 ?>
 										<?php if ( ! dynamic_sidebar( 'ad-widget4' ) ) : ?>
 											<div class="widget no-widget ad ad300x250">
