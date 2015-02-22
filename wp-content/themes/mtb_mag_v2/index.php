@@ -10,71 +10,52 @@ get_header('gordon'); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
-		<div class="latest-article">
+		<div class="cover-article">
 		 <?php 
 
-		 	$orig_query = $wp_query;
+			$orig_query = $wp_query;
 
 			$category_id = get_cat_ID('cover');
 			$category_query = get_posts( "category=$category_id&posts_per_page=1" ); 
 			$cover_article = -1;
 			$exclude_ids = array();
+			$article_count = 16;
+			$paged = get_query_var( 'paged', 1 );
 
-			if ( $category_query ) {
-					// wp_reset_query();
+			$count = 0;
+			$increment = 0;
+			$adArray = array(3,4,5,9,13,14);
+			$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
+
+			if ( $category_query && $paged <= 1 ) {
 					$cover_article = $category_query[0];
 					$cover_article_id = $cover_article->ID;
 					$exclude_ids = array( $cover_article_id );
-					setup_postdata( $cover_article ); 
+					setup_postdata( $GLOBALS['post'] =& $cover_article );
 					get_template_part( 'content', 'big' );
-					// $postName = (locate_template('page-' . $post->post_name . '.php') == '') ? 'page' : $post->post_name;
-					//include(locate_template('inc/my-script.php'))
-			} else {
-				echo "<h1>no cover article</h1>";
-			}
+					$article_count = 15;
+			} 
 
 			?>
-			</div> <!-- .latest-article -->
+			</div> <!-- .cover-article -->
 			<div class="scroll-area">
 			<div class="other-articles">
-
-<!-- test -->
-<div class="gordon">
-	<h2>id:<?php echo $cover_article_id . "; ids: ". implode(',', $exclude_ids)  ?></h2>
-	<div>
-		<?php implode(', ', $orig_query->query) ?>
-	</div>
-</div>
-
-<!-- test -->
-
 
 		<?php
 			global $wp_query;
 			$args = 
 					array_merge( 
-              $orig_query->query, 
-              array( 
-              'post__not_in' => $exclude_ids,
-              'showposts' => 15,
-               ) 
-              );
+							$orig_query->query, 
+							array( 
+							'post__not_in' => $exclude_ids,
+							'showposts' => $article_count,
+							 ) 
+							);
 
-      // wp_reset_query();
 			query_posts( $args );
-			// query_posts( $orig_query->query );
 			if ( have_posts() ) :
-				// Start the Loop.
-				$count = 0;
-				$increment = 0;
-				$adArray = array(3,4,5,9,13,14);
-				$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
-
-
 
 				while ( have_posts() ) : the_post();
-
-					
 					$count++;
 
 					if (array_key_exists($increment, $adArray)) {
