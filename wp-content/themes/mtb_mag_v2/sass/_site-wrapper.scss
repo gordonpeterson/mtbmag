@@ -183,7 +183,10 @@ ul.gordon-menu {
 					}
 				}
 				&:first-child{
-					margin-top: -1px;
+					border-top: none;
+					&:hover{
+						border-top: none;
+					}
 				}
 				&:last-child{
 					border-bottom: 1px solid white;
