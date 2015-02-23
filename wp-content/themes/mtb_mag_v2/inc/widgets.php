@@ -168,6 +168,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 						<?php
 								endif;
 
+
 							else :
 								the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ) );
 							endif;
@@ -181,8 +182,8 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 									the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 								endif;
 
-								// printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
-								printf( '<span class="entry-date">
+								printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
+								/*printf( '<span class="entry-date">
 								      	 <a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a>
 								       </span>
 											<span class="byline">
