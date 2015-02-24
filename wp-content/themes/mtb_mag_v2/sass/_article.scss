@@ -16,13 +16,13 @@ body.single-post {
 		img.size-full, 
 		img.size-large, 
 		img.size-medium{
-			margin: 7px 24px 7px 0;
+			margin: 7px auto 7px auto;
 			&.alignright{
-				margin: 7px 24px 7px 0;
+				margin: 7px auto 7px auto;
 				float: none;
 			}
 			&.alignleft{
-				margin: 7px 24px 7px 0;
+				margin: 7px auto 7px auto;
 				float: none;
 			}
 		}
@@ -43,6 +43,17 @@ body.single-post {
 		&.full{
 			padding: 0 20px;
 			max-width: 1600px;
+		}
+	}
+
+
+	.fb-comments{
+		max-width: 750px;
+		margin: 0 auto 40px;
+		display: block;
+		&.full{
+			padding: 0;
+			max-width: 1200px;
 		}
 	}
 
@@ -102,12 +113,21 @@ body.single-post {
 
 		}
 
+
+		h1,h2,h3,h4,h5,
 		p{
-			// max-width: 750px;
-			// border: 1px solid orange;
+			max-width: 750px;
 			display: block;
 			margin: 20px auto;
 			padding: 0;
+
+			&.size-full,
+			&.full-width,
+			&.fullwidth,
+			&.full{
+				max-width: none;
+			/* border: 1px solid orange; */
+			}
 
 
 			&>a{
@@ -120,7 +140,12 @@ body.single-post {
 			}
 		}
 
-		embed, iframe, object, video{
+		iframe{
+			display: block;
+			margin: 0 auto;
+		}
+
+		embed, object, video{
 			margin: 20px auto;
 			display: block;
 		}
