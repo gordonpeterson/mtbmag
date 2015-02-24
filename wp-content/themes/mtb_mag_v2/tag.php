@@ -28,17 +28,10 @@ get_header('gordon'); ?>
 					// Start the Loop.
 					$count = 0;
 					$increment = 0;
-					$adArray = array(3,4,5,11,15);
-
-					// $post_banner1 = get_post_meta($post->ID, 'wt_meta_post_banner1', true);	
-					// $post_banner2 = get_post_meta($post->ID, 'wt_meta_post_banner2', true);	
-					// $post_banner3 = get_post_meta($post->ID, 'wt_meta_post_banner3', true);	
+					$adArray = array(3,4,5,9,13,14);
 
 					while ( have_posts() ) : the_post();
 						$count++;
-
-						// $blah = count( $adArray );
-						// var_dump( $blah );
 
 						if (array_key_exists($increment, $adArray)) {
 							$currentIndex = $adArray[$increment];
@@ -47,101 +40,62 @@ get_header('gordon'); ?>
 
 						if( $count == $currentIndex ){
 
-							if( $currentIndex == 5 ){ //...the 727x90 banner
-								// echo "<div class='ad ad2'>$adArray[$increment]</div>";
-								// if (empty($post_banner1)) { ?>
-									<div class="ad ad1">
-										<div class="ad-inner-wrap">
-											<!-- <h1>ad1: 727x90</h1> -->
-											<?php  
-												if(ICL_LANGUAGE_CODE == 'en'){ 
-														?>
-															<div id='div-gpt-ad-1402004698859-0'>
-															<script type='text/javascript'>
-															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004698859-0'); });
-															</script>
-															</div>
-														<?php 
-												}
-												else{
-														?>
-															<div id='div-gpt-ad-1402004398340-0'>
-															<script type='text/javascript'>
-															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004398340-0'); });
-															</script>
-															</div>
-														<?php 
-												}
-											?>
-										</div>			
-									</div>
-										
-								<?php //}
-							} elseif ($currentIndex == 11) { //...the 727x400 banner
-								// echo "<div class='ad ad3'>$adArray[$increment]</div>";
-								// if (empty($post_banner3)) { ?>
-									<div class="ad ad3">
-										<div class="ad-inner-wrap">
-											<!-- <h1>ad1: 727x90</h1> -->
-											<?php  
-												if(ICL_LANGUAGE_CODE == 'en'){ 
-														?>
-															<div id='div-gpt-ad-1402004698859-0'>
-															<script type='text/javascript'>
-															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004698859-0'); });
-															</script>
-															</div>
-														<?php 
-												}
-												else{
-														?>
-															<div id='div-gpt-ad-1402004398340-0'>
-															<script type='text/javascript'>
-															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004398340-0'); });
-															</script>
-															</div>
-														<?php 
-												}
-											?>
-										</div>			
-									</div>
-										
-								<?php //}
-							} else { //...the 300x250 banners
-								// echo "<div class='ad'>$adArray[$increment]</div>";
-								// if (empty($post_banner2)) { ?>
-									<div class="ad ad2">
-										<div class="ad-inner-wrap">
-											<!-- <h1>ad1: 727x90</h1> -->
-											<?php  
-												if(ICL_LANGUAGE_CODE == 'en'){ 
-														?>
-															<div id='div-gpt-ad-1402004698859-0'>
-															<script type='text/javascript'>
-															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004698859-0'); });
-															</script>
-															</div>
-														<?php 
-												}
-												else{
-														?>
-															<div id='div-gpt-ad-1402004398340-0'>
-															<script type='text/javascript'>
-															googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402004398340-0'); });
-															</script>
-															</div>
-														<?php 
-												}
-											?>
-										</div>			
-									</div>
-										
-								<?php //}
+							if( $currentIndex == 3 ){ //...ad1 300x250
+							?>
+										<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
+												<div class="widget no-widget ad ad300x250">
+													<p><?php _e("$adText ad1 300x250", 'twentytwelve'); ?></p>
+												</div>
+											<?php endif; ?>
+							<?php 
+							}else if( $currentIndex == 4 ){ //...ad2 300x250
+							 ?>
+										<?php if ( ! dynamic_sidebar( 'ad-widget2' ) ) : ?>
+											<div class="widget no-widget ad ad300x250">
+													<p><?php _e("$adText  ad2 300x250", 'twentytwelve'); ?></p>
+											</div>
+										<?php endif; ?>
+							 <?php 
+							}else if( $currentIndex == 5 ){ //...ad3 727z90
+								?>
+										<?php if ( ! dynamic_sidebar( 'ad-widget3' ) ) : ?>
+											<div class="widget no-widget ad ad272x90">
+													<p><?php _e("$adText ad3 272x90", 'twentytwelve'); ?></p>
+											</div>
+										<?php endif; ?>
+								<?php 
+							}else if( $currentIndex == 9 ){ //...ad4 300x250
+							 ?>
+										<?php if ( ! dynamic_sidebar( 'ad-widget4' ) ) : ?>
+											<div class="widget no-widget ad ad300x250">
+													<p><?php _e("$adText ad4 300x250", 'twentytwelve'); ?></p>
+											</div>
+										<?php endif; ?>
+							 <?php 
+
+							} elseif ($currentIndex == 13) { //...ad5 300x250
+								?>
+										<?php if ( ! dynamic_sidebar( 'ad-widget5' ) ) : ?>
+											<div class="widget no-widget ad ad300x250">
+													<p><?php _e("$adText ad5 300x250", 'twentytwelve'); ?></p>
+											</div>
+										<?php endif; ?>
+								<?php
+
+							} else if(14) { //...ad6 300x250
+								?>
+										<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
+											<div class="widget no-widget ad ad300x250">
+													<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
+											</div>
+										<?php endif; ?>
+								<?php
 							}
 
 
 							$increment++;
 						}
+
 
 						/*
 						 * Include the post format-specific template for the content. If you want to
