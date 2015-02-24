@@ -34,6 +34,7 @@
 			endif;
 		?>
 
+
 		<div class="entry-meta">
 			<?php
 				if ( 'post' == get_post_type() )
@@ -47,6 +48,14 @@
 
 				edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
 			?>
+
+			<span class="tab-related single">
+				<i class="genericon genericon-show"></i>
+				<?php if ( current_user_can( 'edit_post' , get_the_ID() ) & function_exists( "the_views" ) ) {
+					the_views();
+					} ?>
+			</span>	
+
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 	

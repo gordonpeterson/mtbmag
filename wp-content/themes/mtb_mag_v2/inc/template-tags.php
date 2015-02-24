@@ -25,9 +25,9 @@ function mtb_posted_on() {
 	       	<time class="entry-date" datetime="%2$s">%3$s</time>
 	       </a>
 	       </span> 
-	       <span class="byline">
+	       <span class="byline template-tag">
 	       	<span class="author vcard">
-	       		<a class="url fn n " href="" rel="author">%5$s</a>
+	       		<a class="url fn n " href="%4$s" rel="author">%5$s</a>
 	       		</span>
 	       	</span>',
 		esc_url( get_permalink() ),

@@ -621,7 +621,7 @@ $contentMaxWidth: 975px;
 
 
 			.post-thumbnail{
-				height: 250px;
+				height: 210px;
 			}
 
 			.post-info{
@@ -653,6 +653,10 @@ $contentMaxWidth: 975px;
 
 		}
 	}
+	
+	.list-view .site-content .hentry{
+		padding: 0;
+	}
 
 
 	article.big{
@@ -664,6 +668,10 @@ $contentMaxWidth: 975px;
 
 
 	body.single-post{
+		article.post .entry-header{
+			margin-top: 240px;
+		}
+
 		.post-thumbnail{
 			height: auto;
 		}

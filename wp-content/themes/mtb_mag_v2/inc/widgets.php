@@ -168,7 +168,6 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 						<?php
 								endif;
 
-
 							else :
 								the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ) );
 							endif;
@@ -182,11 +181,11 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 									the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 								endif;
 
-								printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
-								/*printf( '<span class="entry-date">
+								// printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline nothing"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
+								printf( '<span class="entry-date">
 								      	 <a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a>
 								       </span>
-											<span class="byline">
+											<span class="byline widgets">
 												<span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span>
 											</span>',
 									esc_url( get_permalink() ),
@@ -200,6 +199,14 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 							?>
 							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
 							<?php endif; ?>
+
+							<span class="tab-related widgets">
+								<i class="icon-eye-open"></i>
+								<?php if ( current_user_can( 'edit_post' , get_the_ID() ) & function_exists( "the_views" ) ) {
+									the_views();
+									} ?>
+							</span>	
+
 						</div><!-- .entry-meta -->
 					</header><!-- .entry-header -->
 				</article><!-- #post-## -->
