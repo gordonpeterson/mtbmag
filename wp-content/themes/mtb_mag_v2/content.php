@@ -49,12 +49,12 @@
 				edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
 			?>
 
+				<?php if ( current_user_can( 'edit_post' , get_the_ID() ) & function_exists( "the_views" ) ) { ?>
 			<span class="tab-related single">
 				<i class="genericon genericon-show"></i>
-				<?php if ( current_user_can( 'edit_post' , get_the_ID() ) & function_exists( "the_views" ) ) {
-					the_views();
-					} ?>
+					<?php the_views();  ?>
 			</span>	
+				<?php } ?>
 
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
@@ -89,25 +89,17 @@
 					 ?>
 					
 					<div class="ads-row">
-					<div class="ad ad300x250">
-						<div class="ad-inner-wrap">
-						<?php if ( ! dynamic_sidebar( 'ad-widget5' ) ) : ?>
+						<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
 							<div class="widget no-widget">
 									<p><?php _e("$adText ad5 300x250", 'twentytwelve'); ?></p>
 							</div>
 						<?php endif; ?>
-						</div>			
-					</div>
 
-					<div class="ad ad300x250">
-						<div class="ad-inner-wrap">
-						<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
+						<?php if ( ! dynamic_sidebar( 'ad-widget7' ) ) : ?>
 							<div class="widget no-widget">
 									<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
 							</div>
 						<?php endif; ?>
-						</div>			
-					</div>
 					</div>
 
 

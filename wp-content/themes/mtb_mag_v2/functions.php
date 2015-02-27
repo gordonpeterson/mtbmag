@@ -13,7 +13,7 @@ function mtb_mag_setup() {
 	register_sidebar( array(
 		'name' => __( 'Ad1 300x250', 'twentytwelve' ),
 		'id' => 'ad-widget1',
-		'description' => __( 'The first 300x250 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'description' => __( 'The first ad slot (300x250). Add the javascript code here using a text widget.', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="ad-title">',
@@ -23,7 +23,7 @@ function mtb_mag_setup() {
 	register_sidebar( array(
 		'name' => __( 'Ad2 300x250', 'twentytwelve' ),
 		'id' => 'ad-widget2',
-		'description' => __( 'The second 300x250 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'description' => __( 'The second ad slot (300x250). Add the javascript code here using a text widget.', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="ad-title">',
@@ -33,7 +33,7 @@ function mtb_mag_setup() {
 	register_sidebar( array(
 		'name' => __( 'Ad3 727x90', 'twentytwelve' ),
 		'id' => 'ad-widget3',
-		'description' => __( 'The third 727x90 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'description' => __( 'The third ad slot (727x90). Add the javascript code here using a text widget.', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="ad ad727x90 %2$s"><div class="ad-inner-wrap">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="ad-title">',
@@ -43,7 +43,7 @@ function mtb_mag_setup() {
 	register_sidebar( array(
 		'name' => __( 'Ad4 300x250', 'twentytwelve' ),
 		'id' => 'ad-widget4',
-		'description' => __( 'The second 300x250 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'description' => __( 'The second ad slot (300x250). Add the javascript code here using a text widget.', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="ad-title">',
@@ -54,17 +54,47 @@ function mtb_mag_setup() {
 	register_sidebar( array(
 		'name' => __( 'Ad5 300x250', 'twentytwelve' ),
 		'id' => 'ad-widget5',
-		'description' => __( 'The fifth 300x250 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'description' => __( 'The fifth ad slot (300x250). Add the javascript code here using a text widget.', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="ad-title">',
 		'after_title' => '</h3>',
 	) );
-	
+
 	register_sidebar( array(
 		'name' => __( 'Ad6 300x250', 'twentytwelve' ),
 		'id' => 'ad-widget6',
-		'description' => __( 'The sixth 300x250 ad slot for category pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'description' => __( 'The seventh ad slot (300x600). Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3 class="ad-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Ad7 300x250', 'twentytwelve' ),
+		'id' => 'ad-widget7',
+		'description' => __( 'The seventh ad slot (300x600). Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3 class="ad-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Ad6 300x600', 'twentytwelve' ),
+		'id' => 'ad-widget6',
+		'description' => __( 'The sixth ad slot (300x600). Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3 class="ad-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Ad8 750x450', 'twentytwelve' ),
+		'id' => 'ad-widget8',
+		'description' => __( 'The eighth ad slot (750x450). Add the javascript code here using a text widget.', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="ad-title">',
@@ -106,23 +136,57 @@ function special_nav_class($classes, $item){
      return $classes;
 }
 
+//[ad12]
+function get_ads( $atts ){
+	$adText = "<div class='ads-row'>";
+	$adText .= get_dynamic_sidebar( 'ad-widget1' );
+	$adText .= get_dynamic_sidebar( 'ad-widget2' );
+	$adText .= "</div>";
+	return $adText;
+}
+add_shortcode( 'ad12', 'get_ads' );
+
+//[ad45]
+function get_ads( $atts ){
+	$adText = "<div class='ads-row'>";
+	$adText .= get_dynamic_sidebar( 'ad-widget4' );
+	$adText .= get_dynamic_sidebar( 'ad-widget5' );
+	$adText .= "</div>";
+	return $adText;
+}
+add_shortcode( 'ad45', 'get_ads' );
+
+//[ad_row3]
+function get_ads( $atts ){
+	$adText = "<div class='ads-row'>";
+	$adText .= get_dynamic_sidebar( 'ad-widget6' );
+	$adText .= get_dynamic_sidebar( 'ad-widget7' );
+	$adText .= "</div>";
+	return $adText;
+}
+add_shortcode( 'ad_row3', 'get_ads' );
+
 //[ad_row1]
 function get_ads( $atts ){
-
-
-	// return "<div class='ads-row'> <div class='ad300x250 ad'> <script type='text/javascript'> var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; (function() {var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node); })(); </script> <script type='text/javascript'> googletag.cmd.push(function() {googletag.defineSlot('/1031065/MTB-home', [[300, 250], [300, 450], [300, 500]], 'div-gpt-ad-1422880044994-0').addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); }); </script> <!-- MTB-home --> <div id='div-gpt-ad-1422880044994-0'> <script type='text/javascript'> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422880044994-0'); }); </script> </div> </div> <div class='ad300x250 ad'> <script type='text/javascript'> var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; (function() {var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node); })(); </script> <script type='text/javascript'> googletag.cmd.push(function() {googletag.defineSlot('/1031065/MTB-home-Multiplayer', [[300, 250], [300, 450], [300, 500], [300, 600]], 'div-gpt-ad-1422880096354-0').addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); }); </script> <!-- MTB-home-Multiplayer --> <div id='div-gpt-ad-1422880096354-0'> <script type='text/javascript'> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422880096354-0'); }); </script> </div> </div> </div>";
-
 	$adText = "<div class='ads-row'>";
 	$adText .= get_dynamic_sidebar( 'ad-widget2' );
 	$adText .= get_dynamic_sidebar( 'ad-widget1' );
-
-	// $adText .= "<div class='ad300x250 ad'> <script type='text/javascript'> var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; (function() {var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node); })(); </script> <script type='text/javascript'> googletag.cmd.push(function() {googletag.defineSlot('/1031065/MTB-home', [[300, 250], [300, 450], [300, 500]], 'div-gpt-ad-1422880044994-0').addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); }); </script> <!-- MTB-home --> <div id='div-gpt-ad-1422880044994-0'> <script type='text/javascript'> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422880044994-0'); }); </script> </div> </div>";
-	// $adText .= "<div class='ad300x250 ad'> <script type='text/javascript'> var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; (function() {var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node); })(); </script> <script type='text/javascript'> googletag.cmd.push(function() {googletag.defineSlot('/1031065/MTB-home-Multiplayer', [[300, 250], [300, 450], [300, 500], [300, 600]], 'div-gpt-ad-1422880096354-0').addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); }); </script> <!-- MTB-home-Multiplayer --> <div id='div-gpt-ad-1422880096354-0'> <script type='text/javascript'> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422880096354-0'); }); </script> </div> </div> ";
 	$adText .= "</div>";
-
 	return $adText;
 }
 add_shortcode( 'ad_row1', 'get_ads' );
+
+//[ad_row1]
+function get_ads( $atts ){
+	$adText = "<div class='ads-row'>";
+	$adText .= get_dynamic_sidebar( 'ad-widget2' );
+	$adText .= get_dynamic_sidebar( 'ad-widget1' );
+	$adText .= "</div>";
+	return $adText;
+}
+add_shortcode( 'ad_row1', 'get_ads' );
+
+
 
 
 function get_dynamic_sidebar($index = 1) {

@@ -377,10 +377,13 @@ ul.gordon-menu {
 	&:hover,
 	&.active{
 		background-color: darken( $mainGrey, 3% );
+		a{
+			color: #fff;
+		}
 	}
 
 	a{
-		color: #fff;
+		color: orange;
 		padding: 10px;
 		vertical-align: bottom;
 		display: block;

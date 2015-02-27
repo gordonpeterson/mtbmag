@@ -2,22 +2,10 @@ $lightBgColor: #b2b2b2;
 $contentMaxWidth: 975px;
 
 
-/**************************************** really big *************************************/
-@media all and (min-width: 1308px) {
-
-	// body.home{
-	// 	border: 8px dashed pink;
-	// 	article.big{
-	// 		height: 750px;
-	// 		.post-thumbnail{
-	// 			height: 750px;
-	// 		}
-	// 	}
-	// }
-}
 
 
-/******************************************* big ****************************************/
+
+/******************************************* big (standard) ****************************************/
 @media all and (min-width: 1008px) {
 
 	
@@ -35,7 +23,6 @@ $contentMaxWidth: 975px;
 			top: 0;
 		}
 	}
-
 
 	body.no-customize-support{
 		.site-header{
@@ -86,6 +73,7 @@ $contentMaxWidth: 975px;
 	.site {
 		
 		max-width: 2400px;
+		max-width: none;
 		position: relative;
 	}
 
@@ -98,6 +86,7 @@ $contentMaxWidth: 975px;
 	.site-header,
 	.header-main{
 		max-width: 2400px;
+		max-width: none;
 	}
 
 
@@ -152,6 +141,8 @@ $contentMaxWidth: 975px;
 		margin: 10px 10px;
 		background: $mainGrey;
 
+
+
 		.post-info{
 			position: absolute;
 			top: auto;
@@ -197,6 +188,8 @@ $contentMaxWidth: 975px;
 			display: none;
 		}
 	}
+
+
 
 
 
@@ -266,7 +259,6 @@ $contentMaxWidth: 975px;
 			}
 
 			header.entry-header{
-				/*border: 1px solid blue;*/
 				margin: 0 !important;
 				background-color: transparent;
 				color: #000;
@@ -276,6 +268,8 @@ $contentMaxWidth: 975px;
 			header.entry-header a{
 				color: #000;
 			}
+
+
 
 			.excerpt{
 				display: block;
@@ -327,9 +321,6 @@ $contentMaxWidth: 975px;
 
 			.post-info{
 
-			}
-
-			header.entry-header{
 			}
 
 			.excerpt{
@@ -668,13 +659,7 @@ $contentMaxWidth: 975px;
 
 
 	body.single-post{
-		article.post .entry-header{
-			margin-top: 240px;
-		}
 
-		.post-thumbnail{
-			height: auto;
-		}
 		p{
 			padding: 10px;
 
@@ -684,6 +669,25 @@ $contentMaxWidth: 975px;
 		}
 	}
 
+}
 
+
+
+// ************************************************* header breakpoints *************************
+
+$w: 1140px -1296px;
+@media screen and (min-width: 1440px) {
+	body.single-post{
+		article.post {
+			.entry-header{
+				margin-top: 600px;
+				border: 5px dashed lightblue;
+			}
+			.post-thumbnail{
+				border: 5px dashed lightblue;
+				height: 725px;
+			}
+		}
+	}
 }
 
