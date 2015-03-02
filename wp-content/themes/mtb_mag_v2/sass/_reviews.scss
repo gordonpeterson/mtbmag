@@ -1,3 +1,6 @@
+
+
+
 .review-container {
 		// float: right;
 		margin-bottom: 20px;
@@ -43,9 +46,11 @@
 		overflow: hidden;	
 		border-top: none;
 		display: table;
+		width: 100%;
 
 		h6{
 			font-weight: 700;
+			margin: 12px 0;
 		}
 
 		.left{
