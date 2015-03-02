@@ -2,6 +2,8 @@ body, h1, h2, h3, h4, h5, h6{
 	font-family: 'Open Sans', Arial, sans-serif;
 }
 
+
+a:active, a:hover,
 a{
 	color: $linkColor;
 }
@@ -376,7 +378,9 @@ ul.gordon-menu {
 
 	&:hover,
 	&.active{
-		background-color: darken( $mainGrey, 3% );
+		// background-color: darken( $mainGrey, 3% );
+		border-color: white white #1f1f1f white;
+    background: #1f1f1f;
 		a{
 			color: #fff;
 		}
@@ -394,6 +398,7 @@ ul.gordon-menu {
 .login-form{
 	position: absolute;
 	background: $mainGrey;
+	background: #1f1f1f;
 	right: 0;
 	border: 1px solid black;
 	z-index: 12;

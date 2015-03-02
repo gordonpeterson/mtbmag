@@ -20,14 +20,19 @@ $gutterMargin: floor($gutter/2);
 	@import "language";
 }
 
+
 @import "responsive";
 
 .gordon{
-	// background: pink;
+	background: pink;
 }
 
 .test{
 	/*border: 5px dashed orange;*/
+}
+
+.blah{
+	// background: lime;
 }
 
 ::selection {

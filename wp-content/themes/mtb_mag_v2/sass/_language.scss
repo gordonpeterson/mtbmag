@@ -20,7 +20,7 @@
 		background-color: $mainGrey;
 		&.lang_sel_sel{
 			background: transparent;
-			border: none;
+			border: 1px solid $mainGrey;
 			border-left: 1px solid black;
 
 
@@ -58,6 +58,8 @@
 #lang_sel :hover > a, 
 #lang_sel ul ul :hover > a{
 	background: darken($mainGrey, .1);
+	border-color: white white #1f1f1f white;
+  background: #1f1f1f;
 }
 
 

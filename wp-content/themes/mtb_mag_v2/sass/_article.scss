@@ -180,12 +180,10 @@ body.single-post {
 		background: $siteBgColor;
 		margin: 0 auto;
 		padding-top: 20px;
-		// max-width: 1600px;
+		padding-bottom: 5px;
 	}
 
 	.nav-links{
-		// border: 1px solid rgba(0, 0, 0, 0.1);
-
 
 		a{
 			max-width: 48%;
@@ -200,13 +198,13 @@ body.single-post {
 				color: white;
 			}
 
-			&:first-child{
-
-			}
 
 			&:last-child{
 				text-align: right;
 				float: right;
+			}
+			&:first-child{
+				float: none;
 			}
 		}
 	}
@@ -218,6 +216,7 @@ body.single-post {
 		position: relative;
 		padding: 35px;
 		margin: 0 auto;
+		clear: both;
 		// max-width: 1600px;
 
 	}
