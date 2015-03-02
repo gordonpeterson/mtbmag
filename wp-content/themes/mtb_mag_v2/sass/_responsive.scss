@@ -372,7 +372,7 @@ $contentMaxWidth: 975px;
 	ul.gordon-menu {
 
 		&>li>a{
-			padding: 0 7px;
+			padding: 0 10px;
 		}
 		
 		&>li.category-container,	
@@ -681,10 +681,10 @@ $w: 1140px -1296px;
 		article.post {
 			.entry-header{
 				margin-top: 600px;
-				border: 5px dashed lightblue;
+				// border: 5px dashed lightblue;
 			}
 			.post-thumbnail{
-				border: 5px dashed lightblue;
+				// border: 5px dashed lightblue;
 				height: 725px;
 			}
 		}

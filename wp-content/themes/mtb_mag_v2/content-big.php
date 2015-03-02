@@ -8,7 +8,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('big'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('big'); ?> ng-controller="coverCtrl as vm" ng-style="{'height': vm.coverHeight+'px'}">
 	<div class="post-thumbnail" ?>
 	<?php
 		if ( has_post_thumbnail() ) :
