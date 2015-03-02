@@ -222,8 +222,11 @@ function wt_show_review(){
 		<div class="review-items">
 			<?php
 			
+			echo "<!-- postID: $post->ID -->";
 			$item1_title = get_post_meta($post->ID,'wt_meta_post_review_item1_title', true);
+			echo "<!--item1_title: $item1_title -->";
 			$item1_score = get_post_meta($post->ID,'wt_meta_post_review_item1_score', true);
+			echo "<!-- item1_score: $item1_score -->";
 				
 			if( $item1_title && $item1_score && is_numeric( $item1_score )){
 				
@@ -235,7 +238,9 @@ function wt_show_review(){
 					$item1_score = 0;
 				}
 				
+				echo "<!-- item1_stars -->";
 				$item1_stars = wt_calculate_stars($item1_score);			
+				echo "<!-- item1_render -->";
 				?>
 				
 				<div class="review-item">
@@ -246,7 +251,9 @@ function wt_show_review(){
 			}
 			
 			$item2_title = get_post_meta($post->ID,'wt_meta_post_review_item2_title', true);
+			echo "<!--item2_title: $item2_title -->";
 			$item2_score = get_post_meta($post->ID,'wt_meta_post_review_item2_score', true);
+			echo "<!-- item2_score: $item2_score -->";
 			
 			if( $item2_title && $item2_score && is_numeric( $item2_score )){
 				
@@ -269,7 +276,9 @@ function wt_show_review(){
 			}
 			
 			$item3_title = get_post_meta($post->ID,'wt_meta_post_review_item3_title', true);
+			echo "<!--item3_title: $item3_title -->";
 			$item3_score = get_post_meta($post->ID,'wt_meta_post_review_item3_score', true);
+			echo "<!-- item3_score: $item3_score -->";
 			
 			if( $item3_title && $item3_score && is_numeric( $item3_score )){
 				
@@ -292,7 +301,9 @@ function wt_show_review(){
 			}
 			
 			$item4_title = get_post_meta($post->ID,'wt_meta_post_review_item4_title', true);
+			echo "<!--item4_title: $item4_title -->";
 			$item4_score = get_post_meta($post->ID,'wt_meta_post_review_item4_score', true);
+			echo "<!-- item4_score: $item4_score -->";
 			
 			if( $item4_title && $item4_score && is_numeric( $item4_score )){
 				
@@ -315,7 +326,9 @@ function wt_show_review(){
 			}
 			
 			$item5_title = get_post_meta($post->ID,'wt_meta_post_review_item5_title', true);
+			echo "<!--item5_title: $item5_title -->";
 			$item5_score = get_post_meta($post->ID,'wt_meta_post_review_item5_score', true);
+			echo "<!-- item5_score: $item5_score -->";
 			
 			if( $item5_title && $item5_score && is_numeric( $item5_score )){
 				
@@ -342,7 +355,9 @@ function wt_show_review(){
 	<?php
 	
 	$item6_title = get_post_meta($post->ID,'wt_meta_post_review_item6_title', true);
+	echo "<!--item6_title: $item6_title -->";
 	$item6_score = get_post_meta($post->ID,'wt_meta_post_review_item6_score', true);	
+			echo "<!-- item6_score: $item6_score -->";
 	
 	if( $item6_title && $item6_score && is_numeric( $item6_score )){
 		
@@ -407,6 +422,59 @@ function wt_show_review(){
 <?php
 }
 
+
+
+function wt_calculate_stars($score){
+
+	if ($score && is_numeric( $score ) ){
+		
+		if ( $score > 100 ){
+				$score = 100;
+		}
+			
+		if ( $score < 0 ){
+			$score = 0;
+		}
+
+		$rounded_score = 5 * round($score / 5);
+		
+		$final_score =  $rounded_score/10; 
+
+		$full_stars = intval($final_score);		
+		$empty_stars = 5 - $full_stars;
+		
+		$half_star = 0;		
+		if(floor( $final_score ) != $final_score) {
+			$half_star = 1;
+		}
+
+		if ($half_star == 1) {
+			$empty_stars = $empty_stars -1;
+		}
+		
+		$i = 0;
+		$stars = "";
+		while($i < $full_stars){
+			$stars .= '<i class="icon-star"></i>';
+			$i++;
+		}
+		
+		if ($half_star == 1) {
+			$stars .= '<i class="icon-star-half-empty"></i>';
+		}
+		 
+		$y = 0;
+		while($y < $empty_stars){
+			$stars .= '<i class="icon-star-empty"></i>';
+			$y++;
+		}		
+		
+		return $stars;
+	} else {
+		return false;
+	}
+
+}
 
 // Implement Custom Header features.
 // require get_template_directory() . '/inc/custom-header.php';

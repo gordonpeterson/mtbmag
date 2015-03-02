@@ -103,6 +103,9 @@
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
+					<div class="review-container">
+						<?php wt_show_review();	?>
+					</div>
 
 					
 					<div class="ads-row">

@@ -101,6 +101,11 @@
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
+		
+					<div class="review-container">
+						<?php wt_show_review();	?>
+					</div>
+
 
 					<?php 
 					$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
@@ -109,13 +114,13 @@
 					<div class="ads-row">
 						<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
 							<div class="widget no-widget">
-									<p><?php _e("$adText ad5 300x250", 'twentytwelve'); ?></p>
+									<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
 							</div>
 						<?php endif; ?>
 
 						<?php if ( ! dynamic_sidebar( 'ad-widget7' ) ) : ?>
 							<div class="widget no-widget">
-									<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
+									<p><?php _e("$adText ad7 300x250", 'twentytwelve'); ?></p>
 							</div>
 						<?php endif; ?>
 					</div>
