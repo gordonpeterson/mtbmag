@@ -91,18 +91,16 @@
 					<div class="ads-row">
 						<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
 							<div class="widget no-widget">
-									<p><?php _e("$adText ad5 300x250", 'twentytwelve'); ?></p>
+									<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
 							</div>
 						<?php endif; ?>
 
 						<?php if ( ! dynamic_sidebar( 'ad-widget7' ) ) : ?>
 							<div class="widget no-widget">
-									<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
+									<p><?php _e("$adText ad7 300x250", 'twentytwelve'); ?></p>
 							</div>
 						<?php endif; ?>
 					</div>
-
-
 
 		<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
 	</div> <!-- .scroll-ares -->

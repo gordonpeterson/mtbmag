@@ -23,6 +23,7 @@
 			<div class="site-info">
 				<?php// do_action( 'twentyfourteen_credits' ); ?>
 			</div><!-- .site-info -->
+			<div class="copy-right">&copy;MTB-MAG.COM 2015 All Rights Reserved</div>
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 	
