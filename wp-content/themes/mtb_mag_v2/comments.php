@@ -3,13 +3,35 @@
  * The template for displaying Comments.
  */
 ?>
-	
+
 
 <div id="comments" class="comments-area">
-	<div class="addthis_custom_sharing"></div>
-
-	<div class="fb-comments" data-href="<?php echo(get_permalink()) ?>" data-width="750px" data-numposts="15" data-colorscheme="light"></div>
 	
+
+
+	
+	<div class="addthis_custom_sharing"></div>
+	
+	
+<?php	if(ICL_LANGUAGE_CODE == 'en'){ ?>
+<div class="entry-content popular">
+	<?php wpp_get_mostpopular( 'header="Popular Posts"&cat="3673,2054,4017,3678,3675,3674,3677,3676,3671"' ); ?>
+</div>
+	<div class="fb-comments" data-href="<?php echo(get_permalink()) ?>" data-width="750px" data-numposts="20" data-colorscheme="light"></div>
+<?php } ?>
+<?php	if(ICL_LANGUAGE_CODE == 'es'){ ?>
+	
+	<div class="fb-comments" data-href="<?php echo(get_permalink()) ?>" data-width="750px" data-numposts="20" data-colorscheme="light"></div>
+	
+<?php } ?>
+<?php	if(ICL_LANGUAGE_CODE == 'it'){ ?>	
+<div class="entry-content popular">
+<?php wpp_get_mostpopular( 'header="Popular Posts"&cat="1,7,9,41,11,1658,63,1161,10,4285,2224,3320,2103,12"' ); ?>
+</div>
+	<?php	}
+		else {?>
+			<?php } ?>
+			
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'wellthemes' ); ?></p>
 	</div><!-- /comments -->
