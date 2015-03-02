@@ -137,54 +137,61 @@ function special_nav_class($classes, $item){
 }
 
 //[ad12]
-function get_ads( $atts ){
+function get_ads1( $atts ){
 	$adText = "<div class='ads-row'>";
 	$adText .= get_dynamic_sidebar( 'ad-widget1' );
 	$adText .= get_dynamic_sidebar( 'ad-widget2' );
 	$adText .= "</div>";
 	return $adText;
 }
-add_shortcode( 'ad12', 'get_ads' );
+add_shortcode( 'ad12', 'get_ads1' );
 
 //[ad45]
-function get_ads( $atts ){
+function get_ads2( $atts ){
 	$adText = "<div class='ads-row'>";
 	$adText .= get_dynamic_sidebar( 'ad-widget4' );
 	$adText .= get_dynamic_sidebar( 'ad-widget5' );
 	$adText .= "</div>";
 	return $adText;
 }
-add_shortcode( 'ad45', 'get_ads' );
+add_shortcode( 'ad45', 'get_ads2' );
 
-//[ad_row3]
-function get_ads( $atts ){
+//[ad67]
+function get_ads3( $atts ){
 	$adText = "<div class='ads-row'>";
 	$adText .= get_dynamic_sidebar( 'ad-widget6' );
 	$adText .= get_dynamic_sidebar( 'ad-widget7' );
 	$adText .= "</div>";
 	return $adText;
 }
-add_shortcode( 'ad_row3', 'get_ads' );
+add_shortcode( 'ad67', 'get_ads3' );
 
-//[ad_row1]
-function get_ads( $atts ){
+//[ad1]
+function get_ad1( $atts ){
 	$adText = "<div class='ads-row'>";
-	$adText .= get_dynamic_sidebar( 'ad-widget2' );
 	$adText .= get_dynamic_sidebar( 'ad-widget1' );
 	$adText .= "</div>";
 	return $adText;
 }
-add_shortcode( 'ad_row1', 'get_ads' );
+add_shortcode( 'ad1', 'get_ad1' );
 
-//[ad_row1]
-function get_ads( $atts ){
+//[ad2]
+function get_ad2( $atts ){
 	$adText = "<div class='ads-row'>";
 	$adText .= get_dynamic_sidebar( 'ad-widget2' );
-	$adText .= get_dynamic_sidebar( 'ad-widget1' );
 	$adText .= "</div>";
 	return $adText;
 }
-add_shortcode( 'ad_row1', 'get_ads' );
+add_shortcode( 'ad2', 'get_ad2' );
+
+//[ad3]
+function get_ad3( $atts ){
+	$adText = "<div class='ads-row'>";
+	$adText .= get_dynamic_sidebar( 'ad-widget3' );
+	$adText .= "</div>";
+	return $adText;
+}
+add_shortcode( 'ad3', 'get_ad3' );
 
 
 
