@@ -66,6 +66,24 @@
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
+
+		<?php// if (strtotime($post->post_date) > strtotime('-4 days')): ?>  
+
+			<div class="ads-row">
+				<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
+					<div class="widget no-widget">
+							<p><?php _e("$adText ad1 300x250", 'twentytwelve'); ?></p>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( ! dynamic_sidebar( 'ad-widget2' ) ) : ?>
+					<div class="widget no-widget">
+							<p><?php _e("$adText ad2 300x250", 'twentytwelve'); ?></p>
+					</div>
+				<?php endif; ?>
+			</div>
+		<?php // endif; ?>
+
 			<?php
 				/* translators: %s: Name of current post */
 				the_content( sprintf(
