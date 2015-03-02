@@ -206,6 +206,208 @@ function get_dynamic_sidebar($index = 1) {
 }
 
 
+function wt_show_review(){
+	global $post ;
+		$review_title = get_post_meta($post->ID, 'wt_meta_post_review_title', true);
+		?>
+		
+		<div class="section-title">
+			<div class="title-wrap main-color-bg">
+				<div class="icon"><i class="icon-list"></i></div>
+				<h3><?php echo $review_title; ?></h3>
+			</div>
+		</div>
+		
+		<div class="review-wrap">
+		<div class="review-items">
+			<?php
+			
+			$item1_title = get_post_meta($post->ID,'wt_meta_post_review_item1_title', true);
+			$item1_score = get_post_meta($post->ID,'wt_meta_post_review_item1_score', true);
+				
+			if( $item1_title && $item1_score && is_numeric( $item1_score )){
+				
+				if ( $item1_score > 50 ){
+					$item1_score = 50;
+				}
+					
+				if ( $item1_score < 0 ){
+					$item1_score = 0;
+				}
+				
+				$item1_stars = wt_calculate_stars($item1_score);			
+				?>
+				
+				<div class="review-item">
+					<div class="item-title"><?php echo $item1_title; ?></div>
+					<div class="review-stars main-color"><?php echo $item1_stars; ?></div>
+				</div>
+				<?php			
+			}
+			
+			$item2_title = get_post_meta($post->ID,'wt_meta_post_review_item2_title', true);
+			$item2_score = get_post_meta($post->ID,'wt_meta_post_review_item2_score', true);
+			
+			if( $item2_title && $item2_score && is_numeric( $item2_score )){
+				
+				if ( $item2_score > 100 ){
+					$item2_score = 100;
+				}
+					
+				if ( $item2_score < 0 ){
+					$item2_score = 0;
+				}
+				
+				$item2_stars = wt_calculate_stars($item2_score);			
+				?>
+				
+				<div class="review-item">
+					<div class="item-title"><?php echo $item2_title; ?></div>
+					<div class="review-stars main-color"><?php echo $item2_stars; ?></div>
+				</div>
+				<?php			
+			}
+			
+			$item3_title = get_post_meta($post->ID,'wt_meta_post_review_item3_title', true);
+			$item3_score = get_post_meta($post->ID,'wt_meta_post_review_item3_score', true);
+			
+			if( $item3_title && $item3_score && is_numeric( $item3_score )){
+				
+				if ( $item3_score > 100 ){
+					$item3_score = 100;
+				}
+					
+				if ( $item3_score < 0 ){
+					$item3_score = 0;
+				}
+				
+				$item3_stars = wt_calculate_stars($item3_score);		
+				?>
+				
+				<div class="review-item">
+					<div class="item-title"><?php echo $item3_title; ?></div>
+					<div class="review-stars main-color"><?php echo $item3_stars; ?></div>
+				</div>
+				<?php			
+			}
+			
+			$item4_title = get_post_meta($post->ID,'wt_meta_post_review_item4_title', true);
+			$item4_score = get_post_meta($post->ID,'wt_meta_post_review_item4_score', true);
+			
+			if( $item4_title && $item4_score && is_numeric( $item4_score )){
+				
+				if ( $item4_score > 100 ){
+					$item4_score = 100;
+				}
+					
+				if ( $item4_score < 0 ){
+					$item4_score = 0;
+				}
+				
+				$item4_stars = wt_calculate_stars($item4_score);		
+				?>
+				
+				<div class="review-item">
+					<div class="item-title"><?php echo $item4_title; ?></div>
+					<div class="review-stars main-color"><?php echo $item4_stars; ?></div>
+				</div>
+				<?php			
+			}
+			
+			$item5_title = get_post_meta($post->ID,'wt_meta_post_review_item5_title', true);
+			$item5_score = get_post_meta($post->ID,'wt_meta_post_review_item5_score', true);
+			
+			if( $item5_title && $item5_score && is_numeric( $item5_score )){
+				
+				if ( $item5_score > 100 ){
+					$item5_score = 100;
+				}
+					
+				if ( $item5_score < 0 ){
+					$item5_score = 0;
+				}
+				
+				$item5_stars = wt_calculate_stars($item5_score);			
+				?>
+				
+				<div class="review-item">
+					<div class="item-title"><?php echo $item5_title; ?></div>
+					<div class="review-stars main-color"><?php echo $item5_stars; ?></div>
+				</div>
+				<?php			
+			}
+			
+			?>	
+		</div>
+	<?php
+	
+	$item6_title = get_post_meta($post->ID,'wt_meta_post_review_item6_title', true);
+	$item6_score = get_post_meta($post->ID,'wt_meta_post_review_item6_score', true);	
+	
+	if( $item6_title && $item6_score && is_numeric( $item6_score )){
+		
+		if ( $item6_score > 100 ){
+			$item6_score = 100;
+		}
+			
+		if ( $item6_score < 0 ){
+			$item6_score = 0;
+		}
+		
+		$item6_stars = wt_calculate_stars($item6_score);			
+		$rating6 =  $item6_score/10; 	
+		$review_summary = get_post_meta($post->ID,'wt_meta_review_summary', true);
+		$rating_text = get_post_meta($post->ID,'wt_meta_post_review_item6_rating_text', true);
+		?>
+		<div class="review-item-final">
+			
+			<div class="left">
+				<div class="final-title"><h6><?php echo $item6_title; ?></h6></div>
+				<?php if ( !empty ($review_summary ) ){ ?>			
+					<div class="final-summary">
+						<?php echo $review_summary; ?>
+					</div>		
+				<?php				
+				} ?>
+			</div>
+			
+			<div class="right">
+				<div class="final-score"><h3><?php echo $rating6; ?></h3></div>
+				<div class="final-text"><?php echo $rating_text; ?></div>
+				<div class="review-stars main-color"><?php echo $item6_stars; ?></div>
+			</div>		
+		</div>
+		
+		<div class="review-format">
+			<?php
+				$full_excerpt = get_the_excerpt();
+				$excerpt = mb_substr($full_excerpt,0, 150);									
+				if (strlen($full_excerpt) > 150){
+					$excerpt = $excerpt.'...';	
+				}
+			?>
+
+			<div itemscope itemtype="http://data-vocabulary.org/Review">
+				<span itemprop="itemreviewed"><?php the_title(); ?></span>
+				<?php _e('Review by ','wellthemes'); ?>
+				<span itemprop="reviewer"><?php the_author_posts_link();  ?></span>
+				<?php _e(' on ','wellthemes'); ?>
+				<time itemprop="dtreviewed" datetime="<?php echo get_the_date(); ?>"><?php echo get_the_date(); ?></time>.
+				<span itemprop="summary"><?php echo  $rating_text; ?></span>
+				<span itemprop="description"><?php echo  $excerpt; ?></span>
+				<?php _e('Rating:','wellthemes'); ?>
+				<span itemprop="rating"><?php echo $rating6; ?></span>
+			</div>
+		</div>
+				
+		<?php			
+	}	
+?>
+</div><!--/review-inner -->	
+<?php
+}
+
+
 // Implement Custom Header features.
 // require get_template_directory() . '/inc/custom-header.php';
 
