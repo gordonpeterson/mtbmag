@@ -66,9 +66,16 @@
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
-
-		<?php// if (strtotime($post->post_date) > strtotime('-4 days')): ?>  
-
+		
+		<?php 
+			$the_long_post_date = strtotime($post->post_date);
+			$the_long_current_date = strtotime('03/09-2015');
+		?>
+		<div class="gordon">
+			<!-- <?php echo "post: $the_long_post_date" ?> -->
+			<!-- <?php echo "current: $the_long_current_date" ?> -->
+		</div>
+		<?php if ( $the_long_post_date <= $the_long_current_date ): ?>
 			<div class="ads-row">
 				<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
 					<div class="widget no-widget">
@@ -82,7 +89,7 @@
 					</div>
 				<?php endif; ?>
 			</div>
-		<?php // endif; ?>
+		<?php endif; ?>
 
 			<?php
 				/* translators: %s: Name of current post */
