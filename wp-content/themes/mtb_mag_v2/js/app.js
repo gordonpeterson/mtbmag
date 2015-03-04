@@ -59,7 +59,7 @@ angular
 		}
 
 		function resizeCover ( $event ) {
-			vm.coverHeight = $window.innerHeight * 0.5;
+			vm.coverHeight = $window.innerHeight * 0.45;
 			vm.coverWidth = $window.innerWidth;
 
 
