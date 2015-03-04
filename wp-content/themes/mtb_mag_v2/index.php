@@ -134,6 +134,7 @@ get_header('gordon'); ?>
 			endif;
 		?>
 			</div> <!-- .other-articles -->
+			<div class="blah"><?php echo "page:" . $page . "; count" . $article_count; ?></div>
 			</div> <!-- .scroll-area -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
