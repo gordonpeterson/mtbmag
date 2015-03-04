@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('small article-home'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('small'); ?>>
 	
 	<?php //twentyfourteen_post_thumbnail(); ?>
 	<div class="post-thumbnail">
