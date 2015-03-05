@@ -9,7 +9,7 @@
 	<?php //twentyfourteen_post_thumbnail(); ?>
 	<div class="post-thumbnail">
 		<div class="cat-date-overlay">
-			<div class="cat-overlay"><?php the_category(', '); ?></div>
+			<div class="cat-overlay"><?php //the_category(', '); ?></div>
 		</div>
 		<?php the_post_thumbnail('wt780_450'); ?>
 	</div>
