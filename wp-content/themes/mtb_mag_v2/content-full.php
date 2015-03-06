@@ -70,7 +70,15 @@
 
 		<div class="entry-content full">
 
-		<?php// if (strtotime($post->post_date) > strtotime('-4 days')): ?>  
+		<?php 
+			$the_long_post_date = strtotime($post->post_date);
+			$v2_launch_date = strtotime('03/09-2015');
+		?>
+		<div class="">
+			<!-- <?php echo "post: $the_long_post_date" ?> -->
+			<!-- <?php echo "current: $v2_launch_date" ?> -->
+		</div>
+		<?php if ( $the_long_post_date <= $v2_launch_date ): ?>
 			<div class="ads-row">
 				<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
 					<div class="widget no-widget">
@@ -84,7 +92,11 @@
 					</div>
 				<?php endif; ?>
 			</div>
-		<?php // endif; ?>
+		<?php  endif; ?>
+
+		<div class="review-container">
+			<?php wt_show_review();	?>
+		</div>
 
 			<?php
 				/* translators: %s: Name of current post */
@@ -103,9 +115,7 @@
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
-					<div class="review-container">
-						<?php wt_show_review();	?>
-					</div>
+					
 
 					
 					<div class="ads-row">

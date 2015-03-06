@@ -2,14 +2,21 @@
 
 
 .review-container {
-		// float: right;
-		margin-bottom: 20px;
-		margin-top: 8px;
-		margin-left: 30px;
 		width: 300px;	
 		color: #999;	
-		margin: 0 auto;
+		margin: 40px auto 30px;
 		width: 750px;
+
+
+	.icon{
+		display: none;
+	}
+
+
+	.icon-star-half-empty,
+	.icon-star{
+		// color: #1f1f1f;
+	}
 
 
 	.review-format{
@@ -17,12 +24,12 @@
 	}
 
 	.review-wrap{
-		border: 1px solid #EEEEEE;
+		border: 1px solid #ddd;
 	}
 
 	.review-item{
 		overflow: hidden;
-		border-bottom: 1px solid #EEEEEE;
+		border-bottom: 1px solid #ddd;
 		padding: 12px 15px;
 	}
 
@@ -38,6 +45,7 @@
 		line-height: 1;
 		i{
 			margin-right: 2px;
+			color: orange;
 		}
 	}
 
@@ -50,7 +58,7 @@
 
 		h6{
 			font-weight: 700;
-			margin: 12px 0;
+			margin: 5px 0;
 		}
 
 		.left{
@@ -64,19 +72,21 @@
 		.right{
 			width: 100px;
 			text-align: center;
-			background: #FFF;
 			margin-top: 5px;
 			display: table-cell;
 			padding: 5px 10px;
 		}
 	}
 
-	.final-score h3{
+	body & div.final-score h3{
 		font-size: 32px;		
 		font-weight: 600;
 		color: #999999;
 		line-height: 1;
-		margin-bottom: 0;
+		margin: 5px 0;
+		text-align: right;
+		padding-right: 8px;
+
 	}
 
 	.final-title h6{
@@ -89,7 +99,8 @@
 	}
 
 	.final-summary{
-		line-height: 1.2;	
+		font-size: 0.8em;
+		line-height: 1.4em;	
 	}
 
 }
