@@ -16,6 +16,7 @@ a{
 
 .content-area{
 	padding-top: 3px;
+	padding-top: 0;
 }
 
 #wpadminbar{
@@ -362,18 +363,17 @@ ul.gordon-menu {
 	z-index: 2;
 	background: $mainGrey;
 	background: transparent;
+	// background: black;
 }
 
 .search-toggle,
 .login-toggle{
 	display: inline-block;
-	border-left: 1px solid black;
-	border-top: 1px solid black;
-	border-right: 1px solid black;
+	border: 1px solid black;
 	float: left;
 	height: 48px;
 	min-width: 48px;
-	background: transparent;
+	background: black;
 	position: relative;
 
 
@@ -407,6 +407,7 @@ ul.gordon-menu {
 	padding: 10px;
 	color: white;
 	width: 250px;
+	border-color: #1f1f1f black black black;
 
 	table{
 	    margin-bottom: 9px;
