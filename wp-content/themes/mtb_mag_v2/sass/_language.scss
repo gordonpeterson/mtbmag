@@ -4,6 +4,9 @@
   display: inline-block;
   float: left;
   height: 48px;
+  	ul li ul{
+			top: 45px;
+  	}
 
   &:hover{
   	a{
@@ -12,16 +15,16 @@
   	ul li ul{
   		display: block;
   		visibility: visible;
-			top: 45px;
   	}
   }
 	
 	a{
 		background-color: $mainGrey;
+		background-color: #1f1f1f;
 		&.lang_sel_sel{
 			background: transparent;
 			border: 1px solid $mainGrey;
-			border-left: 1px solid black;
+			// border-left: 1px solid black;
 
 
 		}
@@ -51,15 +54,17 @@
 #lang_sel ul ul a:visited{
 		padding: 12px 10px 12px 13px;
 		display: block;
-		background: $mainGrey;
+		background-color: #1f1f1f;
 		border-color: black;
 }
 
-#lang_sel :hover > a, 
-#lang_sel ul ul :hover > a{
-	background: darken($mainGrey, .1);
+#lang_sel :hover > a{
+	// background: darken($mainGrey, .1);
 	border-color: white white #1f1f1f white;
-  background: #1f1f1f;
+} 
+#lang_sel ul ul :hover > a{
+	border-color: black;
+  background-color: #1f1f1f;
 }
 
 
