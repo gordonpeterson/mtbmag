@@ -9,6 +9,16 @@ function mtb_mag_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'secondary', __( 'Footer Menu', 'twentytwelve' ) );
 
+
+	// require( get_template_directory() . '/framework/settings/theme-options.php' );
+	// require( get_template_directory() . '/framework/settings/option-functions.php' );
+	
+	// require( get_template_directory() . '/framework/meta/meta_post.php' );
+	// require( get_template_directory() . '/framework/meta/meta_category.php' );
+	// require( get_template_directory() . '/framework/meta/meta_functions.php' );
+
+	
+
 	// New widgetized sidebar area for pages
 	register_sidebar( array(
 		'name' => __( 'Ad1 300x250', 'twentytwelve' ),
@@ -64,7 +74,7 @@ function mtb_mag_setup() {
 	register_sidebar( array(
 		'name' => __( 'Ad6 300x250', 'twentytwelve' ),
 		'id' => 'ad-widget6',
-		'description' => __( 'The seventh ad slot (300x600). Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'description' => __( 'The sixth ad slot (300x250). Add the javascript code here using a text widget.', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="ad-title">',
@@ -81,15 +91,15 @@ function mtb_mag_setup() {
 		'after_title' => '</h3>',
 	) );
 
-	register_sidebar( array(
-		'name' => __( 'Ad6 300x600', 'twentytwelve' ),
-		'id' => 'ad-widget6',
-		'description' => __( 'The sixth ad slot (300x600). Add the javascript code here using a text widget.', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h3 class="ad-title">',
-		'after_title' => '</h3>',
-	) );
+	// register_sidebar( array(
+	// 	'name' => __( 'Ad6 300x600', 'twentytwelve' ),
+	// 	'id' => 'ad-widget6',
+	// 	'description' => __( 'The sixth ad slot (300x600). Add the javascript code here using a text widget.', 'twentytwelve' ),
+	// 	'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
+	// 	'after_widget' => '</div></div>',
+	// 	'before_title' => '<h3 class="ad-title">',
+	// 	'after_title' => '</h3>',
+	// ) );
 
 	register_sidebar( array(
 		'name' => __( 'Ad8 750x450', 'twentytwelve' ),
@@ -192,7 +202,6 @@ function get_ad3( $atts ){
 	return $adText;
 }
 add_shortcode( 'ad3', 'get_ad3' );
-
 
 
 
