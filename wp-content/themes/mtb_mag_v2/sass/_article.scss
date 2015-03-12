@@ -39,11 +39,6 @@ body.single-post {
 	.page-content {
 		margin: 0 auto;
 		max-width: 750px;
-		&.full{
-			padding: 0 20px;
-			max-width: 1600px;
-			border: 1px dashed red;
-		}
 	}
 
 
@@ -51,10 +46,6 @@ body.single-post {
 		max-width: 750px;
 		margin: 0 auto 40px;
 		display: block;
-		&.full{
-			padding: 0;
-			max-width: 1200px;
-		}
 	}
 
 
@@ -64,6 +55,35 @@ body.single-post {
 		max-width:none;
 		position: relative;
 		margin-bottom: 0;
+
+
+		&.article-full{
+
+			h1,h2,h3,h4,h5,
+			p{
+				max-width: none;
+			}
+
+
+
+			.entry-content,
+			.entry-summary,
+			.entry-meta,
+			.post-navigation .nav-links,
+			.comments-area .comment-list,
+			.comments-area .comments-title,
+			.comment-respond,
+			.page-content {
+				padding: 0 20px;
+				max-width: 1600px;
+			}
+
+
+			.fb-comments{
+				padding: 0;
+				max-width: 1200px;
+			}
+		}
 
 
 		.entry-header{
@@ -89,6 +109,7 @@ body.single-post {
 				}
 			}
 		} //.entry-header
+
 
 
 
@@ -121,13 +142,6 @@ body.single-post {
 			margin: 20px auto;
 			padding: 0;
 
-			&.size-full,
-			&.full-width,
-			&.fullwidth,
-			&.full{
-				max-width: none;
-			/* border: 1px solid orange; */
-			}
 
 
 			&>a{
