@@ -11,8 +11,14 @@ a:active, a:hover{
 	color: orange;
 }
 
+.entry-meta .tag-links a:hover:before{
+	border-right-color: orange;
+}
 
-.entry-meta .tag-links a:hover,
+.entry-meta .tag-links a:hover{
+	background-color: orange;
+}
+
 .paging-navigation a:hover,
 .paging-navigation .page-numbers.current{
 	border-color: orange;
