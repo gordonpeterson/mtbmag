@@ -690,7 +690,10 @@ $contentMaxWidth: 975px;
 
 
 	body.single-post{
-
+		div.ad300x250{
+			display: block;
+			margin: 10px auto;
+		}
 		p{
 			padding: 10px;
 
