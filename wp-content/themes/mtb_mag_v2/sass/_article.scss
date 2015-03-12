@@ -57,33 +57,7 @@ body.single-post {
 		margin-bottom: 0;
 
 
-		&.article-full{
 
-			h1,h2,h3,h4,h5,
-			p{
-				max-width: none;
-			}
-
-
-
-			.entry-content,
-			.entry-summary,
-			.entry-meta,
-			.post-navigation .nav-links,
-			.comments-area .comment-list,
-			.comments-area .comments-title,
-			.comment-respond,
-			.page-content {
-				padding: 0 20px;
-				max-width: 1600px;
-			}
-
-
-			.fb-comments{
-				padding: 0;
-				max-width: 1200px;
-			}
-		}
 
 
 		.entry-header{
@@ -242,7 +216,34 @@ body.single-post {
 	}
 	
 
+	.article-full{
 
+		article.post{
+			h1,h2,h3,h4,h5,
+			p{
+				max-width: none;
+				padding: 0 10px;
+			}
+		}
+
+		.entry-content,
+		.entry-summary,
+		.entry-meta,
+		.post-navigation .nav-links,
+		.comments-area .comment-list,
+		.comments-area .comments-title,
+		.comment-respond,
+		.page-content {
+			padding: 0 20px;
+			max-width: 1600px;
+		}
+
+
+		.fb-comments{
+			padding: 0;
+			max-width: 1200px;
+		}
+	}
 
 
 }
