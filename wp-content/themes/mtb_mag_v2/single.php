@@ -34,6 +34,8 @@ get_header('gordon'); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
+
+
 <?php
 // get_sidebar( 'content' );
 // get_sidebar();

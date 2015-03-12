@@ -70,13 +70,13 @@
 		
 		<?php 
 			$the_long_post_date = strtotime($post->post_date);
-			$v2_launch_date = strtotime('03/09-2015');
+			$the_long_current_date = strtotime('03/09-2015');
 		?>
-		<div class="">
+		<div class="gordon">
 			<!-- <?php echo "post: $the_long_post_date" ?> -->
-			<!-- <?php echo "current: $v2_launch_date" ?> -->
+			<!-- <?php echo "current: $the_long_current_date" ?> -->
 		</div>
-		<?php if ( $the_long_post_date <= $v2_launch_date ): ?>
+		<?php if ( $the_long_post_date <= $the_long_current_date ): ?>
 			<div class="ads-row">
 				<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
 					<div class="widget no-widget">
@@ -91,12 +91,6 @@
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
-
-
-		<div class="review-container">
-			<?php wt_show_review();	?>
-		</div>
-
 
 			<?php
 				/* translators: %s: Name of current post */
@@ -114,6 +108,11 @@
 			?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
+
+		
+					<div class="review-container">
+						<?php wt_show_review();	?>
+					</div>
 
 
 					<?php 
