@@ -7,8 +7,10 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
-
+<!-- 
 <article id="post-<?php the_ID(); ?>" <?php post_class('big'); ?> ng-controller="coverCtrl as vm" ng-style="{'height': vm.coverHeight+'px'}">
+ -->
+<article id="post-<?php the_ID(); ?>" <?php post_class('big'); ?> style="height: 0; overflow:visible;" >
 	<div class="post-thumbnail" ?>
 	<?php
 		if ( has_post_thumbnail() ) :
