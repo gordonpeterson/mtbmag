@@ -459,7 +459,6 @@ $contentMaxWidth: 975px;
 	ul.gordon-menu > li.category-container > a > .title:before, 
 	ul.gordon-menu ul.sub-menu li.category-container > a .title:before,
 	ul.gordon-menu > li.down-arrow > a > .title:before{
-		// background: lime;
 		display: none; //....hides the arrow for mobile
 	}
 
@@ -566,11 +565,9 @@ $contentMaxWidth: 975px;
 		}
 
 		article.small{
-			// border: 2px dashed lime;
 
 			.entry-meta{
 				font-size: 10px;
-				// background: lime;
 			}
 		}
 	}
