@@ -2,12 +2,17 @@ body, h1, h2, h3, h4, h5, h6{
 	font-family: 'Open Sans', Arial, sans-serif;
 }
 
-
-a:active, a:hover,
 a{
 	color: $linkColor;
 }
 
+.entry-meta a:hover,
+a:active, a:hover{
+	color: orange;
+}
+
+
+.entry-meta .tag-links a:hover,
 .paging-navigation a:hover,
 .paging-navigation .page-numbers.current{
 	border-color: orange;
