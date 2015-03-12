@@ -10,7 +10,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('article-full'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
 

@@ -5,7 +5,7 @@ Template Name Posts: Fullscreen
 
 get_header('gordon'); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area article-full">
 		<div id="content" class="site-content" role="main">
 			<?php
 				// Start the Loop.
