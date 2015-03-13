@@ -135,8 +135,293 @@ function mtb_mag_setup() {
 
 
 }
-
 add_action( 'after_setup_theme', 'mtb_mag_setup', 11 ); 
+
+
+
+add_action( 'admin_init', 'mtb_register_admin_scripts' );
+function mtb_register_admin_scripts() {
+
+
+	echo "<script type='text/javascript'>console.log('----------fuzz: mtb_register_admin_scripts()-----------');</script>";
+	wp_enqueue_style( 'wt_theme_options_css', get_template_directory_uri() . '/framework/settings/css/theme-options.css');
+	// wp_enqueue_style( 'wt-font-awesome', get_template_directory_uri().'/css/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style('thickbox');
+	wp_enqueue_script('jquery-ui-core');
+	wp_enqueue_script('jquery-ui-slider');
+	wp_enqueue_script( 'wt_colorpicker', get_template_directory_uri() . '/framework/settings/js/colorpicker.js', array( 'jquery' ));
+	wp_enqueue_script( 'wt_select_js', get_template_directory_uri() . '/framework/settings/js/jquery.customSelect.min.js', array( 'jquery' ));
+	wp_enqueue_script( 'wt_theme_options', get_template_directory_uri() . '/framework/settings/js/theme-options.js', array( 'jquery','wt_select_js' ));
+}
+
+function wellthemes_post_meta_settings() {
+	add_meta_box("wt_meta_post_review", "Review Settings", "wt_meta_post_review", "post", "normal", "high");
+	// add_meta_box("wt_meta_post_general_settings", "General Settings", "wt_meta_post_general_settings", "post", "normal", "high");
+	// add_meta_box("wt_meta_post_style_settings", "Style Settings", "wt_meta_post_style_settings", "post", "normal", "high");
+	// add_meta_box("wt_meta_post_sidebar_settings", "Sidebar Settings", "wt_meta_post_sidebar_settings", "post", "normal", "high");
+	// add_meta_box("wt_meta_post_ads_settings", "Ads Settings", "wt_meta_post_ads_settings", "post", "normal", "high");
+	
+	$post_id = '';
+	
+	if(isset($_GET['post'])){  
+		$post_id = $_GET['post'];
+    }
+	
+	if(isset($_POST['post_ID'])){
+		$post_id =  $_POST['post_ID'];
+    }	
+	
+	$template_file = get_post_meta($post_id, '_wp_page_template', TRUE);
+
+	if ($template_file == 'page-featured.php') {
+		add_meta_box("wt_meta_featured_page_settings", "Featured Page Settings", "wt_meta_featured_page_settings", "page", "normal", "high");
+	} else {
+		add_meta_box("wt_meta_post_general_settings", "General Settings", "wt_meta_post_general_settings", "page", "normal", "high");
+	}	
+	
+	add_meta_box("wt_meta_post_style_settings", "Style Settings", "wt_meta_post_style_settings", "page", "normal", "high");
+	add_meta_box("wt_meta_post_sidebar_settings", "Sidebar Settings", "wt_meta_post_sidebar_settings", "page", "normal", "high");
+	add_meta_box("wt_meta_post_ads_settings", "Ads Settings", "wt_meta_post_ads_settings", "page", "normal", "high");
+	
+	
+}
+add_action( 'add_meta_boxes', 'wellthemes_post_meta_settings' );
+
+
+function wt_meta_post_review() {
+	global $post;
+	wp_nonce_field( 'wellthemes_save_postmeta_nonce', 'wellthemes_postmeta_nonce' );	?>	
+		
+	<div class="meta-field field-checkbox">
+		<input type="checkbox" name="wt_meta_post_show_review" id="wt_meta_post_show_review" value="1" <?php checked( get_post_meta( $post->ID, 'wt_meta_post_show_review', true ), 1 ); ?> />
+		<label for="wt_meta_post_show_review"><?php _e( 'Enable Review', 'wellthemes' ); ?></label>
+	</div>		
+		
+	<div id="wt-post-meta-review-options">
+		
+		<div class="meta-field">
+			<label for="wt_meta_post_review_title"><?php _e( 'Review title:', 'wellthemes' ); ?></label>
+			<input name="wt_meta_post_review_title" type="text" id="wt_meta_post_review_title" value="<?php echo get_post_meta( $post->ID, 'wt_meta_post_review_title', true ); ?>" /> 
+		</div>
+			
+		<div class="review-item">				
+			<div class="meta-field">
+				<label for="wt_meta_post_review_item1_title"><?php _e( 'Item 1 title:', 'wellthemes' ); ?></label>
+				<input name="wt_meta_post_review_item1_title" type="text" id="wt_meta_post_review_item1_title" value="<?php echo get_post_meta( $post->ID, 'wt_meta_post_review_item1_title', true ); ?>" /> 
+			</div>
+			<div class="meta-field">
+				<?php
+					if ( get_post_meta( $post->ID, 'wt_meta_post_review_item1_score', true ) ){
+						$saved_score = get_post_meta( $post->ID, 'wt_meta_post_review_item1_score', true );
+					} else{
+						$saved_score = 0;
+					}
+				?>
+				<label for="wt_meta_post_review_item1_score"><?php _e( 'Item 1 score:', 'wellthemes' ); ?></label>
+				<div id="review_item1_slider" class="review-slider"></div>					
+				<input name="wt_meta_post_review_item1_score" type="text" id="wt_meta_post_review_item1_score" value="<?php echo $saved_score; ?>" class="review-score" /> 
+				<script>
+					jQuery(document).ready(function() {
+						jQuery("#review_item1_slider").slider({
+								range: "min",
+								min: 0,
+								max: 50,
+								value: <?php echo $saved_score; ?>,
+								slide: function(event, ui) {
+									jQuery("#wt_meta_post_review_item1_score").attr("value", ui.value );
+								}
+						});
+					});
+				</script>
+			</div>
+		</div><!-- /review-item -->
+			
+		<div class="review-item">				
+			<div class="meta-field">
+				<label for="wt_meta_post_review_item2_title"><?php _e( 'Item 2 title:', 'wellthemes' ); ?></label>
+				<input name="wt_meta_post_review_item2_title" type="text" id="wt_meta_post_review_item2_title" value="<?php echo get_post_meta( $post->ID, 'wt_meta_post_review_item2_title', true ); ?>" /> 
+			</div>
+			
+			<div class="meta-field">
+				<?php
+					if ( get_post_meta( $post->ID, 'wt_meta_post_review_item2_score', true ) ){
+						$saved_score = get_post_meta( $post->ID, 'wt_meta_post_review_item2_score', true );
+					} else{
+						$saved_score = 0;
+					}
+				?>
+				<label for="wt_meta_post_review_item2_score"><?php _e( 'Item 2 score:', 'wellthemes' ); ?></label>
+				<div id="review_item2_slider" class="review-slider"></div>					
+				<input name="wt_meta_post_review_item2_score" type="text" id="wt_meta_post_review_item2_score" value="<?php echo $saved_score; ?>" class="review-score" /> 
+				<script>
+					jQuery(document).ready(function() {
+						jQuery("#review_item2_slider").slider({
+								range: "min",
+								min: 0,
+								max: 50,
+								value: <?php echo $saved_score; ?>,
+								slide: function(event, ui) {
+									jQuery("#wt_meta_post_review_item2_score").attr("value", ui.value );
+								}
+						});
+					});
+				</script>
+			</div>
+		</div><!-- /review-item -->
+			
+		<div class="review-item">				
+			<div class="meta-field">
+				<label for="wt_meta_post_review_item3_title"><?php _e( 'Item 3 title:', 'wellthemes' ); ?></label>
+				<input name="wt_meta_post_review_item3_title" type="text" id="wt_meta_post_review_item3_title" value="<?php echo get_post_meta( $post->ID, 'wt_meta_post_review_item3_title', true ); ?>" /> 
+			</div>
+			
+			<div class="meta-field">
+				<?php
+					if ( get_post_meta( $post->ID, 'wt_meta_post_review_item3_score', true ) ){
+						$saved_score = get_post_meta( $post->ID, 'wt_meta_post_review_item3_score', true );
+					} else{
+						$saved_score = 0;
+					}
+				?>
+				<label for="wt_meta_post_review_item3_score"><?php _e( 'Item 3 score:', 'wellthemes' ); ?></label>
+				<div id="review_item3_slider" class="review-slider"></div>					
+				<input name="wt_meta_post_review_item3_score" type="text" id="wt_meta_post_review_item3_score" value="<?php echo $saved_score; ?>" class="review-score" /> 
+				<script>
+					jQuery(document).ready(function() {
+						jQuery("#review_item3_slider").slider({
+								range: "min",
+								min: 0,
+								max: 50,
+								value: <?php echo $saved_score; ?>,
+								slide: function(event, ui) {
+									jQuery("#wt_meta_post_review_item3_score").attr("value", ui.value );
+								}
+						});
+					});
+				</script>
+			</div>
+		</div><!-- /review-item -->
+			
+		<div class="review-item">				
+			<div class="meta-field">
+				<label for="wt_meta_post_review_item4_title"><?php _e( 'Item 4 title:', 'wellthemes' ); ?></label>
+				<input name="wt_meta_post_review_item4_title" type="text" id="wt_meta_post_review_item4_title" value="<?php echo get_post_meta( $post->ID, 'wt_meta_post_review_item4_title', true ); ?>" /> 
+			</div>
+			
+			<div class="meta-field">
+				<?php
+					if ( get_post_meta( $post->ID, 'wt_meta_post_review_item4_score', true ) ){
+						$saved_score = get_post_meta( $post->ID, 'wt_meta_post_review_item4_score', true );
+					} else{
+						$saved_score = 0;
+					}
+				?>
+				<label for="wt_meta_post_review_item4_score"><?php _e( 'Item 4 score:', 'wellthemes' ); ?></label>
+				<div id="review_item4_slider" class="review-slider"></div>					
+				<input name="wt_meta_post_review_item4_score" type="text" id="wt_meta_post_review_item4_score" value="<?php echo $saved_score; ?>" class="review-score" /> 
+				<script>
+					jQuery(document).ready(function() {
+						jQuery("#review_item4_slider").slider({
+								range: "min",
+								min: 0,
+								max: 50,
+								value: <?php echo $saved_score; ?>,
+								slide: function(event, ui) {
+									jQuery("#wt_meta_post_review_item4_score").attr("value", ui.value );
+							}
+						});
+					});
+				</script>
+			</div>
+		</div><!-- /review-item -->
+			
+		<div class="review-item">				
+			<div class="meta-field">
+				<label for="wt_meta_post_review_item5_title"><?php _e( 'Item 5 title:', 'wellthemes' ); ?></label>
+				<input name="wt_meta_post_review_item5_title" type="text" id="wt_meta_post_review_item5_title" value="<?php echo get_post_meta( $post->ID, 'wt_meta_post_review_item5_title', true ); ?>" /> 
+			</div>
+			
+			<div class="meta-field">
+				<?php
+					if ( get_post_meta( $post->ID, 'wt_meta_post_review_item5_score', true ) ){
+						$saved_score = get_post_meta( $post->ID, 'wt_meta_post_review_item5_score', true );
+					} else{
+						$saved_score = 0;
+					}
+				?>
+				<label for="wt_meta_post_review_item5_score"><?php _e( 'Item 5 score:', 'wellthemes' ); ?></label>
+				<div id="review_item5_slider" class="review-slider"></div>					
+				<input name="wt_meta_post_review_item5_score" type="text" id="wt_meta_post_review_item5_score" value="<?php echo $saved_score; ?>" class="review-score" /> 
+				<script>
+					jQuery(document).ready(function() {
+						jQuery("#review_item5_slider").slider({
+								range: "min",
+								min: 0,
+								max: 50,
+								value: <?php echo $saved_score; ?>,
+								slide: function(event, ui) {
+									jQuery("#wt_meta_post_review_item5_score").attr("value", ui.value );
+								}
+						});
+					});
+				</script>
+			</div>
+		</div><!-- /review-item -->
+		
+		<div class="review-item">				
+			<div class="meta-field">
+				<label for="wt_meta_post_review_item6_title"><?php _e( 'Overall title:', 'wellthemes' ); ?></label>
+				<input name="wt_meta_post_review_item6_title" type="text" id="wt_meta_post_review_item6_title" value="<?php echo get_post_meta( $post->ID, 'wt_meta_post_review_item6_title', true ); ?>" /> 
+			</div>
+			
+			<div class="meta-field">
+				<?php
+					if ( get_post_meta( $post->ID, 'wt_meta_post_review_item6_score', true ) ){
+						$saved_score = get_post_meta( $post->ID, 'wt_meta_post_review_item6_score', true );
+					} else{
+						$saved_score = 0;
+					}
+				?>
+				<label for="wt_meta_post_review_item6_score"><?php _e( 'Overall score:', 'wellthemes' ); ?></label>
+				<div id="review_item6_slider" class="review-slider"></div>					
+				<input name="wt_meta_post_review_item6_score" type="text" id="wt_meta_post_review_item6_score" value="<?php echo $saved_score; ?>" class="review-score" /> 
+				<script>
+					jQuery(document).ready(function() {
+						jQuery("#review_item6_slider").slider({
+								range: "min",
+								min: 0,
+								max: 50,
+								value: <?php echo $saved_score; ?>,
+								slide: function(event, ui) {
+									jQuery("#wt_meta_post_review_item6_score").attr("value", ui.value );
+								}
+						});
+					});
+				</script>
+			</div>
+			<div class="meta-field">
+				<label for="wt_meta_post_review_item6_rating_text"><?php _e( 'Overall rating text:', 'wellthemes' ); ?></label>
+				<input name="wt_meta_post_review_item6_rating_text" type="text" id="wt_meta_post_review_item6_rating_text" value="<?php echo get_post_meta( $post->ID, 'wt_meta_post_review_item6_rating_text', true ); ?>" /> 
+			</div>
+			
+		</div><!-- /review-item -->
+		<div class="review-desc"><?php _e('Select on scale of 1 - 50. Example: 45 will be converted to 4.5', 'wellthemes'); ?></div>
+		
+		<div class="meta-field">
+			<label for="wt_meta_review_summary"><?php _e( 'Review Summary:', 'wellthemes' ); ?></label>
+			<input name="wt_meta_review_summary" type="text" id="wt_meta_review_summary" value="<?php echo get_post_meta( $post->ID, 'wt_meta_review_summary', true ); ?>" /> 
+		</div>		
+		
+	</div><!-- /wt-post-meta-review-options -->
+	
+	<?php
+
+}
+
+
+
+
+
 
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 function special_nav_class($classes, $item){
