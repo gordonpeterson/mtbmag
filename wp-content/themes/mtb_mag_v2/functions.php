@@ -431,6 +431,278 @@ function wt_meta_post_review() {
 
 }
 
+function wt_post_meta_save_post_settings() {
+	global $post;
+	
+	if( !isset( $_POST['wellthemes_postmeta_nonce'] ) || !wp_verify_nonce( $_POST['wellthemes_postmeta_nonce'], 'wellthemes_save_postmeta_nonce' ) )
+		return;
+
+	if( !current_user_can( 'edit_posts' ) )
+		return;
+		
+	if ( isset( $_POST['wt_meta_post_show_review'] ) && $_POST['wt_meta_post_show_review'] == 1  ) {
+		update_post_meta( $post->ID, 'wt_meta_post_show_review', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_show_review', 1 );	
+	}
+	
+	if(isset($_POST['wt_meta_post_review_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_review_title', sanitize_text_field($_POST['wt_meta_post_review_title']));
+	}
+	
+	if(isset($_POST['wt_meta_post_review_item1_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_review_item1_title', sanitize_text_field($_POST['wt_meta_post_review_item1_title']));
+	}	
+  
+	if ( isset( $_POST['wt_meta_post_review_item1_score'] ) && is_numeric( $_POST['wt_meta_post_review_item1_score'] ) ) {
+		update_post_meta( $post->ID, 'wt_meta_post_review_item1_score', $_POST['wt_meta_post_review_item1_score'] );	
+	}
+	
+	if(isset($_POST['wt_meta_post_review_item2_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_review_item2_title', sanitize_text_field($_POST['wt_meta_post_review_item2_title']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_review_item2_score'] ) && is_numeric( $_POST['wt_meta_post_review_item2_score'] ) ) {
+		update_post_meta( $post->ID, 'wt_meta_post_review_item2_score', $_POST['wt_meta_post_review_item2_score'] );	
+	}
+	
+	if(isset($_POST['wt_meta_post_review_item3_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_review_item3_title', sanitize_text_field($_POST['wt_meta_post_review_item3_title']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_review_item3_score'] ) && is_numeric( $_POST['wt_meta_post_review_item3_score'] ) ) {
+		update_post_meta( $post->ID, 'wt_meta_post_review_item3_score', $_POST['wt_meta_post_review_item3_score'] );	
+	}
+	
+	if(isset($_POST['wt_meta_post_review_item4_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_review_item4_title', sanitize_text_field($_POST['wt_meta_post_review_item4_title']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_review_item4_score'] ) && is_numeric( $_POST['wt_meta_post_review_item4_score'] ) ) {
+		update_post_meta( $post->ID, 'wt_meta_post_review_item4_score', $_POST['wt_meta_post_review_item4_score'] );	
+	}
+	
+	if(isset($_POST['wt_meta_post_review_item5_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_review_item5_title', sanitize_text_field($_POST['wt_meta_post_review_item5_title']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_review_item5_score'] ) && is_numeric( $_POST['wt_meta_post_review_item5_score'] ) ) {
+		update_post_meta( $post->ID, 'wt_meta_post_review_item5_score', $_POST['wt_meta_post_review_item5_score'] );	
+	}
+	
+	if(isset($_POST['wt_meta_post_review_item6_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_review_item6_title', sanitize_text_field($_POST['wt_meta_post_review_item6_title']));
+	}
+	
+	if(isset($_POST['wt_meta_post_review_item6_rating_text'])){
+		update_post_meta($post->ID, 'wt_meta_post_review_item6_rating_text', sanitize_text_field($_POST['wt_meta_post_review_item6_rating_text']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_review_item6_score'] ) && is_numeric( $_POST['wt_meta_post_review_item6_score'] ) ) {
+		update_post_meta( $post->ID, 'wt_meta_post_review_item6_score', $_POST['wt_meta_post_review_item6_score'] );	
+	}
+	
+	if(isset($_POST['wt_meta_review_summary'])){
+		update_post_meta($post->ID, 'wt_meta_review_summary', sanitize_text_field($_POST['wt_meta_review_summary']));
+	}	
+	
+	if ( isset( $_POST['wt_meta_post_hide_nav'] ) && $_POST['wt_meta_post_hide_nav'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_hide_nav', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_hide_nav');	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_hide_img'] ) && $_POST['wt_meta_post_hide_img'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_hide_img', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_hide_img', 1 );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_hide_meta'] ) && $_POST['wt_meta_post_hide_meta'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_hide_meta', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_hide_meta', 1 );	
+	}
+		
+	if ( isset( $_POST['wt_meta_post_hide_author'] ) && $_POST['wt_meta_post_hide_author'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_hide_author', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_hide_author', 1 );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_hide_social'] ) && $_POST['wt_meta_post_hide_social'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_hide_social', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_hide_social', 1 );	
+	}
+		
+	if(isset($_POST['wt_meta_post_bg_color'])){
+		update_post_meta($post->ID, 'wt_meta_post_bg_color', sanitize_text_field($_POST['wt_meta_post_bg_color']));
+	}
+	
+	if(isset($_POST['wt_meta_post_bg_img'])){
+		update_post_meta($post->ID, 'wt_meta_post_bg_img', esc_url_raw($_POST['wt_meta_post_bg_img']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_bg_img_repeat'] ) && in_array( $_POST['wt_meta_post_bg_img_repeat'], array( 'repeat','repeat-x','repeat-y','no-repeat','cover') ) ){
+		update_post_meta( $post->ID, 'wt_meta_post_bg_img_repeat', $_POST['wt_meta_post_bg_img_repeat'] );	
+	}
+		
+	if ( isset( $_POST['wt_meta_post_sidebar_name'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_sidebar_name', $_POST['wt_meta_post_sidebar_name'] );	
+	}	
+		
+	if(isset($_POST['wt_meta_post_banner1'])){
+		update_post_meta( $post->ID, 'wt_meta_post_banner1', $_POST['wt_meta_post_banner1'] );
+	}
+	
+	if(isset($_POST['wt_meta_post_banner2'])){
+		update_post_meta( $post->ID, 'wt_meta_post_banner2', $_POST['wt_meta_post_banner2'] );
+	}
+	
+	if ( isset( $_POST['wt_meta_post_show_feat_slider'] ) && $_POST['wt_meta_post_show_feat_slider'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_show_feat_slider', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_show_feat_slider', 1 );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_feat_slider_cat'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_feat_slider_cat', $_POST['wt_meta_post_feat_slider_cat'] );	
+	}
+	
+	if(isset($_POST['wt_meta_post_slider_speed'])){
+		update_post_meta($post->ID, 'wt_meta_post_slider_speed', sanitize_text_field($_POST['wt_meta_post_slider_speed']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_slider_post_cat'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_slider_post_cat', $_POST['wt_meta_post_slider_post_cat'] );	
+	}	
+	
+	if ( isset( $_POST['wt_meta_post_show_feat_tabs'] ) && $_POST['wt_meta_post_show_feat_tabs'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_show_feat_tabs', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_show_feat_tabs', 1 );	
+	}
+	
+	if(isset($_POST['wt_meta_post_tab1_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_tab1_title', sanitize_text_field($_POST['wt_meta_post_tab1_title']));
+	}
+	
+	if(isset($_POST['wt_meta_post_tab1_subtitle'])){
+		update_post_meta($post->ID, 'wt_meta_post_tab1_subtitle', sanitize_text_field($_POST['wt_meta_post_tab1_subtitle']));
+	}
+	
+	if(isset($_POST['wt_meta_post_tab2_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_tab2_title', sanitize_text_field($_POST['wt_meta_post_tab2_title']));
+	}
+	
+	if(isset($_POST['wt_meta_post_tab2_subtitle'])){
+		update_post_meta($post->ID, 'wt_meta_post_tab2_subtitle', sanitize_text_field($_POST['wt_meta_post_tab2_subtitle']));
+	}	
+	
+	if(isset($_POST['wt_meta_post_tab3_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_tab3_title', sanitize_text_field($_POST['wt_meta_post_tab3_title']));
+	}
+	
+	if(isset($_POST['wt_meta_post_tab3_subtitle'])){
+		update_post_meta($post->ID, 'wt_meta_post_tab3_subtitle', sanitize_text_field($_POST['wt_meta_post_tab3_subtitle']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_tabs_cat'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_tabs_cat', $_POST['wt_meta_post_tabs_cat'] );	
+	}
+
+	if(isset($_POST['wt_meta_post_archive_url'])){
+		update_post_meta($post->ID, 'wt_meta_post_archive_url', esc_url_raw($_POST['wt_meta_post_archive_url']));
+	}
+		
+	if ( isset( $_POST['wt_meta_post_show_feat_post'] ) && $_POST['wt_meta_post_show_feat_post'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_show_feat_post', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_show_feat_post', 1 );	
+	}
+	
+	if(isset($_POST['wt_meta_post_feat_post_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_feat_post_title', sanitize_text_field($_POST['wt_meta_post_feat_post_title']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_feat_post_cat'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_feat_post_cat', $_POST['wt_meta_post_feat_post_cat'] );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_show_single_cats'] ) && $_POST['wt_meta_post_show_single_cats'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_show_single_cats', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_show_single_cats', 1 );	
+	}
+	
+	if(isset($_POST['wt_meta_post_single_cat_title1'])){
+		update_post_meta($post->ID, 'wt_meta_post_single_cat_title1', sanitize_text_field($_POST['wt_meta_post_single_cat_title1']));
+	}
+	
+	if(isset($_POST['wt_meta_post_single_cat_title2'])){
+		update_post_meta($post->ID, 'wt_meta_post_single_cat_title2', sanitize_text_field($_POST['wt_meta_post_single_cat_title2']));
+	}
+	
+	if(isset($_POST['wt_meta_post_single_cat_title3'])){
+		update_post_meta($post->ID, 'wt_meta_post_single_cat_title3', sanitize_text_field($_POST['wt_meta_post_single_cat_title3']));
+	}
+	
+	if(isset($_POST['wt_meta_post_single_cat_title4'])){
+		update_post_meta($post->ID, 'wt_meta_post_single_cat_title4', sanitize_text_field($_POST['wt_meta_post_single_cat_title4']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_single_cat1'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_single_cat1', $_POST['wt_meta_post_single_cat1'] );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_single_cat2'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_single_cat2', $_POST['wt_meta_post_single_cat2'] );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_single_cat3'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_single_cat3', $_POST['wt_meta_post_single_cat3'] );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_single_cat4'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_single_cat4', $_POST['wt_meta_post_single_cat4'] );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_show_carousel'] ) && $_POST['wt_meta_post_show_carousel'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_show_carousel', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_show_carousel', 1 );	
+	}
+	
+	if(isset($_POST['wt_meta_post_carousel_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_carousel_title', sanitize_text_field($_POST['wt_meta_post_carousel_title']));
+	}
+	
+	if(isset($_POST['wt_meta_post_carousel_speed'])){
+		update_post_meta($post->ID, 'wt_meta_post_carousel_speed', sanitize_text_field($_POST['wt_meta_post_carousel_speed']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_carousel_cat'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_carousel_cat', $_POST['wt_meta_post_carousel_cat'] );	
+	}
+	
+	if ( isset( $_POST['wt_meta_post_show_postlist'] ) && $_POST['wt_meta_post_show_postlist'] == 1) {
+		update_post_meta( $post->ID, 'wt_meta_post_show_postlist', 1 );	
+	} else {
+		delete_post_meta( $post->ID, 'wt_meta_post_show_postlist', 1 );	
+	}
+	
+	if(isset($_POST['wt_meta_post_postlist_title'])){
+		update_post_meta($post->ID, 'wt_meta_post_postlist_title', sanitize_text_field($_POST['wt_meta_post_postlist_title']));
+	}
+	
+	if ( isset( $_POST['wt_meta_post_postlist_cat'] )){
+		update_post_meta( $post->ID, 'wt_meta_post_postlist_cat', $_POST['wt_meta_post_postlist_cat'] );	
+	}
+	
+	
+}
+add_action( 'save_post', 'wt_post_meta_save_post_settings' );
 
 
 
