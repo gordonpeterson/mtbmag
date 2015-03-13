@@ -28,7 +28,6 @@ if (!function_exists('gordon_js')) {
 			wp_enqueue_script('mtb_mousewheel', get_stylesheet_directory_uri() . '/js/jquery.mousewheel.min.js', array('jquery'),'', true);	
 			wp_enqueue_script('mtb_custom', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'),'', true);		
     }
-
 	
 }
 
@@ -158,14 +157,14 @@ add_action( 'admin_init', 'mtb_register_admin_scripts' );
 function mtb_register_admin_scripts() {
 
 
-	wp_enqueue_style( 'mtb_theme_options_css', get_stylesheet_directory_uri() . '/framework/settings/css/theme-options.css');
-	wp_enqueue_style( 'mtb-font-awesome', get_stylesheet_directory_uri().'/css/font-awesome.min.css' );
+	wp_enqueue_style( 'wt_theme_options_css', get_stylesheet_directory_uri() . '/framework/settings/css/theme-options.css');
+	wp_enqueue_style( 'wt-font-awesome', get_stylesheet_directory_uri().'/css/font-awesome/font-awesome.min.css' );
 	wp_enqueue_style('thickbox');
 	wp_enqueue_script('jquery-ui-core');
 	wp_enqueue_script('jquery-ui-slider');
-	wp_enqueue_script( 'mtb_colorpicker', get_stylesheet_directory_uri() . '/framework/settings/js/colorpicker.js', array( 'jquery' ));
-	wp_enqueue_script( 'mtb_select_js', get_stylesheet_directory_uri() . '/framework/settings/js/jquery.customSelect.min.js', array( 'jquery' ));
-	wp_enqueue_script( 'mtb_theme_options', get_stylesheet_directory_uri() . '/framework/settings/js/theme-options.js', array( 'jquery','wt_select_js' ));
+	wp_enqueue_script( 'wt_colorpicker', get_stylesheet_directory_uri() . '/framework/settings/js/colorpicker.js', array( 'jquery' ));
+	wp_enqueue_script( 'wt_select_js', get_stylesheet_directory_uri() . '/framework/settings/js/jquery.customSelect.min.js', array( 'jquery' ));
+	wp_enqueue_script( 'wt_theme_options', get_stylesheet_directory_uri() . '/framework/settings/js/theme-options.js', array( 'jquery','wt_select_js' ));
 }
 
 function wellthemes_post_meta_settings() {
