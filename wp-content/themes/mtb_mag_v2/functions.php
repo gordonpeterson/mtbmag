@@ -17,17 +17,18 @@ if (!is_admin()){
 if (!function_exists('gordon_js')) {
 
     function gordon_js() {
-			wp_enqueue_script('mtb_hoverIntent', get_stylesheet_directory().'/js/hoverIntent.js',array('jquery'),'', true);
-			wp_enqueue_script('mtb_superfish', get_stylesheet_directory().'/js/superfish.js',array('hoverIntent'),'', true);
-			wp_enqueue_script('mtb_slider', get_stylesheet_directory() . '/js/flexslider-min.js', array('jquery'),'', true); 
-			wp_enqueue_script('mtb_lightbox', get_stylesheet_directory() . '/js/lightbox.min.js', array('jquery'),'', true); 		
-			wp_enqueue_script('mtb_jflickrfeed', get_stylesheet_directory() . '/js/jflickrfeed.min.js', array('jquery'),'', true); 
-			wp_enqueue_script('mtb_mobilemenu', get_stylesheet_directory() . '/js/jquery.mobilemenu.js', array('jquery'),'', true); 
-			wp_enqueue_script('mtb_touchSwipe', get_stylesheet_directory() . '/js/jquery.touchSwipe.min.js', array('jquery'),'', true); 
-			wp_enqueue_script('mtb_carousel', get_stylesheet_directory() . '/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery')); 
-			wp_enqueue_script('mtb_mousewheel', get_stylesheet_directory() . '/js/jquery.mousewheel.min.js', array('jquery'),'', true);	
-			wp_enqueue_script('mtb_custom', get_stylesheet_directory() . '/js/custom.js', array('jquery'),'', true);		
+			wp_enqueue_script('mtb_hoverIntent', get_stylesheet_directory_uri().'/js/hoverIntent.js',array('jquery'),'', true);
+			wp_enqueue_script('mtb_superfish', get_stylesheet_directory_uri().'/js/superfish.js',array('hoverIntent'),'', true);
+			wp_enqueue_script('mtb_slider', get_stylesheet_directory_uri() . '/js/flexslider-min.js', array('jquery'),'', true); 
+			wp_enqueue_script('mtb_lightbox', get_stylesheet_directory_uri() . '/js/lightbox.min.js', array('jquery'),'', true); 		
+			wp_enqueue_script('mtb_jflickrfeed', get_stylesheet_directory_uri() . '/js/jflickrfeed.min.js', array('jquery'),'', true); 
+			wp_enqueue_script('mtb_mobilemenu', get_stylesheet_directory_uri() . '/js/jquery.mobilemenu.js', array('jquery'),'', true); 
+			wp_enqueue_script('mtb_touchSwipe', get_stylesheet_directory_uri() . '/js/jquery.touchSwipe.min.js', array('jquery'),'', true); 
+			wp_enqueue_script('mtb_carousel', get_stylesheet_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery')); 
+			wp_enqueue_script('mtb_mousewheel', get_stylesheet_directory_uri() . '/js/jquery.mousewheel.min.js', array('jquery'),'', true);	
+			wp_enqueue_script('mtb_custom', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'),'', true);		
     }
+
 	
 }
 
@@ -157,15 +158,14 @@ add_action( 'admin_init', 'mtb_register_admin_scripts' );
 function mtb_register_admin_scripts() {
 
 
-	echo "<script type='text/javascript'>console.log('----------fuzz: mtb_register_admin_scripts()-----------');</script>";
-	wp_enqueue_style( 'wt_theme_options_css', get_template_directory_uri() . '/framework/settings/css/theme-options.css');
-	// wp_enqueue_style( 'wt-font-awesome', get_template_directory_uri().'/css/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'mtb_theme_options_css', get_stylesheet_directory_uri() . '/framework/settings/css/theme-options.css');
+	wp_enqueue_style( 'mtb-font-awesome', get_stylesheet_directory_uri().'/css/font-awesome.min.css' );
 	wp_enqueue_style('thickbox');
 	wp_enqueue_script('jquery-ui-core');
 	wp_enqueue_script('jquery-ui-slider');
-	wp_enqueue_script( 'wt_colorpicker', get_template_directory_uri() . '/framework/settings/js/colorpicker.js', array( 'jquery' ));
-	wp_enqueue_script( 'wt_select_js', get_template_directory_uri() . '/framework/settings/js/jquery.customSelect.min.js', array( 'jquery' ));
-	wp_enqueue_script( 'wt_theme_options', get_template_directory_uri() . '/framework/settings/js/theme-options.js', array( 'jquery','wt_select_js' ));
+	wp_enqueue_script( 'mtb_colorpicker', get_stylesheet_directory_uri() . '/framework/settings/js/colorpicker.js', array( 'jquery' ));
+	wp_enqueue_script( 'mtb_select_js', get_stylesheet_directory_uri() . '/framework/settings/js/jquery.customSelect.min.js', array( 'jquery' ));
+	wp_enqueue_script( 'mtb_theme_options', get_stylesheet_directory_uri() . '/framework/settings/js/theme-options.js', array( 'jquery','wt_select_js' ));
 }
 
 function wellthemes_post_meta_settings() {
