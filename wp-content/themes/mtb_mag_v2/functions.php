@@ -10,12 +10,26 @@ function mtb_mag_setup() {
 	register_nav_menu( 'secondary', __( 'Footer Menu', 'twentytwelve' ) );
 
 
-	// require( get_template_directory() . '/framework/settings/theme-options.php' );
-	// require( get_template_directory() . '/framework/settings/option-functions.php' );
+if (!is_admin()){
+    add_action('wp_enqueue_scripts', 'gordon_js');
+}
+
+if (!function_exists('gordon_js')) {
+
+    function gordon_js() {
+			wp_enqueue_script('mtb_hoverIntent', get_stylesheet_directory().'/js/hoverIntent.js',array('jquery'),'', true);
+			wp_enqueue_script('mtb_superfish', get_stylesheet_directory().'/js/superfish.js',array('hoverIntent'),'', true);
+			wp_enqueue_script('mtb_slider', get_stylesheet_directory() . '/js/flexslider-min.js', array('jquery'),'', true); 
+			wp_enqueue_script('mtb_lightbox', get_stylesheet_directory() . '/js/lightbox.min.js', array('jquery'),'', true); 		
+			wp_enqueue_script('mtb_jflickrfeed', get_stylesheet_directory() . '/js/jflickrfeed.min.js', array('jquery'),'', true); 
+			wp_enqueue_script('mtb_mobilemenu', get_stylesheet_directory() . '/js/jquery.mobilemenu.js', array('jquery'),'', true); 
+			wp_enqueue_script('mtb_touchSwipe', get_stylesheet_directory() . '/js/jquery.touchSwipe.min.js', array('jquery'),'', true); 
+			wp_enqueue_script('mtb_carousel', get_stylesheet_directory() . '/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery')); 
+			wp_enqueue_script('mtb_mousewheel', get_stylesheet_directory() . '/js/jquery.mousewheel.min.js', array('jquery'),'', true);	
+			wp_enqueue_script('mtb_custom', get_stylesheet_directory() . '/js/custom.js', array('jquery'),'', true);		
+    }
 	
-	// require( get_template_directory() . '/framework/meta/meta_post.php' );
-	// require( get_template_directory() . '/framework/meta/meta_category.php' );
-	// require( get_template_directory() . '/framework/meta/meta_functions.php' );
+}
 
 	
 
