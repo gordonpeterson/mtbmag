@@ -58,9 +58,11 @@ $contentMaxWidth: 975px;
 		}
 
 		article.big{
-			height: 700px;
+			// height: 700px;
+			height: 0;
+			overflow: visible;
 			.post-thumbnail{
-				height: 700px;
+				// height: 700px;
 			}
 		}
 
@@ -215,6 +217,7 @@ $contentMaxWidth: 975px;
 			background-color: #eee;
 		}
 
+
 		article.small{
 			display: block;
 			position: relative;
@@ -296,6 +299,8 @@ $contentMaxWidth: 975px;
 	body.home{
 
 		article.big{
+			height: 0;
+			overflow: visible;
 			div.post-info{
 				margin: 0;
 				left: 0;
@@ -413,6 +418,12 @@ $contentMaxWidth: 975px;
 			}
 		}
 
+	}
+
+
+	article.big{
+		height: 0;
+		overflow: visible;
 	}
 
 
@@ -599,6 +610,7 @@ $contentMaxWidth: 975px;
 
 		article.big{
 			height: 300px;
+			overflow: hidden;
 			.post-thumbnail{
 				height: 300px;
 				z-index: initial;
