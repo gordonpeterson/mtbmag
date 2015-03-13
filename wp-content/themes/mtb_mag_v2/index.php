@@ -10,7 +10,7 @@ get_header('gordon'); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
-		<div class="cover-article">
+		<div class="cover-article" ng-controller="coverCtrl as vm" ng-style="{'margin-top': vm.coverHeight+'px'}">
 		 <?php 
 
 			$orig_query = $wp_query;

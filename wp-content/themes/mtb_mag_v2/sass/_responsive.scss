@@ -603,8 +603,8 @@ $contentMaxWidth: 975px;
 				height: 300px;
 				z-index: initial;
 				// left: -10px;
-				top: 60px;
-				position: fixed;
+				// top: 60px;
+				// position: fixed;
 				width: 100%;
 
 				img{
@@ -684,6 +684,10 @@ $contentMaxWidth: 975px;
 
 	.list-view .content-area{
 		padding: 0;
+	}
+
+	.other-articles article{
+		border: 5px solid #b2b2b2;
 	}
 
 

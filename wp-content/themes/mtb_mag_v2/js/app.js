@@ -64,7 +64,7 @@ angular
 
 			if( vm.coverWidth <= 590 ){
 				vm.coverHeight = $window.innerHeight * .25;
-				vm.coverHeight = 140;
+				vm.coverHeight = 0;
 			}
 
 			if ( vm.coverHeight >= 700 ) {
