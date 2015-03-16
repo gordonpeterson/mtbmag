@@ -3074,207 +3074,6 @@ a.post-thumbnail:hover {
 
 
 /**
- * 10.2 SMS Grafica
- * -----------------------------------------------------------------------------
- */
-
-.articolo-copertina {
-	height:350px;
-	position:relative;
-}
-
-.articolo-copertina-dettagli {
-	position:absolute;
-	bottom:0;
-	left:0;
-	background:rgba(0,0,0,0.66);
-	width:100%;
-	padding:10px 15px 15px;
-	color:#fff;
-	border-bottom:3px solid orange;
-}
-
-.article-full .articolo-copertina-dettagli, article.post .articolo-copertina-dettagli {
-	bottom:1px;
-}
-
-.articolo-copertina-dettagli h1 {
-	margin-top:0;
-	text-transform:uppercase;
-	font-weight:300;
-}
-
-.articolo-copertina-dettagli h1 a:link, .articolo-copertina-dettagli h1 a:visited {
-	margin-top:0;
-	color:#fff;
-}
-
-.articolo-copertina-dettagli h1 a:hover, .articolo-copertina-dettagli h1 a:active, .articolo-copertina-dettagli h1 a:focus {
-	margin-top:0;
-	color:orange;
-}
-
-.articolo-copertina-dettagli p {
-	margin-bottom:0;
-	font-size:14px;
-}
-
-.articolo-copertina .entry-meta, .articolo-copertina .entry-meta a {
-	color:#fff;
-	background:transparent;
-}
-
-.altri-articoli {
-	width:990px;
-	margin:0 auto;
-}
-
-.articoli-home {
-	float:left;
-	width:300px;
-	height:450px;
-	background:#fff;
-	margin:10px 15px 15px;
-}
-
-.articolo-picture {
-	width:300px;
-	height:203px;
-	position:relative;
-	border-bottom:3px solid orange;
-}
-
-.articolo-cat {
-	width:100%;
-	position:absolute;
-	top:0;
-	left:0;
-	background-color:rgba(0,0,0,0.66);
-	color:#fff;
-	padding:0 10px;
-	line-height:26px;
-	font-size:13px;
-	z-index:2;
-}
-
-.articolo-cat a:link, .articolo-cat a:visited {
-	color:#fff;
-}
-
-.articolo-cat a:hover, .articolo-cat a:active, .articolo-cat a:focus {
-	color:orange;
-}
-
-.articolo-titolo {
-	padding:5px 10px 0;
-	text-transform:uppercase;
-	max-height:77px;
-	overflow:hidden;
-}
-
-.articolo-titolo h1 {
-	font-size:18px;
-	margin:0;
-}
-
-.article-full .articolo-copertina-dettagli h1, article.post .articolo-copertina-dettagli h1 {
-	text-align:center;
-	margin:0 auto 15px !important;
-}
-
-.articolo-anteprima {
-	max-height:240px;
-	overflow:hidden;
-}
-
-.articolo-anteprima-txt {
-	font-size:14px;
-	padding:10px;
-}
-
-.articolo-autore {
-	font-size:12px;
-	padding:10px 10px 0;
-}
-
-.altri-articoli .ad300x250, .cat-pagina .ad300x250 {
-	float:left !important;
-	margin:10px 15px 15px !important;
-	background:transparent !important;
-	height:450px !important;
-	width:300px !important;
-}
-
-.altri-articoli .ad727x90, .cat-pagina .ad727x90 {
-	float:left !important;
-	background:transparent !important;
-	margin-bottom:15px !important;
-}
-
-.altri-articoli .ad300x250 p, .cat-pagina .ad300x250 p {
-	margin:0 !important;
-}
-
-.altri-articoli .ad727x90 p, .cat-pagina .ad727x90 p {
-	margin:0 !important;
-}
-
-.paging-navigation {
-	float:left;
-	width:100%;
-}
-
-.paging-navigation .page-numbers {
-	display:none;
-}
-
-.paging-navigation .prev.page-numbers {
-	display:inline-block;
-	float:left;
-}
-
-.paging-navigation .next.page-numbers {
-	display:inline-block;
-	float:right;
-}
-
-ul.wpp-list {
-	margin:0 auto;
-}
-
-ul.wpp-list li {
-	display: block;
-	width: 150px;
-	float: left;
-	margin: 5px;
-	min-height: 200px;
-}
-
-ul.wpp-list li a {
-	font-size:13px;
-	text-decoration:none;
-}
-
-.articolo-no-pic {
-	margin:80px auto 30px;
-}
-
-.articolo-no-pic h1 {
-	font-size:26px;
-	margin:0;
-}
-
-.addthis_custom_sharing {
-	text-align:center;
-	margin-bottom:20px;
-}
-
-ins.adsbygoogle {
-	background:transparent;
-}
-
-
-/**
  * 11.0 Media Queries
  * -----------------------------------------------------------------------------
  */
@@ -3290,16 +3089,6 @@ ins.adsbygoogle {
 
 @viewport {
 	width: device-width;
-}
-
-@media screen and (min-width: 330px) {
-	.altri-articoli {
-		width:330px;
-		margin:0 auto;
-	}
-	.articolo-copertina-dettagli h1 {
-		font-size:18px;
-	}
 }
 
 @media screen and (max-width: 400px) {
@@ -3516,16 +3305,6 @@ ins.adsbygoogle {
 	}
 }
 
-@media screen and (min-width: 660px) {
-	.altri-articoli {
-		width:660px;
-		margin:0 auto;
-	}
-	.articolo-copertina-dettagli h1 {
-		font-size:26px;
-	}
-}
-
 @media screen and (min-width: 673px) {
 	.header-main {
 		padding: 0 30px;
@@ -3658,15 +3437,6 @@ ins.adsbygoogle {
 	.site-info {
 		padding: 15px 30px;
 	}
-}
-
-@media screen and (max-width: 780px) {
-	.entry-content {
-		padding:0 10px !important;
-	}
-	.review-container {
-		padding:0 10px;
-}
 }
 
 @media screen and (min-width: 783px) {
@@ -3878,13 +3648,6 @@ ins.adsbygoogle {
 
 	.full-width .site-content .alignright {
 		clear: right;
-	}
-}
-
-@media screen and (min-width: 989px) {
-	.altri-articoli {
-		width:990px;
-		margin:0 auto;
 	}
 }
 

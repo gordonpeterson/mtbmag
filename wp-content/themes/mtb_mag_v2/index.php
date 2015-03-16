@@ -10,7 +10,29 @@ get_header('gordon'); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
-		<div class="cover-article" ng-controller="coverCtrl as vm" ng-style="{'margin-top': vm.coverHeight+'px'}">
+<?php if ($paged < 2) { ?>
+
+<?php $cat_id = 3268; //the certain category ID
+$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
+if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();
+$featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+?>
+
+<div class="articolo-copertina" style="background:transparent url(<?php echo $featuredImage; ?>) center center no-repeat; background-size:cover;">
+
+<div class="articolo-copertina-dettagli">
+
+<h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+
+<?php the_excerpt(); ?>
+
+</div> <!-- .articolo-copertina-dettagli -->
+
+<?php endwhile; endif; ?>
+
+</div> <!-- .articolo-copertina --> <?php } ?>
+
+		<div class="cover-article" ng-controller="coverCtrl as vm" ng-style="{'margin-top': vm.coverHeight+'px'}" style="display:none">
 		 <?php 
 
 			$orig_query = $wp_query;
@@ -24,7 +46,7 @@ get_header('gordon'); ?>
 
 			$count = 0;
 			$increment = 0;
-			$adArray = array(3,4,5,9,13,14);
+			$adArray = array(3,4,5,8);
 			$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
 
 			if ( $category_query && $paged <= 1 ) {
@@ -33,13 +55,13 @@ get_header('gordon'); ?>
 					$exclude_ids = array( $cover_article_id );
 					setup_postdata( $GLOBALS['post'] =& $cover_article );
 					get_template_part( 'content', 'big' );
-					$article_count = 15;
+					$article_count = 17;
 			} 
 
 			?>
 			</div> <!-- .cover-article -->
 			<div class="scroll-area">
-			<div class="other-articles">
+			<div class="altri-articoli">
 
 		<?php
 			global $wp_query;
@@ -67,19 +89,73 @@ get_header('gordon'); ?>
 
 							if( $currentIndex == 3 ){ //...ad1 300x250
 							?>
-										<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
+										
 												<div class="widget no-widget ad ad300x250">
-													<p><?php _e("$adText ad1 300x250", 'twentytwelve'); ?></p>
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-home', [[300, 250], [300, 450], [300, 500]], 'div-gpt-ad-1426406849364-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-home -->
+													<div id='div-gpt-ad-1426406849364-0'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426406849364-0'); });
+													</script>
+													</div></p>
 												</div>
-											<?php endif; ?>
+											
 							<?php 
 							}else if( $currentIndex == 4 ){ //...ad2 300x250
 							 ?>
-										<?php if ( ! dynamic_sidebar( 'ad-widget2' ) ) : ?>
+										
 											<div class="widget no-widget ad ad300x250">
-													<p><?php _e("$adText  ad2 300x250", 'twentytwelve'); ?></p>
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-home-Multiplayer', [[300, 250], [300, 450], [300, 500], [300, 600]], 'div-gpt-ad-1426407062975-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-home-Multiplayer -->
+													<div id='div-gpt-ad-1426407062975-0'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426407062975-0'); });
+													</script>
+													</div></p>
 											</div>
-										<?php endif; ?>
+										
 							 <?php 
 							}else if( $currentIndex == 5 ){ //...ad3 727z90
 								?>
@@ -88,40 +164,118 @@ get_header('gordon'); ?>
 													<p><?php _e("$adText ad3 272x90", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
-								<?php 
-							}else if( $currentIndex == 9 ){ //...ad4 300x250
-							 ?>
-										<?php if ( ! dynamic_sidebar( 'ad-widget4' ) ) : ?>
+										
 											<div class="widget no-widget ad ad300x250">
-													<p><?php _e("$adText ad4 300x250", 'twentytwelve'); ?></p>
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-Home-5', [300, 250], 'div-gpt-ad-1426408470947-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-Home-5 -->
+													<div id='div-gpt-ad-1426408470947-0' style='width:300px; height:250px;'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426408470947-0'); });
+													</script>
+													</div></p>
 											</div>
-										<?php endif; ?>
+										
+								<?php 
+							}else if( $currentIndex == 8 ){ //...ad4 300x250
+							 ?>
+										
+											<div class="widget no-widget ad ad300x250">
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-Home-3', [[300, 250], [300, 450], [300, 500], [300, 600]], 'div-gpt-ad-1426407107081-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-Home-3 -->
+													<div id='div-gpt-ad-1426407107081-0'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426407107081-0'); });
+													</script>
+													</div></p>
+											</div>
+										
 							 <?php 
 
-							} elseif ($currentIndex == 13) { //...ad5 300x250
+							} else if ($currentIndex == 11) { //...ad5 300x250
 								?>
-										<?php if ( ! dynamic_sidebar( 'ad-widget5' ) ) : ?>
+										
 											<div class="widget no-widget ad ad300x250">
-													<p><?php _e("$adText ad5 300x250", 'twentytwelve'); ?></p>
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-Home-4', [[300, 250], [300, 450], [300, 500], [300, 600]], 'div-gpt-ad-1426407138426-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-Home-4 -->
+													<div id='div-gpt-ad-1426407138426-0'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426407138426-0'); });
+													</script>
+													</div></p>
 											</div>
-										<?php endif; ?>
+										
 								<?php
 
-							} else if(14) { //...ad6 300x250
-								?>
-										<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
-											<div class="widget no-widget ad ad300x250">
-													<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
-											</div>
-										<?php endif; ?>
-								<?php
 							}
 
 
 							$increment++;
 						}
 
-						get_template_part( 'content', 'small' );
+						get_template_part( 'content', 'home' );
 
 				endwhile;
 				// Previous/next post navigation.
@@ -134,7 +288,6 @@ get_header('gordon'); ?>
 			endif;
 		?>
 			</div> <!-- .other-articles -->
-			<div class="blah"><?php echo "page:" . $page . "; count" . $article_count; ?></div>
 			</div> <!-- .scroll-area -->
 		</div><!-- #content -->
 	</div><!-- #primary -->

@@ -86,10 +86,10 @@ if (!function_exists('gordon_js')) {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Ad6 300x250', 'twentytwelve' ),
+		'name' => __( 'Ad6 300x600', 'twentytwelve' ),
 		'id' => 'ad-widget6',
-		'description' => __( 'The seventh ad slot (300x600). Add the javascript code here using a text widget.', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="ad ad300x250 %2$s"><div class="ad-inner-wrap">',
+		'description' => __( 'The sixth ad slot (300x600). Add the javascript code here using a text widget.', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="ad ad300x600 %2$s"><div class="ad-inner-wrap">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="ad-title">',
 		'after_title' => '</h3>',
@@ -1056,6 +1056,20 @@ function wt_calculate_stars($score){
 
 }
 
+function custom_excerpt_length( $length ) {
+	return 40;
+}
+
+function my_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'my_theme_add_editor_styles' );
+
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+remove_filter('template_redirect', 'redirect_canonical');
+wp_enqueue_script( 'jquery-ui-dialog', false, array('jquery'), false, true );
+
 // Implement Custom Header features.
 // require get_template_directory() . '/inc/custom-header.php';
 
@@ -1069,5 +1083,3 @@ require get_stylesheet_directory() . '/inc/template-tags.php';
 
 // echo "<h1 class='gordon'>this is the functions.php file</h1>";
 // print( get_stylesheet_directory() );
-
-

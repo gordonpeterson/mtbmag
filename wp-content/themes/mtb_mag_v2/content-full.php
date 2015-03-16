@@ -14,12 +14,47 @@
 
 
 
-	<?php 
-	twentyfourteen_post_thumbnail(); 
-	// the_post_thumbnail('wt1600_450');
-	?>
+	<?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 
-	<header class="entry-header" ng-controller="coverCtrl as vm" ng-style="{'margin-top': vm.coverHeight+'px'}" ng-cloak >
+<div class="articolo-copertina" style="background:transparent url(<?php echo $featuredImage; ?>) center center no-repeat; background-size:cover;">
+
+<div class="articolo-copertina-dettagli">
+
+<?php
+			if ( is_single() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+			endif;
+		?>
+
+<div class="entry-meta full">
+			<?php
+				if ( 'post' == get_post_type() )
+					twentyfourteen_posted_on();
+
+				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
+			?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+			<?php
+				endif;
+
+				edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
+			?>
+
+			<?php if ( current_user_can( 'edit_post' , get_the_ID() ) & function_exists( "the_views" ) ) { ?>
+			<span class="tab-related single">
+				<i class="genericon genericon-show"></i>
+					<?php the_views();  ?>
+			</span>	
+				<?php } ?>
+
+		</div><!-- .entry-meta -->
+
+</div> <!-- .articolo-copertina-dettagli -->
+</div>
+
+	<header class="entry-header" ng-controller="coverCtrl as vm" ng-style="{'margin-top': vm.coverHeight+'px'}" ng-cloak style="display:none">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 			<!-- 
 		<div class="entry-meta">
@@ -69,6 +104,9 @@
 		<?php else : ?>
 
 		<div class="entry-content full">
+			
+			<br>
+			<div class="addthis_custom_sharing"></div>
 
 		<?php 
 			$the_long_post_date = strtotime($post->post_date);
@@ -118,19 +156,6 @@
 					
 
 					
-					<div class="ads-row">
-						<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
-							<div class="widget no-widget">
-									<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
-							</div>
-						<?php endif; ?>
-
-						<?php if ( ! dynamic_sidebar( 'ad-widget7' ) ) : ?>
-							<div class="widget no-widget">
-									<p><?php _e("$adText ad7 300x250", 'twentytwelve'); ?></p>
-							</div>
-						<?php endif; ?>
-					</div>
 
 		<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
 	</div> <!-- .scroll-ares -->

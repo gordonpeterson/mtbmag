@@ -22,13 +22,13 @@ get_header('gordon'); ?>
 				?>
 			</header><!-- .archive-header -->
 
-			<div id="content" class="site-content" role="main">
+			<div class="altri-articoli" role="main">
 			
 			<?php
 					// Start the Loop.
 					$count = 0;
 					$increment = 0;
-					$adArray = array(3,4,5,15);
+					$adArray = array(3,4,5,8,11);
 					$adText = 'You have not added content for this ad space. Go to your widgets section and select ';
 
 					while ( have_posts() ) : the_post();
@@ -44,45 +44,186 @@ get_header('gordon'); ?>
 
 							if( $currentIndex == 3 ){ //...ad1 300x250
 							?>
-								<?php if ( ! dynamic_sidebar( 'ad-widget1' ) ) : ?>
-										<div class="widget no-widget">
-											<p><?php _e("$adText ad1 300x250", 'twentytwelve'); ?></p>
-										</div>
-									<?php endif; ?>
+										
+												<div class="widget no-widget ad ad300x250">
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-home', [[300, 250], [300, 450], [300, 500]], 'div-gpt-ad-1426406849364-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-home -->
+													<div id='div-gpt-ad-1426406849364-0'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426406849364-0'); });
+													</script>
+													</div></p>
+												</div>
+											
 							<?php 
 							}else if( $currentIndex == 4 ){ //...ad2 300x250
 							 ?>
-										<?php if ( ! dynamic_sidebar( 'ad-widget2' ) ) : ?>
-											<div class="widget no-widget">
-													<p><?php _e("$adText  ad2 300x250", 'twentytwelve'); ?></p>
+										
+											<div class="widget no-widget ad ad300x250">
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-home-Multiplayer', [[300, 250], [300, 450], [300, 500], [300, 600]], 'div-gpt-ad-1426407062975-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-home-Multiplayer -->
+													<div id='div-gpt-ad-1426407062975-0'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426407062975-0'); });
+													</script>
+													</div></p>
 											</div>
-										<?php endif; ?>
+										
 							 <?php 
 							}else if( $currentIndex == 5 ){ //...ad3 727z90
 								?>
 										<?php if ( ! dynamic_sidebar( 'ad-widget3' ) ) : ?>
-											<div class="widget no-widget">
+											<div class="widget no-widget ad ad272x90">
 													<p><?php _e("$adText ad3 272x90", 'twentytwelve'); ?></p>
 											</div>
 										<?php endif; ?>
 										
+											<div class="widget no-widget ad ad300x250">
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-Home-5', [300, 250], 'div-gpt-ad-1426408470947-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-Home-5 -->
+													<div id='div-gpt-ad-1426408470947-0' style='width:300px; height:250px;'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426408470947-0'); });
+													</script>
+													</div></p>
+											</div>
+										
 								<?php 
-							} elseif ($currentIndex == 15) { //...ad5 300x250
-								?>
-										<?php if ( ! dynamic_sidebar( 'ad-widget5' ) ) : ?>
-											<div class="widget no-widget">
-													<p><?php _e("$adText ad5 300x250", 'twentytwelve'); ?></p>
+							}else if( $currentIndex == 8 ){ //...ad4 300x250
+							 ?>
+										
+											<div class="widget no-widget ad ad300x250">
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-Home-3', [[300, 250], [300, 450], [300, 500], [300, 600]], 'div-gpt-ad-1426407107081-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-Home-3 -->
+													<div id='div-gpt-ad-1426407107081-0'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426407107081-0'); });
+													</script>
+													</div></p>
 											</div>
-										<?php endif; ?>
-								<?php
-							} else  { //...ad6 300x250
+										
+							 <?php 
+
+							} else if ($currentIndex == 11) { //...ad5 300x250
 								?>
-										<?php if ( ! dynamic_sidebar( 'ad-widget6' ) ) : ?>
-											<div class="widget no-widget">
-													<p><?php _e("$adText ad6 300x250", 'twentytwelve'); ?></p>
+										
+											<div class="widget no-widget ad ad300x250">
+													<p><script type='text/javascript'>
+													var googletag = googletag || {};
+													googletag.cmd = googletag.cmd || [];
+													(function() {
+													var gads = document.createElement('script');
+													gads.async = true;
+													gads.type = 'text/javascript';
+													var useSSL = 'https:' == document.location.protocol;
+													gads.src = (useSSL ? 'https:' : 'http:') + 
+													'//www.googletagservices.com/tag/js/gpt.js';
+													var node = document.getElementsByTagName('script')[0];
+													node.parentNode.insertBefore(gads, node);
+													})();
+													</script>
+
+													<script type='text/javascript'>
+													googletag.cmd.push(function() {
+													googletag.defineSlot('/1031065/MTB-Home-4', [[300, 250], [300, 450], [300, 500], [300, 600]], 'div-gpt-ad-1426407138426-0').addService(googletag.pubads());
+													googletag.pubads().enableSingleRequest();
+													googletag.enableServices();
+													});
+													</script>
+													<!-- MTB-Home-4 -->
+													<div id='div-gpt-ad-1426407138426-0'>
+													<script type='text/javascript'>
+													googletag.cmd.push(function() { googletag.display('div-gpt-ad-1426407138426-0'); });
+													</script>
+													</div></p>
 											</div>
-										<?php endif; ?>
+										
 								<?php
+
 							}
 
 
@@ -95,7 +236,7 @@ get_header('gordon'); ?>
 						 * (where ___ is the post format) and that will be used instead.
 						 */
 						// get_template_part( 'content', get_post_format() );
-						get_template_part( 'content', 'small' ); //....this gets the content-small.php template part
+						get_template_part( 'content', 'home' ); //....this gets the content-small.php template part
 
 					endwhile;
 					// Previous/next page navigation.
