@@ -19,7 +19,7 @@
 	// the_post_thumbnail('wt1600_450');
 	?>
 
-	<header class="entry-header">
+	<header class="entry-header" ng-controller="coverCtrl as vm" ng-style="{'margin-top': vm.coverHeight+'px'}" ng-cloak style="display:none">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 			<!-- 
 		<div class="entry-meta">

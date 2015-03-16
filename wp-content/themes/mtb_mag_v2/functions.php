@@ -129,7 +129,7 @@ if (!function_exists('gordon_js')) {
 		'name' => __( 'Ad Full', 'twentytwelve' ),
 		'id' => 'ad-widget-full',
 		'description' => __( 'The full page ad slot for article pages. Add the javascript code here using a text widget.', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="ad-full %2$s">',
+		'before_widget' => '<div id="%1$s" class="ad-full-widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="ad-title">',
 		'after_title' => '</h3>',
