@@ -69,11 +69,6 @@
 
 		<div class="ad ad-full">
 			<div class="ad-inner-wrap">
-			<?php if ( ! dynamic_sidebar( 'ad-widget-full' ) ) : ?>
-				<div class="widget no-widget">
-						<p><?php _e("You have not added content for this ad space. Go to your widgets section and select ad full", 'twentytwelve'); ?></p>
-				</div>
-			<?php endif; ?>
 			</div>
 		</div>
 
@@ -125,5 +120,11 @@
 
 
 		<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+			<?php if ( ! dynamic_sidebar( 'ad-widget-full' ) ) : ?>
+				<div class="widget no-widget">
+						<p><?php _e("You have not added content for this ad space. Go to your widgets section and select ad full", 'twentytwelve'); ?></p>
+				</div>
+			<?php endif; ?>
+
 	</div> <!-- .scroll-ares -->
 </article><!-- #post-## -->
