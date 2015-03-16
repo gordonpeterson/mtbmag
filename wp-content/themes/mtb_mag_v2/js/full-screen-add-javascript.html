@@ -1,0 +1,47 @@
+<script type="text/javascript">
+	
+	(function(){
+
+		//-----targets the elements on the page
+		var wallpaperDocument = document.getElementsByClassName("ad ad-full")[0];
+		wallpaperDocument.style.background = 'url("http://www.mtb-mag.com/ads/mavic-2015-03.jpg") no-repeat scroll center top #000000';
+
+		var article= document.getElementsByClassName("entry-content skin")[0];
+		article.style.padding = '0 10px';
+		article.style.backgroundColor = "#000";
+		article.style.color = "#FFF";
+
+		if (window.self !== window.top) {                       //check to see if the creative is loading into an iframe
+			var wallpaperDocument = parent.document;            //if yes, reference parent window and document
+			var wallpaperWindow = parent.window;
+		} else {
+			var wallpaperDocument = document;                   //if no reference default window and document
+			var wallpaperWindow = window;
+		}
+
+		var hotSpotLeft = wallpaperDocument.createElement('a');                                               //create the clickable 'hot spots', left and right
+		var hotSpotRight = wallpaperDocument.createElement('a');
+		hotSpotLeft.id = 'hotSpotLeft';                                                                       //set the ids for the hot spots
+		hotSpotRight.id = 'hotSpotRight';
+		hotSpotLeft.setAttribute('href','http://www.mavic.it/ruote-strada-e-triathlon-cosmic-carbone-40-elite?utm_source=bdcmag&utm_medium=banner&utm_campaign=cc40elite');                                          //set the click-commands
+		hotSpotRight.setAttribute('href','http://www.mavic.it/ruote-strada-e-triathlon-cosmic-carbone-40-elite?utm_source=bdcmag&utm_medium=banner&utm_campaign=cc40elite');
+		hotSpotLeft.setAttribute('target','_blank');
+		hotSpotRight.setAttribute('target','_blank');
+		hotSpotLeft.style.display = hotSpotRight.style.display = 'block';                                     //set CSS for the hot-spots. I use element.style to be compatible with IE8
+		hotSpotLeft.style.height = hotSpotRight.style.height = '580px';
+		hotSpotLeft.style.width = hotSpotRight.style.width = '130px';
+		hotSpotLeft.style.position = hotSpotRight.style.position = 'absolute';
+		hotSpotLeft.style.top = hotSpotRight.style.top = '165px';
+		hotSpotLeft.style.border = hotSpotRight.style.border = 'none';
+		hotSpotLeft.style.left = hotSpotRight.style.right = ((((wallpaperDocument.documentElement.clientWidth-997)/2)-130) + 'px');             //position hot spots based on window width
+		wallpaperDocument.body.appendChild(hotSpotLeft);
+		wallpaperDocument.body.appendChild(hotSpotRight);
+
+		wallpaperWindow.onresize = function() {
+			wallpaperDocument.getElementById('hotSpotLeft').style.left = (((wallpaperDocument.documentElement.clientWidth-997)/2)-130) + 'px';       //adjust position of hot spots if window is resized.
+			wallpaperDocument.getElementById('hotSpotRight').style.right = (((wallpaperDocument.documentElement.clientWidth-997)/2)-130) + 'px';
+		};
+		
+	})();
+
+</script>
